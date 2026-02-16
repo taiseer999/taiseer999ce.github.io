@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>2</defaultcontrol>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<!-- media infos -->
+		<!--
+		<control type="group">
+			<left>20</left>
+			<top>180r</top>
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+			<include>VisibleFadeEffect</include>
+			<include>SmallMusicInfo</include>
+		</control>
+		-->
+		<control type="button">
+			<visible>SlideShow.IsVideo + [![Player.Playing + Player.HasVideo] | SlideShow.IsPaused]</visible>
+			<description>Video Play Button</description>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>66</width>
+			<height>66</height>
+			<font />
+			<onclick>play</onclick>
+			
+			<include>SlideShowPlay_Button_Textures</include>
+			
+		</control>
+		
+		
+		
+		<include condition="[Integer.IsLess(Window(Home).Property(CinemaHelper.GetSettingValue.lookandfeel.skinzoom),0) | !String.IsEqual(Skin.AspectRatio,16:9)] + !String.IsEqual(Skin.AspectRatio,16:10)">SkinOutOfBoundsMasksTopBottom</include>
+		
+		
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

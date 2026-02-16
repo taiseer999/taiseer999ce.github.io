@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>dialogeffect</include>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<include>BehindDialogDarkBackgroundDarkest</include>
+		
+		
+		
+		<control type="group">
+			<left>246</left>
+			<depth>DepthDialog+</depth>
+			
+			<control type="label">
+				<left>21</left>
+				<top>45</top>
+				<width>1356</width>
+				<height>45</height>
+				<font>Light28</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[1036]</label>
+			</control>
+			
+			<control type="panel" id="450">
+				<left>39</left>
+				<top>138</top>
+				<width>1368</width>
+				<height>942</height>
+				<onleft>noop</onleft>
+				<onup>450</onup>
+				<onright>4501</onright>
+				<ondown>450</ondown>
+				<pagecontrol>4501</pagecontrol>
+				<include>StandardScrollTime</include>
+				
+				<include>favoritesLayout1</include>
+				
+				
+			</control>
+			
+			
+			<include>favoritesLayoutScrollBar</include>
+			
+			
+			
+		</control>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

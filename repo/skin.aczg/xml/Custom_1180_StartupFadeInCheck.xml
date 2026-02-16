@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1180">
+	
+	<visible>
+		!Skin.HasSetting(StartScreenDisabled) + 
+		String.IsEmpty(Window(Home).Property(ExperimentalStartScreenDone)) + 
+		!Window.IsVisible(loginscreen) + 
+		!Window.IsVisible(startup)
+	</visible>
+	
+	<!-- LOAD -->
+	<onload condition="!Window.IsVisible(1182)">AlarmClock(ExperimentalStartScreenAlarm3,ActivateWindow(1182),00:00:00,true)</onload>
+	
+	
+	<!-- UNLOAD -->
+	<onunload condition="Window.IsVisible(1182)">Dialog.Close(1182)</onunload>
+	
+	<onunload>CancelAlarm(ExperimentalStartScreenAlarm3,true)</onunload>
+	
+</window>

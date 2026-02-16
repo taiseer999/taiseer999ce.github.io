@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1113" type="dialog">
+	<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !String.IsEmpty(PVR.ChannelNumberInput)</visible>
+	<include>dialogeffect</include>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<control type="label">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>93%</height>
+			<label>$INFO[PVR.ChannelNumberInput]</label>
+			<align>center</align>
+			<font>LightUltraLarge2</font>
+			<aligny>center</aligny>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
+		</control>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

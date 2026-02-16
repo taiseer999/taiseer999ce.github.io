@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="white2">FFe2e2e2</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">FF999999</color>
+	<color name="grey2+">FF5e5e5e</color>
+	<color name="grey2.5">FF585858</color>
+	<color name="grey3">FF505050</color>
+	<color name="grey3.5">FF3b3b3b</color>
+	<color name="grey4">FF282828</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF0084ff</color>
+	<color name="selected">FFebb217</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="selected+">d0ebb217</color>
+	<color name="red">FFff4a4a</color>
+	<color name="green">FF50ff50</color>
+	<color name="invisible">00000000</color>
+	<color name="selecteddark">FFb48400</color>
+	<color name="orange">ffffa500</color><!-- Kodi 17 original orange color -->
+	<color name="redwarning">ffd20000</color>
+	
+	<!-- VS10 Mod Additions -->
+	<color name="dialog_fg_100">ffededed</color>
+	<color name="dialog_fg_90">e7ededed</color>
+	<color name="dialog_fg_70">b3ededed</color>
+	
+</colors>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1188">
+	
+	<defaultcontrol always="true">9001</defaultcontrol>
+	
+	<visible>!Skin.HasSetting(ShutdownScreenDisabled)   +   !String.IsEmpty(Window(Home).Property(ShutdownInProgressText))   +   !Window.IsVisible(YesNoDialog)</visible>
+	
+	<onload>AlarmClock(ShutdownInProgressCancelIfNotWorking,ClearProperty(ShutdownInProgressText,home),00:00:30,true)</onload>
+	<onunload>ClearProperty(ShutdownInProgressText,home)</onunload>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture>colors/black.png</texture>
+		</control>
+		
+		<control type="group">
+			
+			<control type="image">
+				<left>906</left>
+				<top>486</top>
+				<width>108</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[uiColorVariantKodiLogoColorFadeInScreen]">_added_img/$VAR[LogoScreenLogoTypeVarFilenameTranslate]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+		
+		
+		
+		<include condition="Integer.IsLess(Window(Home).Property(CinemaHelper.GetSettingValue.lookandfeel.skinzoom),0) | !String.IsEqual(Skin.AspectRatio,16:9)">SkinOutOfBoundsMasks</include>
+		
+		
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

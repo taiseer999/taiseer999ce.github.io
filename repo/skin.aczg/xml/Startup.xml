@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	
+	<!-- disable future scope variant for releases -->
+	<onload>Skin.Reset(EnableScopeMode)</onload>
+	
+	<!-- disable large text feature for deprecated Kodi 17.6 -->
+	<onload condition="String.StartsWith(System.BuildVersion,17.) + !String.StartsWith(System.BuildAppName,KodiDS)">Skin.Reset(AccessibilityLargeText)</onload>
+	
+	
+	<!-- Kodi 18 defaultcontrol bug fix -->
+	<onload>SetProperty(HomeDefaultControlTempFix,,home)</onload>
+	<onload>CancelAlarm(HomeDefaultControlTempFixAlarm,true)</onload>
+	
+	
+	<!-- Reset Exit Screen -->
+	<onload>CancelAlarm(ShutdownInProgressCancelIfNotWorking,true)</onload>
+	<onload>ClearProperty(ShutdownInProgressText,home)</onload>
+	
+	<!-- Reset Startup Screen -->
+	<onload>SetProperty(ExperimentalStartScreenDone,,home)</onload>
+	<onload>SetProperty(ExperimentalStartScreenDoneDelayed,,home)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm1,true)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm2,true)</onload>
+	<onload>CancelAlarm(ExperimentalStartScreenAlarm3,true)</onload>
+	
+	<!-- Reset New Version Screen -->
+	<onload>CancelAlarm(WelcomeNewVersion,true)</onload>
+	
+	
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	
+	<controls></controls>
+	
+</window>

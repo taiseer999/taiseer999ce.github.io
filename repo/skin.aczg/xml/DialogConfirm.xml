@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include>dialogeffect</include>
+	<depth>DepthDialog+</depth>
+	
+	<onload>CancelAlarm(ShutdownInProgressCancelIfNotWorking,true)</onload>
+	<onload>ClearProperty(ShutdownInProgressText,home)</onload>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<control type="group">
+		<centerleft>50%</centerleft>
+		<centertop>49%</centertop>
+		<width>1010</width>
+		<height>406</height>
+		
+		<include content="DialogBackgroundCommons">
+			<param name="DialogBackgroundWidth" value="1050" />
+			<param name="DialogBackgroundHeight" value="446" />
+			<param name="DialogHeaderWidth" value="990" />
+			<param name="DialogHeaderLabelWidth" value="946" />
+			<param name="DialogHeaderLabel" value="" />
+			<param name="DialogHeaderId" value="1" />
+		</include>
+		
+		<control type="textbox" id="9">
+			<description>text</description>
+			<left>45</left>
+			<top>100</top>
+			<width>920</width>
+			<height>147</height>
+			<align>left</align>
+			<font>Regular20</font>
+			<autoscroll>false</autoscroll>
+		</control>
+		
+		<control type="group">
+			<left>45</left>
+			<top>255</top>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>3</width>
+				<height>9</height>
+				<texture colordiffuse="30FFFFFF">osd/progress/progress-9px-start-end.png</texture>
+				<visible>Control.IsVisible(20)</visible>
+			</control>
+			<control type="image">
+				<left>917</left>
+				<top>0</top>
+				<width>3</width>
+				<height>9</height>
+				<texture colordiffuse="30FFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+				<visible>Control.IsVisible(20)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>3</width>
+				<height>9</height>
+				<texture colordiffuse="EBFFFFFF">osd/progress/progress-9px-start-end.png</texture>
+				<visible>Control.IsVisible(20)</visible>
+			</control>
+			<control type="image">
+				<left>917</left>
+				<top>0</top>
+				<width>3</width>
+				<height>9</height>
+				<texture colordiffuse="EBFFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+				<visible>Control.IsVisible(20) + Integer.IsGreater(System.Progressbar,99)</visible>
+			</control>
+			<control type="progress" id="20">
+				<description>Progressbar</description>
+				<left>3</left>
+				<top>0</top>
+				<width>914</width>
+				<height>9</height>
+				<info>System.Progressbar</info>
+				<include>progressBarStyleDefault</include>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="9000">
+			<left>10</left>
+			<top>299</top>
+			<width>990</width>
+			<align>center</align>
+			<itemgap>15</itemgap>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+			<orientation>horizontal</orientation>
+			
+			<control type="button" id="11">
+				<description>OK button</description>
+				<width>300</width>
+				<height>67</height>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<label>107</label>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+			</control>
+			<control type="button" id="10">
+				<description>Cancel button</description>
+				<width>300</width>
+				<height>67</height>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<label>106</label>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+			</control>
+			<control type="button" id="12">
+				<description>Custom button</description>
+				<width>300</width>
+				<height>67</height>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<label>106</label>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+			</control>
+		</control>
+		
+		</control>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

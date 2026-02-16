@@ -1,0 +1,4124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	
+	<onload condition="String.IsEmpty(Skin.String(CustomBackgroundMultipleTimePerImage))">Skin.SetString(CustomBackgroundMultipleTimePerImage,1)</onload>
+	
+	<onload condition="String.IsEmpty(Skin.String(HomeScreenIdleUIFadeOut))">Skin.SetString(HomeScreenIdleUIFadeOut,0)</onload>
+	<onload condition="String.IsEmpty(Skin.String(TrailerSearchLanguageType))">Skin.SetString(TrailerSearchLanguageType,0)</onload>
+	<onload condition="String.IsEmpty(Skin.String(DevVolumeAmpLevel))">Skin.SetString(DevVolumeAmpLevel,0)</onload>
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(CustomBackgroundMultipleTimePerImageReloadRestore))">Control.SetFocus(9000,6)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(CustomBackgroundMultipleTimePerImageReloadRestore))">Control.SetFocus(316)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(CustomBackgroundMultipleTimePerImageReloadRestore))">ClearProperty(CustomBackgroundMultipleTimePerImageReloadRestore,home)</onload>
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(HexagonsReloadRestore))">Control.SetFocus(9000,6)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(HexagonsReloadRestore)) +  String.IsEmpty(Window(Home).Property(HexagonsReloadRestoreFocusCustomBackground))">Control.SetFocus(398)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(HexagonsReloadRestore)) + !String.IsEmpty(Window(Home).Property(HexagonsReloadRestoreFocusCustomBackground))">Control.SetFocus(311)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(HexagonsReloadRestore))">ClearProperty(HexagonsReloadRestore,home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(HexagonsReloadRestoreFocusCustomBackground))">ClearProperty(HexagonsReloadRestoreFocusCustomBackground,home)</onload>
+	
+	<onload condition="String.IsEmpty(Skin.String(StartScreenDelay))">Skin.SetString(StartScreenDelay,0)</onload>
+	
+	
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySkinAndVarsReloadRestoreFocus))">Control.SetFocus(9000,8)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySkinAndVarsReloadRestoreFocus))">Control.SetFocus(5277)</onload>
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySkinAndVarsReloadRestoreFocus))">SetProperty(set_focus_now_delay,600,home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySkinAndVarsReloadRestoreFocus))">SetProperty(set_focus_now,527,home)</onload>
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySkinAndVarsReloadRestoreFocus))">ClearProperty(EnableDebugOverlaySkinAndVarsReloadRestoreFocus,home)</onload>
+	
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySystemLoadRestoreFocus))">Control.SetFocus(9000,8)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySystemLoadRestoreFocus))">Control.SetFocus(5277)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(EnableDebugOverlaySystemLoadRestoreFocus))">ClearProperty(EnableDebugOverlaySystemLoadRestoreFocus,home)</onload>
+	
+	
+	
+	<onload condition="!String.IsEmpty(Window(Home).Property(ReloadSkinReloadRestore))">Control.SetFocus(9000,8)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ReloadSkinReloadRestore))">SetProperty(set_focus_now,557,home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(ReloadSkinReloadRestore))">ClearProperty(ReloadSkinReloadRestore,home)</onload>
+	
+	
+	
+	<onload condition="Integer.IsGreater(Skin.String(TrailerSearchWebBrowserAndroid),0)">Skin.SetString(TrailerSearchWebBrowserAndroid,)</onload>
+	
+	
+	
+	<!-- disable large text feature for deprecated Kodi 17.6 -->
+	<onload condition="String.StartsWith(System.BuildVersion,17.) + !String.StartsWith(System.BuildAppName,KodiDS)">Skin.Reset(AccessibilityLargeText)</onload>
+	
+	
+	
+	<include>CommunityUserTexturesCheck</include>
+	<include>ExperimentalOptionsCheck</include>
+	
+	
+	<onunload>ClearProperty(set_focus_now,home)</onunload>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		
+		
+		<control type="group">
+			
+			<left>0</left>
+			<top>0</top>
+			<include>Window_OpenClose_Animation_Full</include>
+			
+			<include>SystemBackgroundAdditions</include>
+			
+			<!-- Skin version info -->
+			<control type="label">
+				<left>75</left>
+				<bottom>0</bottom>
+				<width>510</width>
+				<height>96</height>
+				<font>Light22</font>
+				<textcolor>grey2+</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>version $INFO[System.AddonVersion(skin.aczg)]</label>
+				<animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
+			</control>
+			
+			
+			
+			<!-- Left Tabs Menu -->
+			<control type="list" id="9000">
+				<left>0</left>
+				<top>125</top>
+				<width>510</width>
+				<height>864</height>
+				
+				<onleft>9000</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				
+				<scrolltime>300</scrolltime>
+				
+				<itemlayout height="96" width="510">
+					<control type="label">
+						<left>75</left>
+						<top>0</top>
+						<width>435</width>
+						<height>96</height>
+						<font>Regular_Wider_25</font>
+						<textcolor>grey2+</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="96" width="510">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>510</width>
+						<height>96</height>
+						<texture colordiffuse="$VAR[accentColorDiffuse]">_added_img/settings_category_active$VAR[isUhdScreenStringSuffix].png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>75</left>
+						<top>0</top>
+						<width>435</width>
+						<height>96</height>
+						<font>Regular_Wider_25</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				
+				<content>
+					<item id="1">
+						<label>128</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8">
+						<label>OSD, Dialogs &amp; Views</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="7">
+						<label>10000</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="2">
+						<label>Main menu</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="9">
+						<label>Sub menus</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[24000]</label>
+						<label2>31200</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>31102</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5">
+						<label>$LOCALIZE[31003]</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
+						<label>Advanced</label>
+						<label2></label2>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+			
+			
+			
+			
+			
+			<!-- Group for all section Containers -->
+			<control type="group" id="9010">
+				
+				
+				
+				
+				
+				
+				<!-- General -->
+				<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>61</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="label" id="9001001">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Add-on config</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="104">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Open "ListItem Helper" settings</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="!System.HasAddon(service.listitem.helper)">InstallAddon(service.listitem.helper)</onclick>
+						
+						
+						<!-- Kodi 19+ AddonIsEnabled check -->
+						<onclick condition="![String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.)] + !System.AddonIsEnabled(service.listitem.helper)">EnableAddon(service.listitem.helper)</onclick>
+						
+						
+						<onclick condition="System.HasAddon(service.listitem.helper)">Addon.OpenSettings(service.listitem.helper)</onclick>
+					</control>
+					<control type="label" id="105">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=selecteddark]( ? ) Enter your OMDb/TMDb/MDBList API keys for retrieval of ratings, budgets, etc.[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					<control type="button" id="106">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Open "AutoCompletion for virtual keyboard" settings</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+						
+						
+						<!-- Kodi 19+ AddonIsEnabled check -->
+						<onclick condition="![String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.)] + !System.AddonIsEnabled(plugin.program.autocompletion)">EnableAddon(plugin.program.autocompletion)</onclick>
+						
+						
+						<onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+					</control>
+					<control type="label" id="107">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=selecteddark]( ? ) Recommended setting:  Google &amp; your language[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					<control type="radiobutton" id="108">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable AutoCompletion   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DisableAutoComplete)</onclick>
+						<selected>!Skin.HasSetting(DisableAutoComplete)</selected>
+						
+						<enable>System.HasAddon(plugin.program.autocompletion) + 
+						[ [String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.)] | System.AddonIsEnabled(plugin.program.autocompletion) ]</enable>
+						
+					</control>
+					
+					
+					
+					<control type="label" id="194">
+						<height>15</height>
+					</control>
+					<control type="label" id="190">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Visual options &amp; Views</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="button" id="109">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>UI color scheme</label>
+						<label2>$VAR[uiAccentColorVariantLabel]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						
+						<onclick condition="String.IsEmpty(Skin.String(uiColorVariant))">Skin.SetString(uiColorVariant,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(uiColorVariant),1)">Skin.SetString(uiColorVariant,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(uiColorVariant),2)">Skin.SetString(uiColorVariant,)</onclick>
+						
+						
+						<onclick condition="String.IsEmpty(Skin.String(uiColorVariant))">RunScript("special://skin/xml/py/uicolor_set1.py")</onclick>
+						<onclick condition="String.IsEqual(Skin.String(uiColorVariant),1)">RunScript("special://skin/xml/py/uicolor_set2.py")</onclick>
+						<onclick condition="String.IsEqual(Skin.String(uiColorVariant),2)">RunScript("special://skin/xml/py/uicolor_set0.py")</onclick>
+					</control>
+					
+					
+					<control type="radiobutton" id="9001002">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Accessibility:  Large text    [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick>Skin.ToggleSetting(AccessibilityLargeText)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<onclick>SetProperty(set_focus_now,9001002,home)</onclick>
+						
+						<selected>Skin.HasSetting(AccessibilityLargeText)</selected>
+						
+						<enable>!String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildAppName,KodiDS)</enable>
+						
+					</control>
+					<control type="label" id="9001010">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=redwarning]( ! )[/COLOR]  This option is only available on Kodi 18+ and KodiDS 17.7</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						
+						<visible>!Control.IsEnabled(9001002)</visible>
+						
+					</control>
+					<control type="label" id="9001006">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=redwarning]( ! )[/COLOR]  Only for low vision. This option is intended exclusively for accessibility use.</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>Skin.HasSetting(AccessibilityLargeText)</visible>
+					</control>
+					
+					<control type="label" id="9001003">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					<control type="image" id="9001004">
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="$VAR[SeparatorColorDiffuse]">separator-uni.png</texture>
+					</control>
+					<control type="label" id="9001005">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					
+					<control type="radiobutton" id="523">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Always force Preset Views   [LIGHT](Default+Recommended: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ForcePresetViewsDisable)</onclick>
+						<selected>!Skin.HasSetting(ForcePresetViewsDisable)</selected>
+					</control>
+					<control type="radiobutton" id="520">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Always force focus on first episode item on window load   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ForceFirstEpisodeItemFocusDisable)</onclick>
+						<selected>!Skin.HasSetting(ForceFirstEpisodeItemFocusDisable)</selected>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="535">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  ( ? ) You can customize the View IDs in the "Advanced" tab</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					<control type="label" id="9001007">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					<control type="image" id="9001008">
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="$VAR[SeparatorColorDiffuse]">separator-uni.png</texture>
+					</control>
+					<control type="label" id="9001009">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					
+					<control type="radiobutton" id="192">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Confluence Old Views   [LIGHT][COLOR=selecteddark]( ! ) Looks bad[/COLOR][/LIGHT]   [LIGHT](Default+Recommended: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ViewTypesShowLegacy)</onclick>
+						<selected>Skin.HasSetting(ViewTypesShowLegacy)</selected>
+					</control>
+					<control type="radiobutton" id="101">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[20189]   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+						<selected>Skin.HasSetting(AutoScroll)</selected>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="61">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9001</onleft>
+					<onright>61</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(1)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Main menu -->
+				<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>62</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>62</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="radiobutton" id="2291"><include>RadioButtonMultiSelectStyle</include>
+						<description>Favorites button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuFavorites]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)</visible>
+						
+						<onright>204</onright>
+						
+					</control>
+					<control type="radiobutton" id="222"><include>RadioButtonMultiSelectStyle</include>
+						<description>Movies button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuMovies]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="223"><include>RadioButtonMultiSelectStyle</include>
+						<description>TV Shows button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuTvShows]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="221"><include>RadioButtonMultiSelectStyle</include>
+						<description>Videos button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuVideos]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="2212"><include>RadioButtonMultiSelectStyle</include>
+						<description>PVR TV button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuTv]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPVRTVButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoPVRTVButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="2211"><include>RadioButtonMultiSelectStyle</include>
+						<description>PVR Radio button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuRadio]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPVRRadioButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoPVRRadioButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="224"><include>RadioButtonMultiSelectStyle</include>
+						<description>Music button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuMusic]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="225"><include>RadioButtonMultiSelectStyle</include>
+						<description>Pictures button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuPictures]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="228"><include>RadioButtonMultiSelectStyle</include>
+						<description>Weather button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuWeather]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="226"><include>RadioButtonMultiSelectStyle</include>
+						<description>Programs button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuAddOns]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="230"><include>RadioButtonMultiSelectStyle</include>
+						<description>Play Disc button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuPlayDisc]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPlayDiscButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoPlayDiscButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<!-- Kodi 18+ Games -->
+					<control type="radiobutton" id="231"><include>RadioButtonMultiSelectStyle</include>
+						<description>Games button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuGames]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuHasGamesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuHasGamesButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="229"><include>RadioButtonMultiSelectStyle</include>
+						<description>Favorites button</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<label>$VAR[SkinSettingsMainMenuFavorites]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)</visible>
+						
+						<onright>204</onright>
+						
+					</control>
+					
+					
+					
+				</control>
+				
+				<!-- Favorites Mover Up/Down -->
+				<control type="group">
+					<left>600</left>
+					<top>125</top>
+					
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>810</width>
+						<height>72</height>
+						<texture border="14" colordiffuse="$VAR[accentColorDiffuse]">colors/white_border10.png</texture>
+						<visible>Control.HasFocus(204)</visible>
+						<animation effect="fade" end="10" time="0" condition="true">Conditional</animation>
+					</control>
+					
+					<control type="button" id="204">
+						
+						<left>500</left>
+						<top>0</top>
+						
+						<width>310</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsMainMenuFavoritesMoveLabel]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HomeMenuFavoritesButtonMakeFirstItem)</onclick>
+						
+						<onleft condition="!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">229</onleft>
+						<onleft condition="Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">2291</onleft>
+						
+						<onup condition="!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">left</onup>
+						<onup condition="!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">up</onup>
+						
+						<ondown condition="Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">left</ondown>
+						<ondown condition="Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">down</ondown>
+						
+						<textoffsetx>60</textoffsetx>
+						<textwidth>235</textwidth>
+					</control>
+					<control type="image">
+						<left>517</left>
+						<top>20</top>
+						<width>32</width>
+						<height>32</height>
+						<texture>arrow-white-left.png</texture>
+						<animation effect="rotate" end="-90" center="auto" time="0" condition="!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">Conditional</animation>
+						<animation effect="rotate" end="90" center="auto" time="0" condition="Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">Conditional</animation>
+					</control>
+					
+					<animation effect="slide" start="0,0" end="0,720" time="0" condition="!Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">Conditional</animation>
+					
+					<animation effect="slide" start="0,0" end="0,72" time="0" condition="Control.IsVisible(231) + !Skin.HasSetting(HomeMenuFavoritesButtonMakeFirstItem)">Conditional</animation>
+					
+					<animation effect="fade" start="100" end="25" time="500" condition="![Container(9000).Hasfocus(2) + [Control.HasFocus(229) | Control.HasFocus(2291) | Control.HasFocus(204)]]">Conditional</animation>
+					
+					<visible>Container(9000).Hasfocus(2)</visible>
+					
+				</control>
+				
+				<control type="scrollbar" id="62">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9002</onleft>
+					<onright>62</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(2)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Sub menus -->
+				<control type="grouplist" id="9009">
+					<visible>Container(9000).Hasfocus(9)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>69</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>69</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="radiobutton" id="901">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable sub menus   [LIGHT](Default: On)[/LIGHT]</label>
+						<onclick>Skin.ToggleSetting(HomeScreenHideSubMenus)</onclick>
+						<selected>!Skin.HasSetting(HomeScreenHideSubMenus)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.Reset(KioskModeEnabled)</onclick>
+					</control>
+					<control type="button" id="916">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Menu visibility</label>
+						<label2>$VAR[HomeScreeneSubMenusVAR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HomeScreenDontFadeOutSubMenusWhenNotInFocus)</onclick>
+						<selected>!Skin.HasSetting(HomeScreenDontFadeOutSubMenusWhenNotInFocus)</selected>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					
+					
+					<control type="label" id="9020">
+						<height>15</height>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					<control type="label" id="902">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Custom sub menus</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					
+					<control type="label" id="914">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=selecteddark]( ? ) For a good out of the box user experience, leave custom sub menus disabled.[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					<control type="label" id="915">
+						<height>15</height>
+					</control>
+					
+					<control type="radiobutton" id="903">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Use custom sub menu for "$LOCALIZE[342]"   [LIGHT](Default: Off)[/LIGHT]</label>
+						<onclick>Skin.ToggleSetting(CustomSubMenusMovies)</onclick>
+						<selected>Skin.HasSetting(CustomSubMenusMovies)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					<control type="button" id="904">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Set][/COLOR] Path</label>
+						<label2>[COLOR=selected]$VAR[CustomSubMenusMoviesPathVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEmpty(Skin.String(CustomSubMenusMoviesPath))">Skin.SetString(CustomSubMenusMoviesPath,$ESCVAR[CustomSubMenusMoviesPathVAR])</onclick>
+						
+						<onclick>Skin.SetString(CustomSubMenusMoviesPath)</onclick>
+						<visible>Skin.HasSetting(CustomSubMenusMovies)</visible>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					<control type="label" id="912">
+						<height>15</height>
+					</control>
+					
+					<control type="radiobutton" id="905">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Use custom sub menu for "$LOCALIZE[20343]"   [LIGHT](Default: Off)[/LIGHT]</label>
+						<onclick>Skin.ToggleSetting(CustomSubMenusTvShows)</onclick>
+						<selected>Skin.HasSetting(CustomSubMenusTvShows)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					<control type="button" id="906">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Set][/COLOR] Path</label>
+						<label2>[COLOR=selected]$VAR[CustomSubMenusTvShowsPathVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEmpty(Skin.String(CustomSubMenusTvShowsPath))">Skin.SetString(CustomSubMenusTvShowsPath,$ESCVAR[CustomSubMenusTvShowsPathVAR])</onclick>
+						
+						<onclick>Skin.SetString(CustomSubMenusTvShowsPath)</onclick>
+						<visible>Skin.HasSetting(CustomSubMenusTvShows)</visible>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					<control type="label" id="911">
+						<height>15</height>
+					</control>
+					
+					<control type="radiobutton" id="907">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Use custom sub menu for "$LOCALIZE[2]"   [LIGHT](Default: Off)[/LIGHT]</label>
+						<onclick>Skin.ToggleSetting(CustomSubMenusMusic)</onclick>
+						<selected>Skin.HasSetting(CustomSubMenusMusic)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					<control type="button" id="908">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Set][/COLOR] Path</label>
+						<label2>[COLOR=selected]$VAR[CustomSubMenusMusicPathVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEmpty(Skin.String(CustomSubMenusMusicPath))">Skin.SetString(CustomSubMenusMusicPath,$ESCVAR[CustomSubMenusMusicPathVAR])</onclick>
+						
+						<onclick>Skin.SetString(CustomSubMenusMusicPath)</onclick>
+						<visible>Skin.HasSetting(CustomSubMenusMusic)</visible>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					<control type="label" id="910">
+						<height>33</height>
+					</control>
+					
+					<control type="button" id="909">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=redwarning][Reset][/COLOR] all paths to default</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick>RunScript("special://skin/xml/py/clear_submenu_paths.py")</onclick>
+						
+						<visible>Skin.HasSetting(CustomSubMenusMovies) | Skin.HasSetting(CustomSubMenusTvShows) | Skin.HasSetting(CustomSubMenusMusic)</visible>
+						<visible>!Skin.HasSetting(HomeScreenHideSubMenus)</visible>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="69">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9009</onleft>
+					<onright>69</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(9)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Add-on Shortcuts -->
+				<control type="grouplist" id="9003">
+					<visible>Container(9000).Hasfocus(3)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>63</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>63</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<!-- Movies / TV shows / Videos   Add-on Shortcuts -->
+					<control type="label" id="410">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="411">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="412">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="413">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="414">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="415">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="416">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="417">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeVideosButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+						<enable>!Skin.HasSetting(HomeVideosButtonSuperFolder1)</enable>
+					</control>
+					
+					<!-- Super Folder -->
+					<control type="radiobutton" id="4181">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>[COLOR=grey2]$LOCALIZE[342] / $LOCALIZE[20343] / $LOCALIZE[3]   [/COLOR]Enable Super Folder</label>
+						<onclick>Skin.ToggleSetting(HomeVideosButtonSuperFolder1)</onclick>
+						<selected>Skin.HasSetting(HomeVideosButtonSuperFolder1)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="button" id="4182">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Super Folder · $LOCALIZE[573]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeVideosButtonSuperFolder1Path)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetPath(HomeVideosButtonSuperFolder1Path)</onclick>
+						<visible>Skin.HasSetting(HomeVideosButtonSuperFolder1)</visible>
+					</control>
+					<control type="button" id="4183">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Super Folder · $LOCALIZE[556]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeVideosButtonSuperFolder1Name)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetString(HomeVideosButtonSuperFolder1Name)</onclick>
+						<visible>Skin.HasSetting(HomeVideosButtonSuperFolder1)</visible>
+					</control>
+					<control type="radiobutton" id="4184">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>– Super Folder as first item</label>
+						<onclick>Skin.ToggleSetting(HomeVideosButtonSuperFolder1StartWith)</onclick>
+						<selected>Skin.HasSetting(HomeVideosButtonSuperFolder1StartWith)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<visible>Skin.HasSetting(HomeVideosButtonSuperFolder1)</visible>
+					</control>
+					
+					
+					
+					<!-- PVR TV/Radio   Add-on Shortcuts -->
+					<control type="label" id="4600">
+						<height>15</height>
+					</control>
+					<control type="label" id="460">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[19020] / $LOCALIZE[19021]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="461">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="462">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="463">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="464">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="465">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="466">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="467">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[19020] / $LOCALIZE[19021]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePVRButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePVRButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+					<!-- Music   Add-on Shortcuts -->
+					<control type="label" id="4200">
+						<height>15</height>
+					</control>
+					<control type="label" id="420">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[2]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="421">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="422">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="423">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="424">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="425">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="426">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="427">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[2]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeMusicButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeMusicButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+					<!-- Pictures   Add-on Shortcuts -->
+					<control type="label" id="4300">
+						<height>15</height>
+					</control>
+					<control type="label" id="430">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[1]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="431">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="432">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="433">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="434">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="435">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="436">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="437">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomePictureButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomePictureButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+					<!-- Add-ons   Add-on Shortcuts -->
+					<control type="label" id="4400">
+						<height>15</height>
+					</control>
+					<control type="label" id="440">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[24001]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="441">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="442">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="443">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="444">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="445">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="446">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="447">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[24001]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeProgramButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+					<!-- Kodi 18+ Games -->
+					<!-- Games   Add-on Shortcuts -->
+					<control type="label" id="4700">
+						<height>15</height>
+					</control>
+					<control type="label" id="470">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[15016]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="471">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="472">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="473">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="474">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="475">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="476">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="477">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[15016]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeGamesButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeGamesButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+					<!-- Favorites   Add-on Shortcuts -->
+					<control type="label" id="4500">
+						<height>15</height>
+					</control>
+					<control type="label" id="450">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[1036]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="button" id="451">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton1))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="452">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton2))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="453">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton3))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="454">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton4))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="455">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton5))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="456">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton6))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="457">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=grey2]$LOCALIZE[1036]   [/COLOR]$LOCALIZE[24000] [B]7[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeFavoritesButton7))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(HomeFavoritesButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,kodi.gameclient)</onclick>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="63">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9003</onleft>
+					<onright>63</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(3)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Background -->
+				<control type="grouplist" id="9004">
+					<visible>Container(9000).Hasfocus(4)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>875</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>64</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>64</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="radiobutton" id="396">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Auto-preview/simulate Home screen background result within this section</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(BackgroundsAutoPreviewOnSelectDisable)</onclick>
+						<selected>!Skin.HasSetting(BackgroundsAutoPreviewOnSelectDisable)</selected>
+					</control>
+					<control type="label" id="395">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  ( ! ) Simulation can look slightly different compared to the real final result</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(BackgroundsAutoPreviewOnSelectDisable)</visible>
+					</control>
+					
+					<control type="button" id="398">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Background</label>
+						<label2>$VAR[BackgroundTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),0)">Skin.SetString(BackgroundType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),1)">Skin.SetString(BackgroundType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),2)">Skin.SetString(BackgroundType,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),3)">Skin.SetString(BackgroundType,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),4)">Skin.SetString(BackgroundType,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),5)">Skin.SetString(BackgroundType,6)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),6)">Skin.SetString(BackgroundType,7)</onclick>
+						
+						
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),7)">Skin.SetString(BackgroundType,8)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),8) | String.IsEmpty(Skin.String(BackgroundType))">Skin.SetString(BackgroundType,9)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),9)">Skin.SetString(BackgroundType,10)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),10)">Skin.SetString(BackgroundType,11)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),11)">Skin.SetString(BackgroundType,12)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),12)">Skin.SetString(BackgroundType,13)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),13)">Skin.SetString(BackgroundType,14)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),14)">Skin.SetString(BackgroundType,15)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),15)">Skin.SetString(BackgroundType,16)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),16) + System.HasAddon(resource.images.aczg.community)">Skin.SetString(BackgroundType,90)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),16) + !System.HasAddon(resource.images.aczg.community)">Skin.SetString(BackgroundType,99)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),16) + !System.HasAddon(resource.images.aczg.community)">SetProperty(HexagonsReloadRestore,True,home)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),16) + !System.HasAddon(resource.images.aczg.community)">ReloadSkin()</onclick>
+						
+						
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),90)">Skin.SetString(BackgroundType,99)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),90)">SetProperty(HexagonsReloadRestore,True,home)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),90)">ReloadSkin()</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundType),99)">Skin.SetString(BackgroundType,0)</onclick>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))</enable>
+					</control>
+					<control type="button" id="397">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Hexagons variant</label>
+						<label2>$VAR[BackgroundHexagonsVariantVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),0) | String.IsEmpty(Skin.String(BackgroundHexagonsVariant))">Skin.SetString(BackgroundHexagonsVariant,1)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),1) + System.HasAddon(resource.images.aczg.community)">Skin.SetString(BackgroundHexagonsVariant,2)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),1) + !System.HasAddon(resource.images.aczg.community)">Skin.SetString(BackgroundHexagonsVariant,0)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),2)">Skin.SetString(BackgroundHexagonsVariant,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),3)">Skin.SetString(BackgroundHexagonsVariant,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),4)">Skin.SetString(BackgroundHexagonsVariant,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),5)">Skin.SetString(BackgroundHexagonsVariant,6)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),6)">Skin.SetString(BackgroundHexagonsVariant,7)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),7)">Skin.SetString(BackgroundHexagonsVariant,8)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),8)">Skin.SetString(BackgroundHexagonsVariant,9)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundHexagonsVariant),9)">Skin.SetString(BackgroundHexagonsVariant,0)</onclick>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))</enable>
+						<visible>String.IsEqual(Skin.String(BackgroundType),99)</visible>
+					</control>
+					<control type="label" id="399">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>      ( ! ) Animated variants have higher idle GPU usage (Be aware for low end devices)</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))</enable>
+						<visible>String.IsEqual(Skin.String(BackgroundType),99) + System.HasAddon(resource.images.aczg.community)</visible>
+					</control>
+					<control type="radiobutton" id="400">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Enable Hexagons 3D effect   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(BackgroundHexagonsDisable3D)</onclick>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))</enable>
+						<selected>!Skin.HasSetting(BackgroundHexagonsDisable3D)</selected>
+						<visible>String.IsEqual(Skin.String(BackgroundType),99)</visible>
+					</control>
+					
+					<control type="button" id="311">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>31109</label>
+						<label2>$VAR[BackgroundCustomModeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetString(UseCustomBackground,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),0) | String.IsEmpty(Skin.String(UseCustomBackground))">Skin.SetString(UseCustomBackground,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),1)">Skin.SetString(UseCustomBackground,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),2)">Skin.SetString(UseCustomBackground,0)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),2) + String.IsEqual(Skin.String(BackgroundType),99)">SetProperty(HexagonsReloadRestore,True,home)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),2) + String.IsEqual(Skin.String(BackgroundType),99)">SetProperty(HexagonsReloadRestoreFocusCustomBackground,True,home)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(UseCustomBackground),2) + String.IsEqual(Skin.String(BackgroundType),99)">ReloadSkin()</onclick>
+						
+					</control>
+					
+					<control type="button" id="312">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Select][/COLOR] Image</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+						<visible>String.IsEqual(Skin.String(UseCustomBackground),1)</visible>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),1)</enable>
+					</control>
+					<control type="button" id="314">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Select][/COLOR] Folder</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPathMultiple)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetPath(CustomBackgroundPathMultiple)</onclick>
+						<visible>String.IsEqual(Skin.String(UseCustomBackground),2)</visible>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),2)</enable>
+					</control>
+					<control type="button" id="316">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Change Interval</label>
+						<label2>$VAR[CustomBackgroundMultipleTimePerImageVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),0)">Skin.SetString(CustomBackgroundMultipleTimePerImage,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),1)">Skin.SetString(CustomBackgroundMultipleTimePerImage,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),2)">Skin.SetString(CustomBackgroundMultipleTimePerImage,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),3)">Skin.SetString(CustomBackgroundMultipleTimePerImage,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),4)">Skin.SetString(CustomBackgroundMultipleTimePerImage,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),5)">Skin.SetString(CustomBackgroundMultipleTimePerImage,6)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CustomBackgroundMultipleTimePerImage),6)">Skin.SetString(CustomBackgroundMultipleTimePerImage,0)</onclick>
+						
+						<onclick>SetProperty(CustomBackgroundMultipleTimePerImageReloadRestore,True,home)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						
+						<visible>String.IsEqual(Skin.String(UseCustomBackground),2)</visible>
+						<enable>String.IsEqual(Skin.String(UseCustomBackground),2)</enable>
+					</control>
+					
+					<control type="button" id="313">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Darken Background on Home screen</label>
+						<label2>$VAR[BackgroundDarkenVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),0)">Skin.SetString(BackgroundDarkenStrength,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),4)">Skin.SetString(BackgroundDarkenStrength,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),5)">Skin.SetString(BackgroundDarkenStrength,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),1) | String.IsEmpty(Skin.String(BackgroundDarkenStrength))">Skin.SetString(BackgroundDarkenStrength,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),2)">Skin.SetString(BackgroundDarkenStrength,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundDarkenStrength),3)">Skin.SetString(BackgroundDarkenStrength,0)</onclick>
+					</control>
+					
+					
+					
+					<!-- Misc options -->
+					<control type="label" id="3001">
+						<height>15</height>
+					</control>
+					<control type="label" id="300">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>31106</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="button" id="315">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Idle Timer for Home screen UI Fade Out</label>
+						<label2>$VAR[HomeScreenIdleUIFadeOutVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),0)">Skin.SetString(HomeScreenIdleUIFadeOut,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),1)">Skin.SetString(HomeScreenIdleUIFadeOut,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),2)">Skin.SetString(HomeScreenIdleUIFadeOut,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),3)">Skin.SetString(HomeScreenIdleUIFadeOut,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenIdleUIFadeOut),4)">Skin.SetString(HomeScreenIdleUIFadeOut,0)</onclick>
+					</control>
+					<control type="radiobutton" id="301">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[31119]   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
+						<selected>Skin.HasSetting(HideBackGroundFanart)</selected>
+					</control>
+					<control type="radiobutton" id="302">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[31129]   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
+						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
+					</control>
+					<control type="radiobutton" id="303">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[31124]   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
+						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
+					</control>
+					<control type="radiobutton" id="304">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[31125]   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
+						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="64">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9004</onleft>
+					<onright>64</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(4)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Power options -->
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>65</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>65</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="radiobutton" id="606"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuExit]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownHideExit)</onclick>
+						<selected>!Skin.HasSetting(ShutdownHideExit)</selected>
+					</control>
+					<control type="radiobutton" id="601"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuShutdown]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownHideShutdown)</onclick>
+						<selected>!Skin.HasSetting(ShutdownHideShutdown)</selected>
+						<visible>System.CanPowerDown</visible>
+					</control>
+					<control type="radiobutton" id="602"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuShutdownTimer]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownShowShutdownTimer)</onclick>
+						<selected>Skin.HasSetting(ShutdownShowShutdownTimer)</selected>
+						<visible>[System.CanPowerDown | System.CanSuspend | System.CanHibernate]</visible>
+					</control>
+					<control type="radiobutton" id="603"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuSuspend]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownHideSuspend)</onclick>
+						<selected>!Skin.HasSetting(ShutdownHideSuspend)</selected>
+						<visible>System.CanSuspend</visible>
+					</control>
+					<control type="radiobutton" id="604"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuHibernate]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownShowHibernate)</onclick>
+						<selected>Skin.HasSetting(ShutdownShowHibernate)</selected>
+						<visible>System.CanHibernate</visible>
+					</control>
+					<control type="radiobutton" id="605"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuReboot]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownHideReboot)</onclick>
+						<selected>!Skin.HasSetting(ShutdownHideReboot)</selected>
+						<visible>System.CanReboot</visible>
+					</control>
+					<control type="radiobutton" id="608"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuRebootNand]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownHideRebootNand)</onclick>
+						<selected>!Skin.HasSetting(ShutdownHideRebootNand)</selected>
+						<visible>System.HasAddon(service.coreelec.settings) + System.CanReboot</visible>
+					</control>
+					<control type="radiobutton" id="607"><include>RadioButtonMultiSelectStyle</include>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$VAR[SkinSettingsPowerMenuRestartApp]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownShowRestartApp)</onclick>
+						<selected>Skin.HasSetting(ShutdownShowRestartApp)</selected>
+						<visible>System.Platform.Linux + [System.Platform.Android | System.HasAddon(service.coreelec.settings)]</visible>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="65">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9005</onleft>
+					<onright>65</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(5)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Advanced -->
+				<control type="grouplist" id="9006">
+					<visible>Container(9000).Hasfocus(6)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>66</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>66</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="label" id="526">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>View IDs for "Always force Preset Views"</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="label" id="5261">
+						<height>15</height>
+					</control>
+					
+					<control type="label" id="532">
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>  [COLOR=selecteddark]( ? ) View IDs     500 (Wall 2X)     908 (Wall 3X)     909 (Wall 4X)     910 (Wall 5X)[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="533">
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>[COLOR=selecteddark]508 (Fanart)      509 (Seasons)   510 (Episodes)    52 (Modern)    588 (Songs)[/COLOR]  </label>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					<control type="label" id="5331">
+						<height>15</height>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					
+					
+					
+					
+					
+					<control type="button" id="528">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Movies Preset IDs           [LIGHT](Default: $VAR[ForcePresetViewsMoviesCategoriesVARDefault])[/LIGHT]</label>
+						<label2>[COLOR=selected]$VAR[ForcePresetViewsMoviesCategoriesVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEmpty(Skin.String(ForcePresetViewsMoviesCategories))">Skin.SetString(ForcePresetViewsMoviesCategories,$ESCVAR[ForcePresetViewsMoviesCategoriesVARDefault])</onclick>
+						<onclick>Skin.SetString(ForcePresetViewsMoviesCategories)</onclick>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="530">
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>   [COLOR=selecteddark]Movies Standard,   Movies inside Set,   My List &amp; Recently Added,   All Movie Sets[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="button" id="529">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>TV shows Preset IDs      [LIGHT](Default: $VAR[ForcePresetViewsTvShowsCategoriesVARDefault])[/LIGHT]</label>
+						<label2>[COLOR=selected]$VAR[ForcePresetViewsTvShowsCategoriesVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEmpty(Skin.String(ForcePresetViewsTvShowsCategories))">Skin.SetString(ForcePresetViewsTvShowsCategories,$ESCVAR[ForcePresetViewsTvShowsCategoriesVARDefault])</onclick>
+						<onclick>Skin.SetString(ForcePresetViewsTvShowsCategories)</onclick>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="531">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>   [COLOR=selecteddark]TV shows Standard,   TV shows My List,   Seasons,   Episodes,   Recently Added Episodes[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					<control type="button" id="547">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Music/Pictures Preset IDs           [LIGHT](Default: $VAR[ForcePresetViewsMusicPicturesCategoriesVARDefault])[/LIGHT]</label>
+						<label2>[COLOR=selected]$VAR[ForcePresetViewsMusicPicturesCategoriesVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEmpty(Skin.String(ForcePresetViewsMusicPicturesCategories))">Skin.SetString(ForcePresetViewsMusicPicturesCategories,$ESCVAR[ForcePresetViewsMusicPicturesCategoriesVARDefault])</onclick>
+						<onclick>Skin.SetString(ForcePresetViewsMusicPicturesCategories)</onclick>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="548">
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>   [COLOR=selecteddark]Albums &amp; Music Videos,   Songs,   Pictures[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					<control type="button" id="549">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Global/Misc Preset IDs           [LIGHT](Default: $VAR[ForcePresetViewsGlobalMiscCategoriesVARDefault])[/LIGHT]</label>
+						<label2>[COLOR=selected]$VAR[ForcePresetViewsGlobalMiscCategoriesVAR][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEmpty(Skin.String(ForcePresetViewsGlobalMiscCategories))">Skin.SetString(ForcePresetViewsGlobalMiscCategories,$ESCVAR[ForcePresetViewsGlobalMiscCategoriesVARDefault])</onclick>
+						<onclick>Skin.SetString(ForcePresetViewsGlobalMiscCategories)</onclick>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="label" id="550">
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>   [COLOR=selecteddark]Root &amp; fallback,   Actors &amp; Artists,   Non-DB Video Files,   Add-ons$VAR[ForcePresetViewsGlobalMiscCategoriesGamesLabelAddString][/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					<control type="label" id="5510">
+						<height>15</height>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					<control type="button" id="551">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=redwarning][Reset][/COLOR] all View IDs to default</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript("special://skin/xml/py/clear_custom_view_ids.py")</onclick>
+						<visible>!Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					
+					
+					<control type="label" id="534">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>( ? ) "Always force Preset Views" has to be enabled in "General" tab</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>Skin.HasSetting(ForcePresetViewsDisable)</visible>
+					</control>
+					
+					
+					
+					
+					
+					
+					<control type="label" id="5360">
+						<height>15</height>
+					</control>
+					<control type="label" id="536">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Fullscreen OSD</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					<control type="radiobutton" id="553">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=green]artwork[/COLOR] when OSD is open   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoOSDArtworkDisable)</onclick>
+						<selected>!Skin.HasSetting(ReducedFullScreenInfoOSDArtworkDisable)</selected>
+					</control>
+					<control type="radiobutton" id="554">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=orange]end time[/COLOR] when OSD is open   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoEndTime)</onclick>
+						<selected>Skin.HasSetting(ReducedFullScreenInfoEndTime)</selected>
+					</control>
+					<control type="radiobutton" id="537">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=orange]video resolution[/COLOR] when OSD is open   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoOSDVideoResolution)</onclick>
+						<selected>Skin.HasSetting(ReducedFullScreenInfoOSDVideoResolution)</selected>
+					</control>
+					<control type="radiobutton" id="541">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=orange]audio codec[/COLOR] when OSD is open   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoOSDAudioCodec)</onclick>
+						<selected>Skin.HasSetting(ReducedFullScreenInfoOSDAudioCodec)</selected>
+					</control>
+					<control type="radiobutton" id="542">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=ffea4e3d]audio/sub language[/COLOR] when OSD is open   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoOSDAudioSubLanguage)</onclick>
+						<selected>Skin.HasSetting(ReducedFullScreenInfoOSDAudioSubLanguage)</selected>
+					</control>
+					<control type="radiobutton" id="538">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show [COLOR=ffea4e3d]audio channels[/COLOR] when OSD is open   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ReducedFullScreenInfoOSDAudioChannels)</onclick>
+						<selected>Skin.HasSetting(ReducedFullScreenInfoOSDAudioChannels)</selected>
+					</control>
+					
+					<control type="label" id="556">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  ( ? ) Color chart to avoid UI clutter:   [COLOR=green]recommended[/COLOR]  [COLOR=grey2]|[/COLOR]  [COLOR=orange]if needed[/COLOR]  [COLOR=grey2]|[/COLOR]  [COLOR=ffea4e3d]avoid if possible[/COLOR]</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					<control type="button" id="555">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=redwarning][Reset][/COLOR] Fullscreen OSD settings to default</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript("special://skin/xml/py/clear_fullscreen_osd_cfg.py")</onclick>
+					</control>
+					
+					
+					
+					<control type="label" id="4990">
+						<height>15</height>
+					</control>
+					<control type="label" id="499">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Cinema options</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					
+					<control type="button" id="510">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Dialog after playing a single movie from Kodi DB</label>
+						<label2>$VAR[CinemaPostPlaybackDialogTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),0) | String.IsEmpty(Skin.String(CinemaPostPlaybackDialogType))">Skin.SetString(CinemaPostPlaybackDialogType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),1)">Skin.SetString(CinemaPostPlaybackDialogType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)">Skin.SetString(CinemaPostPlaybackDialogType,0)</onclick>
+					</control>
+					
+					<control type="button" id="560">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Dialog background</label>
+						<label2>$VAR[CinemaPostPlaybackDialogBackgroundTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogBackgroundType),0) | String.IsEmpty(Skin.String(CinemaPostPlaybackDialogBackgroundType))">Skin.SetString(CinemaPostPlaybackDialogBackgroundType,1)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogBackgroundType),1) + System.HasAddon(resource.images.aczg.community)">Skin.SetString(CinemaPostPlaybackDialogBackgroundType,2)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogBackgroundType),1) + !System.HasAddon(resource.images.aczg.community)">Skin.SetString(CinemaPostPlaybackDialogBackgroundType,0)</onclick>
+						
+						<onclick condition="String.IsEqual(Skin.String(CinemaPostPlaybackDialogBackgroundType),2)">Skin.SetString(CinemaPostPlaybackDialogBackgroundType,0)</onclick>
+						<visible>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)</visible>
+					</control>
+					
+					<control type="button" id="561">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>    [COLOR=selected][Select][/COLOR] Custom Image</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CinemaPostPlaybackDialogImageCustomPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetImage(CinemaPostPlaybackDialogImageCustomPath)</onclick>
+						<visible>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2) + String.IsEqual(Skin.String(CinemaPostPlaybackDialogBackgroundType),1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="519">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Enable End Screen Text</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(CinemaPostPlaybackDialogEnable)</onclick>
+						<selected>Skin.HasSetting(CinemaPostPlaybackDialogEnable)</selected>
+						<visible>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)</visible>
+						<enable>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)</enable>
+					</control>
+					<control type="button" id="517">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>    [COLOR=selected][Edit][/COLOR] End Screen Text</label>
+						<label2>[COLOR=selected]$VAR[CinemaPostPlaybackDialogTextVar][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetString(CinemaPostPlaybackDialogText)</onclick>
+						<visible>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2) + Skin.HasSetting(CinemaPostPlaybackDialogEnable)</visible>
+						<enable>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2) + Skin.HasSetting(CinemaPostPlaybackDialogEnable)</enable>
+					</control>
+					<control type="button" id="518">
+						<width>1125</width>
+						<height>60</height>
+						<font>Regular20</font>
+						<label>[COLOR=selected][Test][/COLOR] Custom End Screen</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Notification(Custom End Screen,Test starting...,2500)</onclick>
+						<onclick>ActivateWindow(1190)</onclick>
+						<visible>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)</visible>
+						<enable>String.IsEqual(Skin.String(CinemaPostPlaybackDialogType),2)</enable>
+					</control>
+					
+					
+					
+					<control type="label" id="5220">
+						<height>15</height>
+					</control>
+					<control type="label" id="522">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Visual options &amp; Views</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="513">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Kiosk Mode (Hides: Sub menus, Sidebar menus)   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="Skin.HasSetting(KioskModeEnabled)">Skin.Reset(HomeScreenHideSubMenus)</onclick>
+						<onclick condition="!Skin.HasSetting(KioskModeEnabled)">Skin.SetBool(HomeScreenHideSubMenus)</onclick>
+						
+						<onclick>Skin.ToggleSetting(KioskModeEnabled)</onclick>
+						<selected>Skin.HasSetting(KioskModeEnabled)</selected>
+					</control>
+					<control type="radiobutton" id="543">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Alternative "Videos" Home screen icon (Pseudo library mode)   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(VideosPseudoLibraryIconEnable)</onclick>
+						<selected>Skin.HasSetting(VideosPseudoLibraryIconEnable)</selected>
+					</control>
+					<control type="label" id="544">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  ( ! ) Will only be used if both Movies and TV shows sections are not visible.</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>Skin.HasSetting(VideosPseudoLibraryIconEnable)</visible>
+					</control>
+					<control type="radiobutton" id="5451">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Use new Trakt ratings logo (2024-10)   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DisableNewTraktLogo)</onclick>
+						<selected>!Skin.HasSetting(DisableNewTraktLogo)</selected>
+						<visible>!Skin.HasSetting(HideVideoRatings)</visible>
+					</control>
+					<control type="radiobutton" id="545">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Always force-disable "$LOCALIZE[13306]"   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(AllowShowParentDirItems)</onclick>
+						<selected>!Skin.HasSetting(AllowShowParentDirItems)</selected>
+					</control>
+					
+					
+					
+					<control type="label" id="5210">
+						<height>15</height>
+					</control>
+					<control type="label" id="521">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Startup &amp; Exit</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="514">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Startup Screen &amp; fade in UI on startup   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="Skin.HasSetting(StartScreenDisabled)">SetProperty(ExperimentalStartScreenDone,True,home)</onclick>
+						<onclick condition="Skin.HasSetting(StartScreenDisabled)">SetProperty(AccessibilityLargeText,True,home)</onclick>
+						
+						<onclick>Skin.ToggleSetting(StartScreenDisabled)</onclick>
+						<selected>!Skin.HasSetting(StartScreenDisabled)</selected>
+					</control>
+					
+					<control type="button" id="515">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Delay startup fade in</label>
+						<label2>$VAR[StartScreenDelayVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),0) | String.IsEmpty(Skin.String(StartScreenDelay))">Skin.SetString(StartScreenDelay,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),1)">Skin.SetString(StartScreenDelay,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),2)">Skin.SetString(StartScreenDelay,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),3)">Skin.SetString(StartScreenDelay,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),4)">Skin.SetString(StartScreenDelay,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(StartScreenDelay),5)">Skin.SetString(StartScreenDelay,0)</onclick>
+						<visible>!Skin.HasSetting(StartScreenDisabled)</visible>
+						<enable>!Skin.HasSetting(StartScreenDisabled)</enable>
+					</control>
+					
+					<control type="radiobutton" id="502">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Exit Screen during shutdown/reboot/logout   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShutdownScreenDisabled)</onclick>
+						<selected>!Skin.HasSetting(ShutdownScreenDisabled)</selected>
+					</control>
+					
+					<control type="button" id="516">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Startup/Exit Screen logo type</label>
+						<label2>$VAR[LogoScreenLogoTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(LogoScreenLogoType),0) | String.IsEmpty(Skin.String(LogoScreenLogoType))">Skin.SetString(LogoScreenLogoType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LogoScreenLogoType),1)">Skin.SetString(LogoScreenLogoType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LogoScreenLogoType),2)">Skin.SetString(LogoScreenLogoType,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LogoScreenLogoType),3)">Skin.SetString(LogoScreenLogoType,0)</onclick>
+						<visible>!Skin.HasSetting(StartScreenDisabled) | !Skin.HasSetting(ShutdownScreenDisabled)</visible>
+						<enable>!Skin.HasSetting(StartScreenDisabled) | !Skin.HasSetting(ShutdownScreenDisabled)</enable>
+					</control>
+					
+					
+					
+					<control type="label" id="540">
+						<height>33</height>
+					</control>
+					<control type="label" id="5083">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Debugging</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="button" id="524">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Reload Skin</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick>CancelAlarm(ReloadSkinReloadRestoreAlarm,true)</onclick>
+						<onclick>AlarmClock(ReloadSkinReloadRestoreAlarm,Control.SetFocus(524),00:00:01,true)</onclick>
+						<onclick>SetProperty(ReloadSkinReloadRestore,True,home)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						
+					</control>
+					<control type="button" id="512">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Clear "Simple Cache Module" cache</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript("special://skin/xml/py/clear_simplecache_helper.py")</onclick>
+					</control>
+					<control type="button" id="525">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Clear "ListItem Helper" image cache</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript(service.listitem.helper,action=clear_image_cache)</onclick>
+					</control>
+					
+					
+					
+					<control type="button" id="55882">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=redwarning][Delete][/COLOR] Kodi "userdata/Thumbnails/" folder</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript("special://skin/xml/py/clear_thumbnails_folder.py")</onclick>
+					</control>
+					
+					
+					
+					<control type="button" id="552">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[COLOR=redwarning][Reset][/COLOR] all Skin settings to default</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>RunScript("special://skin/xml/py/reset_skin_settings.py")</onclick>
+					</control>
+					
+					
+					
+					
+					
+					
+					<control type="label" id="570">
+						<height>33</height>
+					</control>
+					
+					<control type="image" id="568">
+						<description>separator image</description>
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="77b22222">separator-uni.png</texture>
+					</control>
+					
+					<control type="label" id="569">
+						<height>33</height>
+					</control>
+					
+					
+					
+					<control type="radiobutton" id="557">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show &amp; enable experimental options [COLOR=redwarning]at my own risk[/COLOR]   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ExperimentalOptions)</onclick>
+						<selected>Skin.HasSetting(ExperimentalOptions)</selected>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<include>ExperimentalOptionsOnClick</include>
+						
+					</control>
+					
+					<control type="label" id="558"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<height>33</height>
+					</control>
+					<control type="label" id="501"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>68</height>
+						<font>Light24</font>
+						<label>Experimental &amp; development</label>
+						<textcolor>redwarning</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					
+					<control type="label" id="567"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<height>16</height>
+					</control>
+					<control type="radiobutton" id="566"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Dynamic Range Compression audio features   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(DevVolumeAmpFeaturesEnabled)</onclick>
+						<selected>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</selected>
+					</control>
+					<control type="label" id="504"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>51</height>
+						<font>Light18</font>
+						<label>   [COLOR=redwarning]( ! )[/COLOR] [COLOR=selecteddark]Audio passthrough has to be disabled before using this[/COLOR]</label>
+						<textcolor>blue</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</visible>
+					</control>
+					<control type="radiobutton" id="507"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Show manual DRC toggle in Fullscreen OSD   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(DevVolumeAmpHideOSDToggle)</onclick>
+						<selected>!Skin.HasSetting(DevVolumeAmpHideOSDToggle)</selected>
+						<visible>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</visible>
+					</control>
+					<control type="button" id="506"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Compression level</label>
+						<label2>$VAR[SkinSettingsCompressionLevelLabel]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),0) | String.IsEmpty(Skin.String(DevVolumeAmpLevel))">Skin.SetString(DevVolumeAmpLevel,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),1)">Skin.SetString(DevVolumeAmpLevel,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),2)">Skin.SetString(DevVolumeAmpLevel,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),3)">Skin.SetString(DevVolumeAmpLevel,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),4)">Skin.SetString(DevVolumeAmpLevel,5)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpLevel),5)">Skin.SetString(DevVolumeAmpLevel,0)</onclick>
+						<visible>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</visible>
+					</control>
+					
+					<control type="radiobutton" id="505"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Auto-enable DRC on video start   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(DevVolumeAmpUseAutoDRC)</onclick>
+						<selected>Skin.HasSetting(DevVolumeAmpUseAutoDRC)</selected>
+						
+						<visible>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</visible>
+					</control>
+					
+					<control type="button" id="506566"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Content types</label>
+						<label2>$VAR[DevVolumeAmpTypesVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpTypes),0) | String.IsEmpty(Skin.String(DevVolumeAmpTypes))">Skin.SetString(DevVolumeAmpTypes,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpTypes),1)">Skin.SetString(DevVolumeAmpTypes,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(DevVolumeAmpTypes),2)">Skin.SetString(DevVolumeAmpTypes,0)</onclick>
+						<visible>Skin.HasSetting(DevVolumeAmpFeaturesEnabled)</visible>
+						<enable>Skin.HasSetting(DevVolumeAmpUseAutoDRC)</enable>
+					</control>
+					
+					
+					
+					<control type="label" id="559"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<height>16</height>
+					</control>
+					
+					<control type="button" id="562"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Dev Codes</label>
+						<label2>[COLOR=redwarning]$INFO[Skin.String(DevCodes)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEmpty(Skin.String(DevCodes))">Skin.SetString(ForcePresetViewsMoviesCategories,$ESCVAR[ForcePresetViewsMoviesCategoriesVARDefault])</onclick>
+						<onclick>Skin.SetString(DevCodes)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="546"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Debug Overlay · Out of bounds UI masks</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(EnableDebugOverlayOOBUIMasks)</onclick>
+						
+						<selected>Skin.HasSetting(EnableDebugOverlayOOBUIMasks)</selected>
+					</control>
+					
+					<control type="radiobutton" id="527"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Debug Overlay · Skin &amp; Variables</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(EnableDebugOverlaySkinAndVars)</onclick>
+						
+						<onclick>SetProperty(EnableDebugOverlaySkinAndVarsReloadRestoreFocus,True,home)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						
+						<selected>Skin.HasSetting(EnableDebugOverlaySkinAndVars)</selected>
+					</control>
+					
+					<control type="radiobutton" id="5277"><visible>Skin.HasSetting(ExperimentalOptions)</visible>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable Debug Overlay · System Load</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						
+						<textureradioonfocus>radiobutton-focus-warn.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus-warn.png</textureradioonnofocus>
+						<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus-warn.png</textureradioondisabled>
+						
+						<onclick>Skin.ToggleSetting(EnableDebugOverlaySystemLoad)</onclick>
+						
+						<onclick>SetProperty(EnableDebugOverlaySystemLoadRestoreFocus,True,home)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						
+						<selected>Skin.HasSetting(EnableDebugOverlaySystemLoad)</selected>
+					</control>
+					
+					
+					
+				</control>
+					
+				<control type="scrollbar" id="66">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9006</onleft>
+					<onright>66</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(6)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- Home screen options -->
+				<control type="grouplist" id="9007">
+					<visible>Container(9000).Hasfocus(7)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>67</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>67</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="button" id="217">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Home screen style</label>
+						<label2>$VAR[HomeScreenStyleVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenStyle),0) | String.IsEmpty(Skin.String(HomeScreenStyle))">Skin.SetString(HomeScreenStyle,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenStyle),1)">Skin.SetString(HomeScreenStyle,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenStyle),2)">Skin.SetString(HomeScreenStyle,0)</onclick>
+					</control>
+					<control type="button" id="218">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Main menu background style</label>
+						<label2>$VAR[HomeScreenMainMenuStyleVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenMainMenuStyle),0) | String.IsEmpty(Skin.String(HomeScreenMainMenuStyle))">Skin.SetString(HomeScreenMainMenuStyle,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenMainMenuStyle),1)">Skin.SetString(HomeScreenMainMenuStyle,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenMainMenuStyle),2)">Skin.SetString(HomeScreenMainMenuStyle,0)</onclick>
+					</control>
+					
+					<control type="button" id="201">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Kodi logo type</label>
+						<label2>$VAR[HomeScreenKodiLogoVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),0) | String.IsEmpty(Skin.String(HomeScreenKodiLogo))">Skin.SetString(HomeScreenKodiLogo,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),1)">Skin.SetString(HomeScreenKodiLogo,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenKodiLogo),2)">Skin.SetString(HomeScreenKodiLogo,0)</onclick>
+					</control>
+					
+					<control type="button" id="202">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Search button type</label>
+						<label2>$VAR[HomeScreenSearchButtonVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenSearchButton),0) | String.IsEmpty(Skin.String(HomeScreenSearchButton))">Skin.SetString(HomeScreenSearchButton,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenSearchButton),1)">Skin.SetString(HomeScreenSearchButton,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenSearchButton),2)">Skin.SetString(HomeScreenSearchButton,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeScreenSearchButton),3)">Skin.SetString(HomeScreenSearchButton,0)</onclick>
+					</control>
+					
+					
+					
+					<control type="button" id="212">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Date/Time type</label>
+						<label2>$VAR[HomeDateTimeTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(HomeDateTimeType),0) | String.IsEmpty(Skin.String(HomeDateTimeType))">Skin.SetString(HomeDateTimeType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeDateTimeType),1)">Skin.SetString(HomeDateTimeType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(HomeDateTimeType),2)">Skin.SetString(HomeDateTimeType,0)</onclick>
+					</control>
+					
+					
+					
+					
+					<control type="radiobutton" id="203">
+						<description>enable weather info</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>20084</label>
+						<onclick>Skin.ToggleSetting(HomepageWeatherinfo)</onclick>
+						<selected>Skin.HasSetting(HomepageWeatherinfo)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					
+					<control type="button" id="215">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show profile picture</label>
+						<label2>$VAR[ActiveProfilePictureTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(ActiveProfilePictureType),0)">Skin.SetString(ActiveProfilePictureType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ActiveProfilePictureType),1) | String.IsEmpty(Skin.String(ActiveProfilePictureType))">Skin.SetString(ActiveProfilePictureType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ActiveProfilePictureType),2)">Skin.SetString(ActiveProfilePictureType,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ActiveProfilePictureType),3)">Skin.SetString(ActiveProfilePictureType,0)</onclick>
+					</control>
+					
+					
+					
+					<control type="label" id="2050">
+						<height>15</height>
+					</control>
+					<control type="label" id="205">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Widgets</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="207">
+						<description>Enable Widget</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable Widget  "$VAR[RecentlyAddedLanguageString] · $LOCALIZE[20342] / $LOCALIZE[20343]"</label>
+						<onclick>Skin.ToggleSetting(HomepageHideRecentlyAddedVideo)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideRecentlyAddedVideo)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					
+					<control type="radiobutton" id="216">
+						<description>Enable Widget</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>– $LOCALIZE[20343] are displayed as single $LOCALIZE[20360]</label>
+						<onclick>Skin.ToggleSetting(RecentlyAddedTvShowsChangeWidgetTypeToEpisodes)</onclick>
+						<selected>Skin.HasSetting(RecentlyAddedTvShowsChangeWidgetTypeToEpisodes)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<enable>!Skin.HasSetting(HomepageHideRecentlyAddedVideo)</enable>
+					</control>
+					
+					<control type="radiobutton" id="208">
+						<description>Enable Widget</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable Widget  "Recently played · $LOCALIZE[19020]"</label>
+						<onclick>Skin.ToggleSetting(HomepageHideRecentlyPlayedLiveTV)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideRecentlyPlayedLiveTV)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="209">
+						<description>Enable Widget</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable Widget  "$VAR[RecentlyAddedLanguageString] · $LOCALIZE[2]"</label>
+						<onclick>Skin.ToggleSetting(HomepageHideRecentlyAddedAlbums)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					<control type="radiobutton" id="206">
+						<description>Enable Widget</description>
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable Widget  "$LOCALIZE[1036]"</label>
+						<onclick>Skin.ToggleSetting(HomepageHideWidgetFavorites)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideWidgetFavorites)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					
+					
+					
+					<control type="label" id="2100">
+						<height>15</height>
+					</control>
+					<control type="label" id="210">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>$LOCALIZE[24000] $LOCALIZE[31200]</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="211">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable $LOCALIZE[24000] $LOCALIZE[31200]</label>
+						<onclick>Skin.ToggleSetting(HomeScreenHideAddonShortcuts)</onclick>
+						<selected>!Skin.HasSetting(HomeScreenHideAddonShortcuts)</selected>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="67">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9007</onleft>
+					<onright>67</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(7)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+				<!-- OSD, Dialogs &amp; Views -->
+				<control type="grouplist" id="9008">
+					<visible>Container(9000).Hasfocus(8)</visible>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>869</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>68</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>68</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					
+					
+					<control type="label" id="199004">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>OSD / Fullscreen</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="button" id="199006">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Customize Fullscreen OSD   [LIGHT][COLOR=selecteddark]( ? ) Shortcut to "Advanced" tab[/LIGHT][/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Control.SetFocus(9000,8)</onclick>
+						<onclick>Control.SetFocus(555)</onclick>
+						<onclick>SetProperty(set_focus_now,553,home)</onclick>
+					</control>
+					
+					<control type="label" id="9008001">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					<control type="image" id="9008002">
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="$VAR[SeparatorColorDiffuse]">separator-uni.png</texture>
+					</control>
+					<control type="label" id="9008003">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					
+					<control type="radiobutton" id="195">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable OSD button simplicity   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DisableFullScreenOsdButtonSimplicity)</onclick>
+						<selected>!Skin.HasSetting(DisableFullScreenOsdButtonSimplicity)</selected>
+					</control>
+					<control type="radiobutton" id="199005">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show seek bar when video is paused   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(NoInfoOsdOnPause)</onclick>
+						<selected>!Skin.HasSetting(NoInfoOsdOnPause)</selected>
+					</control>
+					<control type="radiobutton" id="196">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Auto-pause/resume playback when using "Info" button   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(FullScreenOsdInfoButtonPauseResume)</onclick>
+						<selected>Skin.HasSetting(FullScreenOsdInfoButtonPauseResume)</selected>
+					</control>
+					<control type="radiobutton" id="200">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable menu above subtitle button   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(EnableVideoOSDEnableSubtitlesMiniSubMenu)</onclick>
+						<selected>Skin.HasSetting(EnableVideoOSDEnableSubtitlesMiniSubMenu)</selected>
+						<visible>![String.StartsWith(System.BuildVersion,17.) + !String.StartsWith(System.BuildVersion,17.7) + !String.StartsWith(System.BuildVersion,17.6 Git:20171126-13194ec) + !String.StartsWith(System.BuildVersion,17.9)]</visible>
+					</control>
+					<control type="radiobutton" id="213">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Post Credits Scene icon (10min before movie ends)   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(EnableVideoOSDStingerIconMovieEnd)</onclick>
+						<selected>Skin.HasSetting(EnableVideoOSDStingerIconMovieEnd)</selected>
+					</control>
+					<control type="radiobutton" id="214">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show duration time instead of remaining time   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(PlayerUseDurationNotRemainingTime)</onclick>
+						<selected>Skin.HasSetting(PlayerUseDurationNotRemainingTime)</selected>
+					</control>
+					
+					
+					
+					<control type="label" id="1990010">
+						<height>15</height>
+					</control>
+					<control type="label" id="199001">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Video Info Dialog</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="199">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable "My List" functionality   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(EnableMyList)</onclick>
+						<selected>Skin.HasSetting(EnableMyList)</selected>
+					</control>
+					
+					<control type="label" id="180">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=redwarning]( ! )[/COLOR] [COLOR=selecteddark]"My List" writes UserRating to mark the items &amp; replaces "My Rating". Be aware.[/COLOR]</label>
+						<textcolor>grey2</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					<control type="label" id="9008004">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					<control type="image" id="9008005">
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="$VAR[SeparatorColorDiffuse]">separator-uni.png</texture>
+					</control>
+					<control type="label" id="9008006">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					
+					<control type="radiobutton" id="103">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show button "Trailer"   [LIGHT](Default: On,  Recommended: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideTrailerButtonInVideoInfoDialog)</onclick>
+						<selected>!Skin.HasSetting(HideTrailerButtonInVideoInfoDialog)</selected>
+					</control>
+					
+					<control type="radiobutton" id="1171">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show button "Trailer Search"   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideTrailerSearchButtonInVideoInfoDialog)</onclick>
+						<selected>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</selected>
+					</control>
+					
+					<control type="button" id="102">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Language string for better results</label>
+						<label2>$VAR[TrailerSearchLanguageTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),0) | String.IsEmpty(Skin.String(TrailerSearchLanguageType))">Skin.SetString(TrailerSearchLanguageType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),1)">Skin.SetString(TrailerSearchLanguageType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),2)">Skin.SetString(TrailerSearchLanguageType,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchLanguageType),3)">Skin.SetString(TrailerSearchLanguageType,0)</onclick>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+					</control>
+					
+					<control type="button" id="110">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Search method</label>
+						<label2>$VAR[TrailerSearchMethodVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchMethod),0) | String.IsEmpty(Skin.String(TrailerSearchMethod))">Skin.SetString(TrailerSearchMethod,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchMethod),1)">Skin.SetString(TrailerSearchMethod,0)</onclick>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+					</control>
+					
+					<control type="button" id="111">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Browser type</label>
+						<label2>$VAR[TrailerSearchWebBrowserTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserType),0) | String.IsEmpty(Skin.String(TrailerSearchWebBrowserType))">Skin.SetString(TrailerSearchWebBrowserType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserType),1)">Skin.SetString(TrailerSearchWebBrowserType,0)</onclick>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+					</control>
+					
+					<control type="button" id="112">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Set][/COLOR] Browser path</label>
+						<label2>$VAR[TrailerSearchWebBrowserCustomPathVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetString(TrailerSearchWebBrowserCustomPath)</onclick>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						<visible>String.IsEqual(Skin.String(TrailerSearchWebBrowserType),1)</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+						<visible>System.Platform.Windows</visible>
+						
+					</control>
+					
+					<control type="button" id="1121">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Choose Browser</label>
+						<label2>$VAR[TrailerSearchWebBrowserAndroidVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),0) | String.IsEmpty(Skin.String(TrailerSearchWebBrowserAndroid))">Skin.SetString(TrailerSearchWebBrowserAndroid,com.android.chrome)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),com.android.chrome)">Skin.SetString(TrailerSearchWebBrowserAndroid,com.amazon.cloud9)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),com.amazon.cloud9)">Skin.SetString(TrailerSearchWebBrowserAndroid,org.mozilla.tv.firefox)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),org.mozilla.tv.firefox)">Skin.SetString(TrailerSearchWebBrowserAndroid,org.mozilla.firefox)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),org.mozilla.firefox)">Skin.SetString(TrailerSearchWebBrowserAndroid,com.phlox.tvwebbrowser)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),com.phlox.tvwebbrowser)">Skin.SetString(TrailerSearchWebBrowserAndroid,com.brave.browser)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),com.brave.browser)">Skin.SetString(TrailerSearchWebBrowserAndroid,com.sec.android.app.sbrowser)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(TrailerSearchWebBrowserAndroid),com.sec.android.app.sbrowser)">Skin.SetString(TrailerSearchWebBrowserAndroid,)</onclick>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						<visible>String.IsEqual(Skin.String(TrailerSearchWebBrowserType),0) | String.IsEmpty(Skin.String(TrailerSearchWebBrowserType))</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+						<visible>System.Platform.Android</visible>
+						
+					</control>
+					
+					<control type="button" id="1122">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– [COLOR=selected][Set][/COLOR] Browser App ID</label>
+						<label2>$INFO[Skin.String(TrailerSearchWebBrowserAndroidCustomID)]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetString(TrailerSearchWebBrowserAndroidCustomID)</onclick>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						<visible>String.IsEqual(Skin.String(TrailerSearchWebBrowserType),1)</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+						<visible>System.Platform.Android</visible>
+						
+					</control>
+					<control type="label" id="1123">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>      [COLOR=selecteddark]( ? ) Example:  com.android.chrome[/COLOR]</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						<visible>String.IsEqual(Skin.String(TrailerSearchWebBrowserType),1)</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+						<visible>System.Platform.Android</visible>
+						
+					</control>
+					
+					<control type="label" id="116">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>      [COLOR=redwarning]( ! )[/COLOR] "Custom Browser" is only supported on Windows &amp; Android</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						
+						<visible>String.IsEqual(Skin.String(TrailerSearchMethod),1)</visible>
+						<visible>String.IsEqual(Skin.String(TrailerSearchWebBrowserType),1)</visible>
+						
+						<visible>!System.Platform.Windows + !System.Platform.Android</visible>
+						
+						<visible>!Skin.HasSetting(HideTrailerSearchButtonInVideoInfoDialog)</visible>
+						
+					</control>
+					
+					
+					<control type="radiobutton" id="219">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show button "Extended Info" for Movies   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideExtendedInfoButtonInVideoInfoDialog)</onclick>
+						<selected>!Skin.HasSetting(HideExtendedInfoButtonInVideoInfoDialog)</selected>
+					</control>
+					
+					
+					<control type="radiobutton" id="191">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show button "My Rating"   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideMyRatingButtonInVideoInfoDialog)</onclick>
+						<selected>!Skin.HasSetting(HideMyRatingButtonInVideoInfoDialog)</selected>
+						
+						<enable>!Skin.HasSetting(EnableMyList)</enable>
+						
+					</control>
+					
+					
+					
+					<!-- Kodi 21+ -->
+					<control type="radiobutton" id="197">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show buttons "Versions" and "Extras"   [LIGHT](Default+Recommended: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DialogVideoInfoVersionsExtrasButtons)</onclick>
+						<selected>Skin.HasSetting(DialogVideoInfoVersionsExtrasButtons)</selected>
+						
+						<!-- Kodi 21+ -->
+						<visible>![String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.) | String.StartsWith(System.BuildVersion,19.) | String.StartsWith(System.BuildVersion,20.)]</visible>
+						
+					</control>
+					<control type="label" id="193">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  [COLOR=redwarning]( ! )[/COLOR] It's strongly recommended [COLOR=redwarning]not[/COLOR] to use the Video Versions/Extras feature yet.</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						
+						<!-- Kodi 21+ -->
+						<visible>![String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.) | String.StartsWith(System.BuildVersion,19.) | String.StartsWith(System.BuildVersion,20.)]</visible>
+						
+					</control>
+					
+					
+					
+					<control type="label" id="9008007">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					<control type="image" id="9008008">
+						<width>1125</width>
+						<height>1</height>
+						<texture colordiffuse="$VAR[SeparatorColorDiffuse]">separator-uni.png</texture>
+					</control>
+					<control type="label" id="9008009">
+						<width>1125</width>
+						<height>8</height>
+					</control>
+					
+					<control type="radiobutton" id="120">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show audio codec/channels   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(ShowAudioInfo)</onclick>
+						<selected>Skin.HasSetting(ShowAudioInfo)</selected>
+					</control>
+					<control type="radiobutton" id="198">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show movie file name   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DialogVideoInfoFilenameEnable)</onclick>
+						<selected>Skin.HasSetting(DialogVideoInfoFilenameEnable)</selected>
+					</control>
+					<control type="radiobutton" id="509">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Enable File Info &amp; Release Notes for Movies &amp; Episodes   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						
+						<onclick>Skin.ToggleSetting(ExperimentalShowNtsFile)</onclick>
+						<selected>Skin.HasSetting(ExperimentalShowNtsFile)</selected>
+					</control>
+					
+					
+					
+					<control type="label" id="1990070">
+						<height>15</height>
+					</control>
+					<control type="label" id="199007">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>Views</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="radiobutton" id="199003">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>[Episodes]  Enable Episode Thumbnail Spoiler Protection   [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(EpisodeSpoilerProtection)</onclick>
+						<selected>Skin.HasSetting(EpisodeSpoilerProtection)</selected>
+					</control>
+					
+					<control type="radiobutton" id="115">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show video ratings   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideVideoRatings)</onclick>
+						<selected>!Skin.HasSetting(HideVideoRatings)</selected>
+					</control>
+					<control type="radiobutton" id="123">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Show stars (*****)   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(HideVideoRatingsStars)</onclick>
+						<selected>!Skin.HasSetting(HideVideoRatingsStars)</selected>
+						<visible>!Skin.HasSetting(HideVideoRatings)</visible>
+					</control>
+					<control type="radiobutton" id="117">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Use highest score for rating and stars (*****)   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DisableBestScoreRating)</onclick>
+						<selected>!Skin.HasSetting(DisableBestScoreRating)</selected>
+						<visible>!Skin.HasSetting(HideVideoRatings)</visible>
+					</control>
+					<control type="radiobutton" id="124">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– Normalize ratings scale to 100%   [LIGHT](Default: On)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(DisableRatingsNormalizeTo100)</onclick>
+						<selected>!Skin.HasSetting(DisableRatingsNormalizeTo100)</selected>
+						<visible>!Skin.HasSetting(HideVideoRatings)</visible>
+					</control>
+					<control type="button" id="121">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Wall Views overlays 4K/HFR/3D/Set/Disc</label>
+						<label2>$VAR[OverlayFlagsShowTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(OverlayFlagsShowType),0) | String.IsEmpty(Skin.String(OverlayFlagsShowType))">Skin.SetString(OverlayFlagsShowType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OverlayFlagsShowType),1)">Skin.SetString(OverlayFlagsShowType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OverlayFlagsShowType),2)">Skin.SetString(OverlayFlagsShowType,0)</onclick>
+					</control>
+					<control type="button" id="122">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Show Wall Views watched checkmarks</label>
+						<label2>$VAR[OverlayWatchedFlagsShowTypeVar]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick condition="String.IsEqual(Skin.String(OverlayWatchedFlagsShowType),0) | String.IsEmpty(Skin.String(OverlayWatchedFlagsShowType))">Skin.SetString(OverlayWatchedFlagsShowType,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OverlayWatchedFlagsShowType),1)">Skin.SetString(OverlayWatchedFlagsShowType,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(OverlayWatchedFlagsShowType),2)">Skin.SetString(OverlayWatchedFlagsShowType,0)</onclick>
+					</control>
+					
+					
+					
+					
+					<control type="radiobutton" id="118">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>Make Poster Wall Views higher density    [LIGHT](Default: Off)[/LIGHT]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.ToggleSetting(WallViewsHigherDensity)</onclick>
+						<selected>Skin.HasSetting(WallViewsHigherDensity)</selected>
+					</control>
+					<control type="label" id="119">
+						<width>1125</width>
+						<height>57</height>
+						<font>Light18</font>
+						<label>  ( ? ) This will change Poster Wall Views to have one item more per row</label>
+						<textcolor>selecteddark</textcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+					</control>
+					
+					
+					
+					<control type="label" id="8190">
+						<height>15</height>
+					</control>
+					<control type="label" id="819">
+						<width>1125</width>
+						<height>68</height>
+						<font>Light22</font>
+						<label>31140</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					
+					
+					<control type="button" id="820">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>$LOCALIZE[31132]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+					</control>
+					<control type="button" id="821">
+						<width>1125</width>
+						<height>72</height>
+						<font>Regular20</font>
+						<label>– $LOCALIZE[24020]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+						<texturenofocus />
+						<enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
+						<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="scrollbar" id="68">
+					<include>scrollBarDimensionsSkinSettings</include>
+					<include>scrollBarStyleDefaultWidth</include>
+					<include>scrollBarStyleDefault</include>
+					<onleft>9008</onleft>
+					<onright>68</onright>
+					<showonepage>false</showonepage>
+					<visible>Container(9000).Hasfocus(8)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
+			</control>
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+		</control>
+		
+		
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[5]" />
+			<param name="ShowLabel2" value="true" />
+		</include>
+		
+		<include>BehindDialogFadeOut</include>
+		
+		
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

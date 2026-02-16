@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="CommonRootView">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="50">
+				<!-- Fix for weird history focus scroll bug on window load (only Kodi 17?) workaround: change "list" to "panel" with no further changes -->
+				<visible>!String.IsEqual(Container.Content,Directors) + !String.IsEqual(Container.Content,Studios) + !String.IsEqual(Container.Content,Years) + !String.IsEqual(Container.Content,Countries) + !String.IsEqual(Container.Content,Tags) + !String.IsEqual(Container.Content,Genres) + [!String.IsEqual(Container.Content,Episodes) | Skin.HasSetting(ViewTypesShowLegacy)] + [!String.IsEqual(Container.Content,Seasons) | Skin.HasSetting(ViewTypesShowLegacy)]</visible>
+				<left>105</left>
+				<top>99</top>
+				<width>1134</width>
+				<height>860</height>
+				
+				<onleft condition="!Container.Filtered | [Container.Filtered + !Control.IsVisible(98) + !Control.IsVisible(19)]">2</onleft>
+				<onleft condition="Container.Filtered + Control.IsVisible(98)">98</onleft>
+				<onleft condition="Container.Filtered + !Control.IsVisible(98) + Control.IsVisible(19)">19</onleft>
+				
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<include>SimpleListViewsScrollTime</include>
+				<itemlayout height="66" width="1134">
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>960</width>
+						<height>66</height>
+						<font>Regular21</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>510</left>
+						<top>3</top>
+						<width>600</width>
+						<height>66</height>
+						<font>Regular17</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="label">
+						<left>420</left>
+						<top>3</top>
+						<width>600</width>
+						<height>66</height>
+						<font>Regular17</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Window.IsVisible(Videos)</visible>
+						<animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>1028</left>
+						<top>15</top>
+						<width>53</width>
+						<height>39</height>
+						<texture colordiffuse="ffd2d2d2">$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]</visible>
+					</control>
+					<control type="image">
+						<left>1089</left>
+						<top>18</top>
+						<width>33</width>
+						<height>33</height>
+						<texture colordiffuse="ffd2d2d2">OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>1089</left>
+						<top>18</top>
+						<width>33</width>
+						<height>33</height>
+						<texture colordiffuse="ffd2d2d2">$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="66" width="1134">
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1134</width>
+							<height>68</height>
+							<texture border="15" colordiffuse="$VAR[accentSlightlyTransparentColorDiffuse]">colors/white_border15.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<include>FocusAnimationType1</include>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>960</width>
+						<height>66</height>
+						<font>Regular21</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>510</left>
+						<top>3</top>
+						<width>600</width>
+						<height>66</height>
+						<font>Regular17</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="label">
+						<left>420</left>
+						<top>3</top>
+						<width>600</width>
+						<height>66</height>
+						<font>Regular17</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Window.IsVisible(Videos)</visible>
+						<animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>1028</left>
+						<top>15</top>
+						<width>53</width>
+						<height>39</height>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]</visible>
+					</control>
+					<control type="image">
+						<left>1089</left>
+						<top>18</top>
+						<width>33</width>
+						<height>33</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>1089</left>
+						<top>18</top>
+						<width>33</width>
+						<height>33</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1263</left>
+				<top>99</top>
+				<include>scrollBarStyleDefaultWidth</include>
+				<height>860</height>
+				<onleft>50</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(50)</visible>
+				<include>scrollBarStyleDefault</include>
+			</control>
+			<control type="group">
+				<depth>DepthContent-</depth>
+				<left>90</left>
+				<top>69</top>
+				<visible>Control.IsVisible(50) + !ListItem.IsParentFolder</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>1242</left>
+					<top>69</top>
+					<width>516</width>
+					<height>774</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- INCLUDE WALL VIEWS -->
+	<include file="_ViewsFileMode_walls.xml" />
+	<include file="_ViewsFileMode_text.xml" />
+	<include name="WideIconView">
+		<control type="group">
+			<visible>Control.IsVisible(505)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="505">
+				<visible>String.IsEqual(Container.Content,TvShows)</visible>
+				<left>143</left>
+				<top>120</top>
+				<width>1620</width>
+				<height>825</height>
+				
+				<onleft condition="!Container.Filtered | [Container.Filtered + !Control.IsVisible(98) + !Control.IsVisible(19)]">2</onleft>
+				<onleft condition="Container.Filtered + Control.IsVisible(98)">98</onleft>
+				<onleft condition="Container.Filtered + !Control.IsVisible(98) + Control.IsVisible(19)">19</onleft>
+				
+				<onright>60</onright>
+				<onup>505</onup>
+				<ondown>505</ondown>
+				<viewtype label="$LOCALIZE[539]">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<include>StandardScrollTime</include>
+				<preloaditems>2</preloaditems>
+				<itemlayout height="165" width="810">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>807</width>
+						<height>158</height>
+						<bordersize>8</bordersize>
+						<texture background="true">$VAR[BannerThumb]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>744</left>
+						<top>102</top>
+						<width>42</width>
+						<height>42</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="ffd2d2d2">$INFO[ListItem.Overlay]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="165" width="810">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>807</width>
+						<height>158</height>
+						<bordertexture border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">_added_img/focus_border_2px-rounded-neutral.png</bordertexture>
+						<bordersize>8</bordersize>
+						<texture background="true">$VAR[BannerThumb]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>744</left>
+						<top>102</top>
+						<width>42</width>
+						<height>42</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1770</left>
+				<top>120</top>
+				<include>scrollBarStyleDefaultWidth</include>
+				<height>818</height>
+				<onleft>505</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(505)</visible>
+				<include>scrollBarStyleDefault</include>
+			</control>
+		</control>
+	</include>
+	<include name="FullWidthList">
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="panel" id="51">
+				<!-- Fix for weird history focus scroll bug on window load (only Kodi 17?) workaround: change "list" to "panel" with no further changes -->
+				<visible>!String.IsEqual(Container.Content,Directors) + !String.IsEqual(Container.Content,Studios) + !String.IsEqual(Container.Content,Years) + !String.IsEqual(Container.Content,Countries) + !String.IsEqual(Container.Content,Tags) + !String.IsEqual(Container.Content,Genres) + [!String.IsEqual(Container.Content,Episodes) | Skin.HasSetting(ViewTypesShowLegacy)] + [!String.IsEqual(Container.Content,Seasons) | Skin.HasSetting(ViewTypesShowLegacy)]</visible>
+				<left>105</left>
+				<top>99</top>
+				<width>1620</width>
+				<height>888</height>
+				
+				<onleft condition="!Container.Filtered | [Container.Filtered + !Control.IsVisible(98) + !Control.IsVisible(19)]">2</onleft>
+				<onleft condition="Container.Filtered + Control.IsVisible(98)">98</onleft>
+				<onleft condition="Container.Filtered + !Control.IsVisible(98) + Control.IsVisible(19)">19</onleft>
+				
+				<onright>60</onright>
+				<onup>51</onup>
+				<ondown>51</ondown>
+				<viewtype label="List Wide">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<include>SimpleListViewsScrollTime</include>
+				
+				<itemlayout height="111" width="1620">
+					<control type="image">
+						<left>36</left>
+						<top>9</top>
+						<width>63</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">scale</aspectratio>
+						<visible>[String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))] + !String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>9</top>
+						<width>105</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">keep</aspectratio>
+						<visible>![String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))] + !String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>9</top>
+						<width>105</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">scale</aspectratio>
+						<visible>String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="label">
+						<left>133</left>
+						<top>12</top>
+						<width>1382</width>
+						<height>84</height>
+						<font>Regular22</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>90</left>
+						<top>12</top>
+						<width>1500</width>
+						<height>84</height>
+						<font>Light18</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="label">
+						<left>98</left>
+						<top>12</top>
+						<width>1394</width>
+						<height>84</height>
+						<font>Light18</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$VAR[VideoItemLabel2]</label>
+						<visible>Window.IsVisible(Videos)</visible>
+						<animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![String.IsEmpty(Container.PluginName) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]]">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>1510</left>
+						<top>36</top>
+						<width>53</width>
+						<height>39</height>
+						<texture colordiffuse="ffd2d2d2">$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos) + [String.IsEmpty(Container.PluginName) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]]</visible>
+					</control>
+					<control type="image">
+						<left>1572</left>
+						<top>39</top>
+						<width>33</width>
+						<height>33</height>
+						<texture colordiffuse="ffd2d2d2">OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>1572</left>
+						<top>39</top>
+						<width>33</width>
+						<height>33</height>
+						<texture colordiffuse="ffd2d2d2">$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos)</visible>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="111" width="1620">
+					
+					<!-- focus border -->
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<top>3</top>
+							<width>1620</width>
+							<height>105</height>
+							<texture border="15" colordiffuse="$VAR[accentSlightlyTransparentColorDiffuse]">colors/white_border15.png</texture>
+							<include>DimFocusTextureAdditionally</include>
+							<visible>Control.HasFocus(51)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<include>FocusAnimationType1</include>
+					</control>
+					
+					<control type="image">
+						<left>36</left>
+						<top>9</top>
+						<width>63</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">scale</aspectratio>
+						<visible>[String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))] + !String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>9</top>
+						<width>105</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">keep</aspectratio>
+						<visible>![String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Art(poster))] + !String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>9</top>
+						<width>105</width>
+						<height>93</height>
+						<texture background="true" colordiffuse="ffd2d2d2" diffuse="colors/diffuse/rounded-generic-1.png">$VAR[PosterThumb]</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="true">scale</aspectratio>
+						<visible>String.IsEqual(Container.Content,MusicVideos)</visible>
+					</control>
+					<control type="label">
+						<left>133</left>
+						<top>12</top>
+						<width>1382</width>
+						<height>84</height>
+						<font>Regular22</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>90</left>
+						<top>12</top>
+						<width>1500</width>
+						<height>84</height>
+						<font>Light18</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="label">
+						<left>98</left>
+						<top>12</top>
+						<width>1394</width>
+						<height>84</height>
+						<font>Light18</font>
+						<textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$VAR[VideoItemLabel2]</label>
+						<visible>Window.IsVisible(Videos)</visible>
+						<animation effect="slide" start="0,0" end="60,0" delay="0" time="0" condition="![String.IsEmpty(Container.PluginName) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]]">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>1510</left>
+						<top>36</top>
+						<width>53</width>
+						<height>39</height>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos) + [String.IsEmpty(Container.PluginName) + [String.IsEqual(Container.Content,Movies) | String.IsEqual(Container.Content,Sets) | String.IsEqual(Container.Content,Episodes) | String.IsEqual(Container.Content,MusicVideos)]]</visible>
+					</control>
+					<control type="image">
+						<left>1572</left>
+						<top>39</top>
+						<width>33</width>
+						<height>33</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>1572</left>
+						<top>39</top>
+						<width>33</width>
+						<height>33</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos)</visible>
+					</control>
+				</focusedlayout>
+				
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1749</left>
+				<top>102</top>
+				<include>scrollBarStyleDefaultWidth</include>
+				<height>882</height>
+				<onleft>51</onleft>
+				<onright>60</onright>
+				<showonepage>false</showonepage>
+				<visible>Control.IsVisible(51)</visible>
+				<include>scrollBarStyleDefault</include>
+			</control>
+		</control>
+	</include>
+</includes>

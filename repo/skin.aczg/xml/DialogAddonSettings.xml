@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3</defaultcontrol>
+	<include>dialogeffect</include>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<include condition="Window.Is(AddonInformation)">BehindDialogDarkBackgroundLighter</include>
+		<include condition="!Window.Is(AddonInformation)">BehindDialogDarkBackground</include>
+		
+		<control type="group">
+			
+			<centerleft>50%</centerleft>
+			<centertop>49%</centertop>
+			<width>1200</width>
+			<height>907</height>
+			
+			<include content="DialogBackgroundCommons">
+				<param name="DialogBackgroundWidth" value="1240" />
+				<param name="DialogBackgroundHeight" value="947" />
+				<param name="DialogHeaderWidth" value="1180" />
+				<param name="DialogHeaderLabelWidth" value="1136" />
+				<param name="DialogHeaderLabel" value="" />
+				<param name="DialogHeaderId" value="2" />
+			</include>
+			
+			<control type="grouplist" id="3">
+				<description>Categories Area</description>
+				<left>68</left>
+				<top>105</top>
+				<width>1064</width>
+				<height>65</height>
+				<itemgap>8</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<height>63</height>
+				<width>260</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Regular19</font>
+				<textcolor>white</textcolor>
+				<texturefocus border="15" colordiffuse="$VAR[accentSlightlyTransparentColorDiffuse]">colors/white_border15.png</texturefocus>
+			</control>
+			<control type="image">
+				<description>Has Previous</description>
+				<left>25</left>
+				<top>120</top>
+				<width>30</width>
+				<height>30</height>
+				<texture colordiffuse="$VAR[accentColorDiffuse]">scroll-left.png</texture>
+				<visible>Container(3).HasPrevious</visible>
+			</control>
+			<control type="image">
+				<description>Has Next</description>
+				<left>1145</left>
+				<top>120</top>
+				<width>30</width>
+				<height>30</height>
+				<texture flipx="true" colordiffuse="$VAR[accentColorDiffuse]">scroll-left.png</texture>
+				<visible>Container(3).HasNext</visible>
+			</control>
+			
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>50</left>
+				<top>193</top>
+				<width>1080</width>
+				<height>577</height>
+				<itemgap>8</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onup>3</onup>
+				
+				<ondown condition="Control.IsVisible(28) + Control.IsEnabled(28)">28</ondown>
+				<ondown condition="![Control.IsVisible(28) + Control.IsEnabled(28)] + [Control.IsVisible(29) + Control.IsEnabled(29)]">29</ondown>
+				<ondown condition="![Control.IsVisible(28) + Control.IsEnabled(28)] + ![Control.IsVisible(29) + Control.IsEnabled(29)] + [Control.IsVisible(30) + Control.IsEnabled(30)]">30</ondown>
+				
+				<onleft>noop</onleft>
+				<onright>60</onright>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1152</left>
+				<top>193</top>
+				<include>scrollBarStyleDefaultWidth</include>
+				<height>577</height>
+				<onleft>5</onleft>
+				<onright>noop</onright>
+				<showonepage>false</showonepage>
+				<include>scrollBarStyleDefault</include>
+			</control>
+			
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<height>63</height>
+				<font>Regular20</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<height>63</height>
+				<textwidth>1002</textwidth>
+				<font>Regular20</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default spincontrolex</description>
+				<height>63</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturenofocus></texturenofocus>
+				<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+				<font>Regular20</font>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+			</control>
+			<control type="image" id="11">
+				<description>separator image</description>
+				<height>7</height>
+				<texture border="0,0,0,5" colordiffuse="$VAR[SeparatorColorDiffuse]">separator3.png</texture>
+			</control>
+			<!-- Kodi 18+ adds type="edit" id="12" here -->
+			<control type="edit" id="12">
+				<description>Default Edit</description>
+				<height>63</height>
+				<font>Regular20</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturenofocus></texturenofocus>
+				<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+			</control>
+			<control type="sliderex" id="13">
+				<description>Default Slider</description>
+				<height>63</height>
+				<font>Regular20</font>
+				<textwidth>777</textwidth>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+			</control>
+			<control type="label" id="14">
+				<description>Default Heading</description>
+				<height>53</height>
+				<font>Light20</font>
+				<label></label>
+				<textcolor>blue</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			
+			<control type="group" id="9001">
+				<top>800</top>
+				<left>135</left>
+				<control type="button" id="28">
+					<description>OK Button</description>
+					<left>0</left>
+					<top>0</top>
+					<width>300</width>
+					<height>67</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Regular21</font>
+					<label></label>
+					<onleft>noop</onleft>
+					<onright>29</onright>
+					<onup>5</onup>
+					<ondown>9001</ondown>
+					<include>ButtonInfoDialogsCommonValues</include>
+				</control>
+				<control type="button" id="29">
+					<description>Cancel Button</description>
+					<left>315</left>
+					<top>0</top>
+					<width>300</width>
+					<height>67</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Regular21</font>
+					<label></label>
+					<onleft>28</onleft>
+					<onright>30</onright>
+					<onup>5</onup>
+					<ondown>9001</ondown>
+					<include>ButtonInfoDialogsCommonValues</include>
+				</control>
+				<control type="button" id="30">
+					<description>Defaults Button</description>
+					<left>630</left>
+					<top>0</top>
+					<width>300</width>
+					<height>67</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Regular21</font>
+					<label></label>
+					<onleft>29</onleft>
+					<onright>noop</onright>
+					<onup>5</onup>
+					<ondown>9001</ondown>
+					<include>ButtonInfoDialogsCommonValues</include>
+				</control>
+			</control>
+			
+		</control>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		
+		<control type="group">
+			
+			<left>0</left>
+			<top>0</top>
+			
+			<include>Window_OpenClose_Animation_Full</include>
+			
+			<include>SystemBackgroundAdditions</include>
+			
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<left>0</left>
+				<top>125</top>
+				<width>510</width>
+				<height>768</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				
+				<pagecontrol>399</pagecontrol>
+				
+				<onup>3</onup>
+				<ondown>202</ondown>
+				
+			</control>
+			<control type="scrollbar" id="399">
+				<left>456</left>
+				<top>143</top>
+				<include>scrollBarStyleDefaultWidth</include>
+				<height>738</height>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<showonepage>false</showonepage>
+				<include>scrollBarStyleDefault</include>
+				<animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
+			</control>
+			
+			
+			<control type="group">
+				
+				
+				<!-- Settings Level -->
+				
+				<control type="image">
+					
+					<left>56</left>
+					<top>912</top>
+					
+					<width>79</width>
+					<height>79</height>
+					
+					<texture border="24" colordiffuse="$VAR[accentSlightlyTransparentColorDiffuse]">colors/white_border24.png</texture>
+					
+					<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(202)" reversible="true">Conditional</animation>
+					
+				</control>
+				
+				<control type="label">
+					<left>160</left>
+					<top>929</top>
+					
+					<width>381</width>
+					<height>50</height>
+					
+					<label>$INFO[Control.GetLabel(20)]</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Light22</font>
+					<textcolor>selected</textcolor>
+					
+					<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(202)" reversible="true">Conditional</animation>
+					
+				</control>
+				
+				<control type="button" id="20">
+					<description>Setting level button</description>
+					
+					<left>39</left>
+					<top>906</top>
+					
+					<width>381</width>
+					<height>90</height>
+					
+					<label></label>
+					<textcolor>invisible</textcolor>
+					<focusedcolor>invisible</focusedcolor>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					
+				</control>
+				
+				<control type="image">
+					<left>74</left>
+					<top>932</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>_added_img/settings_level.png</texture>
+					<animation effect="fade" start="100" end="40" time="200" condition="!Control.HasFocus(202)">Conditional</animation>
+				</control>
+				
+				<control type="button" id="202">
+					
+					<left>38</left>
+					<top>905</top>
+					
+					<width>383</width>
+					<height>92</height>
+					
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					
+					<onleft></onleft>
+					<onright>5</onright>
+					
+					<!-- workaround a Kodi issue where it's focusing two buttons of a grouplist at once -->
+					<onup>right</onup>
+					<onup>left</onup>
+					
+					<ondown></ondown>
+					
+					<onclick>SettingsLevelChange</onclick>
+					
+				</control>
+				
+			</control>
+			
+			
+			
+			<control type="group">
+				
+				<control type="grouplist" id="5">
+					<description>control area</description>
+					<left>600</left>
+					<top>125</top>
+					<width>1125</width>
+					<height>732</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>60</pagecontrol>
+					
+					<!-- workaround a Kodi issue where it's focusing two buttons of a grouplist at once -->
+					<onleft>SetFocus(3)</onleft><!-- workaround -->
+					<onleft>3</onleft>
+					
+					<onright>60</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1782</left>
+					<top>125</top>
+					<include>scrollBarStyleDefaultWidth</include>
+					<height>732</height>
+					<onleft>5</onleft>
+					<onright>60</onright>
+					<showonepage>false</showonepage>
+					<include>scrollBarStyleDefault</include>
+				</control>
+				
+				
+				
+				
+				<control type="textbox" id="6">
+					<description>description area</description>
+					<left>616</left>
+					<top>900</top>
+					<width>1104</width>
+					<height>106</height>
+					<font>Light18.5</font>
+					<align>left</align>
+					<textcolor>selected+</textcolor>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				</control>
+				
+				
+				
+			</control>
+			
+			
+			
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<height>96</height>
+			<width>510</width>
+			<textoffsetx>75</textoffsetx>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Regular_Wider_25</font>
+			<textcolor>grey2+</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<include>SettingsCategoryButtonTexture</include>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<left>0</left>
+			<top>0</top>
+			<height>72</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<invalidcolor>invalid</invalidcolor>
+			<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		
+		<!-- Kodi 20+ fix -->
+		<control type="colorbutton" id="15">
+			<description>Default ColorButton</description>
+			<left>0</left>
+			<top>0</top>
+			<height>72</height>
+			<aligny>center</aligny>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<invalidcolor>invalid</invalidcolor>
+			<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<left>0</left>
+			<top>0</top>
+			<height>72</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<left>0</left>
+			<top>0</top>
+			<height>72</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+			<left>0</left>
+			<top>0</top>
+			<height>72</height>
+			<font>Regular21</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="12" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">MenuItemFO-rounded-10px-neutral.png</texturefocus>
+			<texturenofocus></texturenofocus>
+			<aligny>center</aligny>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>15</height>
+			<texture></texture>
+		</control>
+		<control type="label" id="14">
+			<description>Default Label</description>
+			<left>0</left>
+			<top>0</top>
+			<height>68</height>
+			<label></label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Light22</font>
+			<textcolor>blue</textcolor>
+		</control>
+		<control type="label" id="2">
+			<description>Fake Label so we can pass it value down to the one below</description>
+			<left>0</left>
+			<top>0</top>
+			<width>0</width>
+			<height>0</height>
+			<font></font>
+			<visible>false</visible>
+		</control>
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[5]" />
+			<param name="ShowLabel2" value="true" />
+		</include>
+		
+		<include>BehindDialogFadeOut</include>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

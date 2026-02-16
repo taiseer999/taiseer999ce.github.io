@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+	
+	
+	<fontset id="Default" unicode="true">
+		
+		<!-- Kodi 17.7+ (With support for Font Includes) -->
+		<include content="Font_Include"></include>
+		
+	</fontset>
+	
+	<include condition="Skin.HasSetting(ExperimentalOptions) + String.Contains(Skin.String(DevCodes),FONTS)">Font_Include_FontSets_Additional</include>
+	
+	
+</fonts>

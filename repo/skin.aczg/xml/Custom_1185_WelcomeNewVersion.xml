@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1185">
+	
+	<visible>!String.IsEmpty(System.AddonVersion(skin.aczg)) + !String.IsEqual(Skin.String(WelcomeNewVersion),System.AddonVersion(skin.aczg)) + !Window.IsVisible(StartUp) + !Window.IsVisible(LoginScreen) + !Window.IsVisible(1180) + !Window.IsVisible(1181) + !Window.IsVisible(1182) + !Window.IsVisible(YesNodialog) + !Window.IsVisible(1112) + !Window.IsVisible(1111) + !Window.IsVisible(notification)</visible>
+	
+	<onload>CancelAlarm(WelcomeNewVersion,true)</onload>
+	
+	<onload>AlarmClock(WelcomeNewVersion, "Notification(Hi,just updated your UI to $INFO[System.AddonVersion(skin.aczg)] - enjoy,8000,special://skin/icon.png)",00:00:02,true)</onload>
+	
+	<!-- new skin milestone (x.6.6) one-time reset some skin settings to default -->
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.SetString(HomeScreenKodiLogo,0)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.SetString(HomeDateTimeType,0)</onload>
+	
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.SetString(BackgroundType,8)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.SetString(UseCustomBackground,0)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.SetString(BackgroundDarkenStrength,1)</onload>
+	
+	<!-- new osd (x.6.6) one-time reset to default -->
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoOSDVideoResolution)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoOSDAudioCodec)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoOSDAudioSubLanguage)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoOSDAudioChannels)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoEndTime)</onload>
+	<onload condition="!String.StartsWith(System.AddonVersion(skin.aczg),3.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.6.) + !String.StartsWith(System.AddonVersion(skin.aczg),3.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),4.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),5.7.) + !String.StartsWith(System.AddonVersion(skin.aczg),6.7.)">Skin.Reset(ReducedFullScreenInfoOSDArtworkDisable)</onload>
+	
+	
+	
+	<onload condition="[String.IsEqual(System.AddonVersion(skin.aczg),3.7.30) | String.IsEqual(System.AddonVersion(skin.aczg),4.7.30) | String.IsEqual(System.AddonVersion(skin.aczg),5.7.30) | String.IsEqual(System.AddonVersion(skin.aczg),6.7.30)] + String.IsEqual(Skin.String(HomeScreenMainMenuStyle),1)">Skin.SetString(HomeScreenMainMenuStyle,0)</onload>
+	
+	<onload condition="[String.IsEqual(System.AddonVersion(skin.aczg),3.7.31) | String.IsEqual(System.AddonVersion(skin.aczg),4.7.31) | String.IsEqual(System.AddonVersion(skin.aczg),5.7.31) | String.IsEqual(System.AddonVersion(skin.aczg),6.7.31)] + String.IsEqual(Skin.String(HomeScreenMainMenuStyle),1)">Skin.SetString(HomeScreenMainMenuStyle,0)</onload>
+	
+	<onload condition="[String.IsEqual(System.AddonVersion(skin.aczg),3.7.32) | String.IsEqual(System.AddonVersion(skin.aczg),4.7.32) | String.IsEqual(System.AddonVersion(skin.aczg),5.7.32) | String.IsEqual(System.AddonVersion(skin.aczg),6.7.32)] + String.IsEqual(Skin.String(HomeScreenMainMenuStyle),1)">Skin.SetString(HomeScreenMainMenuStyle,0)</onload>
+	
+	
+	
+	<onload condition="String.IsEmpty(Skin.String(ListItemHelperHotfixDone20260101))">RunScript("special://skin/xml/py/clear_image_cache_helper.py")</onload>
+	<onload condition="String.IsEmpty(Skin.String(ListItemHelperHotfixDone20260101))">Skin.SetString(ListItemHelperHotfixDone20260101,True)</onload>
+	
+	
+	
+	<onload>Skin.SetString(WelcomeNewVersion,$INFO[System.AddonVersion(skin.aczg)])</onload>
+	<onload condition="String.IsEmpty(Skin.String(FirstKnownVersion))">Skin.SetString(FirstKnownVersion,$INFO[System.AddonVersion(skin.aczg)])</onload>
+	
+	<controls></controls>
+	
+</window>

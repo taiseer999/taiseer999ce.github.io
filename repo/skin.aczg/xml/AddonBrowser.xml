@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">51</defaultcontrol>
+	<menucontrol>7000</menucontrol>
+	<!--
+	Disable only here to prevent first install helper dialog spam while being in add-on browser
+	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	-->
+	<views>51,50,550,551,500,908,909,910</views>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 51 -->
+			<include>FullWidthList</include>
+			<!-- view id = 50 -->
+			<include>CommonRootView</include>
+			<!-- view id = 550 -->
+			<include condition="Skin.HasSetting(ViewTypesShowLegacy)">AddonInfoListView1</include>
+			<!-- view id = 551 -->
+			<include condition="Skin.HasSetting(ViewTypesShowLegacy)">AddonInfoThumbView1</include>
+			
+			<include>WallView2X</include>
+			<include>WallView3X</include>
+			<include>WallView4X</include>
+			<include>WallView5X</include>
+			
+		</control>
+		
+		
+		<!--<include>ScrollOffsetLabel</include>-->
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_addons" />
+			<param name="Label" value="$LOCALIZE[24001]" />
+		</include>
+		
+		<include>BehindDialogFadeOut</include>
+		
+		
+		<control type="group">
+			
+			<left>-429</left>
+			
+			<include>SideBladeLeft</include>
+			
+			<control type="grouplist" id="7000">
+				<include>SideBladeLeftFadeInAni</include>
+				<left>24</left>
+				<top>120</top>
+				<width>375</width>
+				<height>915</height>
+				<onleft>7000</onleft>
+				<onright>50</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<onback>50</onback>
+				<itemgap>0</itemgap>
+				
+				<control type="image" id="7101">
+					<width>375</width>
+					<height>15</height>
+				</control>
+				
+				<control type="button" id="2">
+					<description>View As button</description>
+					<textwidth>353</textwidth>
+					<include>SideBarButtonCommon</include>
+					<label></label>
+				</control>
+				
+				<include>WallViewsHigherDensitySidebarButton</include>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>SideBarButtonCommon</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>SideBarButtonCommon</include>
+					<alttexturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</alttexturefocus>
+					<alttexturenofocus></alttexturenofocus>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="label" id="201">
+					<width>375</width>
+					<height>53</height>
+					<font>Light18.5</font>
+					<label>31026</label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="radiobutton" id="7">
+					<description>Hide foreign</description>
+					<include>SideBarButtonCommon</include>
+					<label>25001</label>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide broken</description>
+					<include>SideBarButtonCommon</include>
+					<label>24999</label>
+				</control>
+				<control type="button" id="9">
+					<description>Check for updates</description>
+					<include>SideBarButtonCommon</include>
+					<label>24034</label>
+				</control>
+				
+				<!-- dummy space -->
+				<control type="label" id="6446">
+					<height>15</height>
+				</control>
+				
+				<control type="button" id="5">
+					<description>Settings shortcut</description>
+					<include>SideBarButtonCommon</include>
+					<label>10004</label>
+				</control>
+				<control type="button" id="2562">
+					<description>My add-ons</description>
+					<textwidth>345</textwidth>
+					<include>SideBarButtonCommon</include>
+					<label>24998</label>
+					<onclick>ActivateWindow(addonbrowser,addons://user/all/,return)</onclick>
+				</control>
+				<control type="button" id="3364">
+					<description>Manage dependencies</description>
+					<textwidth>345</textwidth>
+					<include>SideBarButtonCommon</include>
+					<label>24996</label>
+					<onclick>ActivateWindow(addonbrowser,addons://dependencies/,return)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control type="button" id="7454">
+					<description>Running</description>
+					<textwidth>345</textwidth>
+					<include>SideBarButtonCommon</include>
+					<label>24994</label>
+					<onclick>ActivateWindow(addonbrowser,addons://running/,return)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				
+				<include>CommonNowPlaying_Controls</include>
+			</control>
+			
+			<control type="group">
+				<include>SideBladeLeftFadeInAni</include>
+				<left>42</left>
+				<top>19</top>
+				<control type="label">
+					<description>Last updated</description>
+					<left>0</left>
+					<top>0</top>
+					<height>90</height>
+					<width>360</width>
+					<label>$LOCALIZE[31301]$INFO[Window.Property(Updated),[CR][COLOR=grey],[/COLOR]]</label>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Light18+</font>
+					<textcolor>selected</textcolor>
+					<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
+				</control>
+			</control>
+			
+		</control>
+		
+		
+		
+		<include condition="Integer.IsLess(Window(Home).Property(CinemaHelper.GetSettingValue.lookandfeel.skinzoom),0) | !String.IsEqual(Skin.AspectRatio,16:9)">SkinOutOfBoundsMasks</include>
+		
+		
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

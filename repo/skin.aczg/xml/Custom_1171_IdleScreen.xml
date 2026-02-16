@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1171">
+	
+	<defaultcontrol always="true">11711</defaultcontrol>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<control type="button" id="11711">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<hitrect x="0" y="0" w="1920" h="1080" />
+			<onclick>noop</onclick>
+		</control>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

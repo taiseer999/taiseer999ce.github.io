@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">95</defaultcontrol>
+	
+	<controls><!-- WRAPPER START --><control type="group"><centerleft>50%</centerleft><centertop>50%</centertop><width>1920</width><height>1080</height><!-- WRAPPER START -->
+		
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		
+		
+		
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			
+			<include>Window_OpenClose_Animation_Full</include>
+			
+			<include>SystemBackgroundAdditions</include>
+			
+			
+			
+			<!-- Left Tabs Menu -->
+			<control type="grouplist" id="9000">
+				<itemgap>0</itemgap>
+				
+				<left>0</left>
+				<top>125</top>
+				<width>510</width>
+				<height>945</height>
+				
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onright>60</onright>
+				
+				<control type="button" id="95">
+					<description>Button Summary Values</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>20037</label>
+				</control>
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>13277</label>
+				</control>
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>13279</label>
+				</control>
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>13280</label>
+				</control>
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>13281</label>
+				</control>
+				<control type="button" id="99">
+					<description>Button PVR</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>19191</label>
+					<animation effect="fade" start="100" end="25" time="0" condition="!Control.IsEnabled(99)" reversible="true">Conditional</animation>
+				</control>
+				<control type="button" id="100">
+					<description>Button Policy</description>
+					<height>96</height>
+					<width>510</width>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Regular_Wider_25</font>
+					<textcolor>grey2+</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<include>SettingsCategoryButtonTexture</include>
+					<label>$LOCALIZE[12389]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>600</left>
+				<top>131</top>
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<left>0</left>
+					<top>0</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<left>0</left>
+					<top>53</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<left>0</left>
+					<top>106</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<left>0</left>
+					<top>159</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<left>0</left>
+					<top>212</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<left>0</left>
+					<top>265</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<left>0</left>
+					<top>318</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<left>0</left>
+					<top>371</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<left>0</left>
+					<top>424</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<left>0</left>
+					<top>477</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<control type="label" id="12">
+					<description>Label 12</description>
+					<left>0</left>
+					<top>530</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+				</control>
+				<!-- Kodi 21.2+ only -->
+				<!-- Line 12 -->
+				<control type="label" id="13">
+					<description>Label 13</description>
+					<left>0</left>
+					<top>583</top>
+					<width>1125</width>
+					<label></label>
+					<font>Light21</font>
+					<visible>![String.StartsWith(System.BuildVersion,17.) | String.StartsWith(System.BuildVersion,18.) | String.StartsWith(System.BuildVersion,19.) | String.StartsWith(System.BuildVersion,20.) | String.StartsWith(System.BuildVersion,21.)] | [String.StartsWith(System.BuildVersion,21.) + !String.StartsWith(System.BuildVersion,21.0) + !String.StartsWith(System.BuildVersion,21.1)]</visible>
+				</control>
+				
+				
+				
+				<control type="image">
+					<include>VisibleFadeEffectSpecial</include>
+					<left>-20</left>
+					<top>-15</top>
+					<width>1165</width>
+					<height>420</height>
+					<texture border="24" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">_added_img/focus_border_2px-rounded-neutral-new.png</texture>
+					<visible>Control.HasFocus(60)</visible>
+					
+					<include>DimFocusTextureAdditionally</include>
+					
+				</control>
+				<control type="button" id="60">
+					<left>-20</left>
+					<top>-15</top>
+					<width>1165</width>
+					<height>420</height>
+					
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					
+					<onleft>100</onleft>
+					
+					<onclick condition="!String.IsEmpty(Control.GetLabel(30))">SetProperty(TextViewer_Header,$ESCINFO[Control.GetLabel(100)],home)</onclick>
+					<onclick condition="!String.IsEmpty(Control.GetLabel(30))">SetProperty(TextViewer_Text_Pre,,home)</onclick>
+					<onclick condition="!String.IsEmpty(Control.GetLabel(30))">SetProperty(TextViewer_Text,$ESCINFO[Control.GetLabel(30)],home)</onclick>
+					
+					<onclick condition="!String.IsEmpty(Control.GetLabel(30))">ActivateWindow(1102)</onclick>
+					
+					<visible>Control.IsVisible(30)</visible>
+					
+				</control>
+				<control type="textbox" id="30">
+					<left>0</left>
+					<top>0</top>
+					<width>1125</width>
+					<height>346</height>
+					<autoscroll>false</autoscroll>
+					<font>Light19</font>
+				</control>
+				<control type="label">
+					<description>...</description>
+					<left>0</left>
+					<top>352</top>
+					<width>150</width>
+					<height>60</height>
+					
+					<font>Light20</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<label>...</label>
+					
+					<visible>Control.IsVisible(30)</visible>
+					
+				</control>
+				
+				
+				<control type="group">
+					<top>70</top>
+					<control type="label">
+						<description>CPU Text</description>
+						<left>0</left>
+						<top>577</top>
+						<width>1125</width>
+						<height>38</height>
+						<label>CPU:  $INFO[System.CPUUsage]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<font>Light18</font>
+					</control>
+					
+					<control type="image">
+						<left>0</left>
+						<top>627</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="30FFFFFF">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>1122</left>
+						<top>627</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="30FFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>627</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="EBFFFFFF">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>1122</left>
+						<top>627</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="EBFFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+						<visible>Integer.IsGreater(System.CPUUsage,99)</visible>
+					</control>
+					<control type="progress">
+						<description>CPU BAR</description>
+						<left>3</left>
+						<top>627</top>
+						<width>1119</width>
+						<height>9</height>
+						<info>System.CPUUsage</info>
+						<include>progressBarStyleDefault</include>
+					</control>
+					<control type="label">
+						<description>CPU Temperature</description>
+						<left>1150</left>
+						<top>612</top>
+						<width>auto</width>
+						<height>38</height>
+						<label>$INFO[System.CPUTemperature]</label>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<font>Light18</font>
+						
+						<visible>!String.IsEmpty(System.CPUTemperature) + !String.Contains(System.CPUTemperature,?)</visible>
+						
+						<!--
+						Language string "Not available"
+						Kodi 17      416
+						Kodi 18+   10005
+						-->
+						<visible>[!String.StartsWith(System.BuildVersion,17.) + !String.IsEqual(System.CPUTemperature,$LOCALIZE[10005])] | [String.StartsWith(System.BuildVersion,17.) + !String.IsEqual(System.CPUTemperature,$LOCALIZE[416])]</visible>
+						
+					</control>
+					
+					
+					<control type="label">
+						<description>Memory Text</description>
+						<left>0</left>
+						<top>659</top>
+						<width>auto</width>
+						<height>38</height>
+						<label>RAM:   $INFO[system.memory(used.percent)]         $INFO[system.memory(used)]  /  $INFO[system.memory(total)]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<font>Light18</font>
+					</control>
+					<control type="grouplist">
+						<left>740</left>
+						<top>659</top>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<description>Memory Text</description>
+							<width>auto</width>
+							<height>38</height>
+							<label>$LOCALIZE[158]:   </label>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<font>Light18</font>
+						</control>
+						<control type="label">
+							<description>Memory Text</description>
+							<width>134</width>
+							<height>38</height>
+							<label>$INFO[system.memory(free)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<font>Light18</font>
+						</control>
+					</control>
+					
+					<control type="image">
+						<left>0</left>
+						<top>708</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="30FFFFFF">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>1122</left>
+						<top>708</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="30FFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>708</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="EBFFFFFF">osd/progress/progress-9px-start-end.png</texture>
+					</control>
+					<control type="image">
+						<left>1122</left>
+						<top>708</top>
+						<width>3</width>
+						<height>9</height>
+						<texture colordiffuse="EBFFFFFF" flipx="true">osd/progress/progress-9px-start-end.png</texture>
+						<visible>Integer.IsGreater(system.memory(used),99)</visible>
+					</control>
+					<control type="progress">
+						<description>Memory BAR</description>
+						<left>3</left>
+						<top>708</top>
+						<width>1119</width>
+						<height>9</height>
+						<info>system.memory(used)</info>
+						<include>progressBarStyleDefault</include>
+					</control>
+					
+					<control type="grouplist">
+						<description>Kodi build version</description>
+						<itemgap>30</itemgap>
+						<top>741</top>
+						<left>0</left>
+						<align>left</align>
+						<orientation>horizontal</orientation>
+						<width>1320</width>
+						<control type="label">
+							<description>Build label</description>
+							<width>auto</width>
+							<height>38</height>
+							<label>$LOCALIZE[144]</label>
+							<textcolor>white</textcolor>
+							<font>Light21</font>
+						</control>
+						<control type="label" id="53">
+							<description>Kodi Build Date</description>
+							<width>auto</width>
+							<textcolor>blue</textcolor>
+							<font>Light21</font>
+						</control>
+						<control type="label" id="52">
+							<description>Kodi Build Version</description>
+							<width min="1320">auto</width>
+							<textcolor>blue</textcolor>
+							<font>Light21</font>
+						</control>
+					</control>
+					<control type="label">
+						<description>Kodi Build Version</description>
+						<left>0</left>
+						<top>780</top>
+						<width>1185</width>
+						<textcolor>grey3</textcolor>
+						<font>Light18</font>
+						<label>$INFO[System.OSVersionInfo]</label>
+						<visible>!String.IsEmpty(System.OSVersionInfo)</visible>
+					</control>
+				</control>
+				
+			</control>
+		</control>
+		
+		<include content="CommonWindowHeader">
+			<param name="Icon" value="icon_system" />
+			<param name="Label" value="$LOCALIZE[130]" />
+		</include>
+		
+	<include condition="Skin.HasSetting(EnableDebugOverlaySkinAndVars)">DebugOverlaySkinAndVars</include><include condition="Skin.HasSetting(EnableDebugOverlaySystemLoad)">DebugOverlaySystemLoad</include><!-- WRAPPER STOP --></control><!-- WRAPPER STOP --></controls>
+</window>

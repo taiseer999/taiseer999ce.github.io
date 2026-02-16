@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<left>0</left>
+		<top>0</top>
+		<texture></texture>
+	</default>
+	<default type="label">
+		<label></label>
+		<font>Regular20</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+	</default>
+	<default type="fadelabel">
+		<left>120</left>
+		<top>90</top>
+		<font>Regular20</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+	</default>
+	<default type="button">
+		<width>450</width>
+		<height>63</height>
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<font>Regular20</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<textoffsetx>16</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="togglebutton">
+		<left>210</left>
+		<top>251</top>
+		<width>30</width>
+		<height>30</height>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<label></label>
+		<font>Regular20</font>
+		<disabledcolor>grey3.5</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="textbox">
+		<left>330</left>
+		<top>333</top>
+		<width>615</width>
+		<height>320</height>
+		<align>left</align>
+		<textcolor>white</textcolor>
+		<font>Regular20</font>
+		
+		<scrolltime tween="sine" easing="inout">275</scrolltime>
+		
+	</default>
+	<default type="progress">
+		<left>150</left>
+		<top>486</top>
+		<include>progressBarStyleDefault</include>
+		<lefttexture></lefttexture>
+		<righttexture></righttexture>
+		<overlaytexture></overlaytexture>
+	</default>
+	<default type="spincontrol">
+		<left>495</left>
+		<top>189</top>
+		
+		<textureup>spincontrol-up.png</textureup>
+		<texturedown>spincontrol-down.png</texturedown>
+		
+		<textureupdisabled colordiffuse="40FFFFFF">spincontrol-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">spincontrol-down.png</texturedowndisabled>
+		
+		<textureupfocus>spincontrol-up-focus.png</textureupfocus>
+		<texturedownfocus>spincontrol-down-focus.png</texturedownfocus>
+		
+		<align>right</align>
+		<width>50</width>
+		<height>33</height>
+		<spinwidth>50</spinwidth>
+		<spinheight>33</spinheight>
+		<font>Regular20</font>
+		<reverse>yes</reverse>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>-8</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<left>795</left>
+		<top>240</top>
+		<width>450</width>
+		<height>63</height>
+		<spinwidth>50</spinwidth>
+		<spinheight>33</spinheight>
+		<texturefocus colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		
+		<textureup>spincontrol-up.png</textureup>
+		<texturedown>spincontrol-down.png</texturedown>
+		
+		<textureupdisabled colordiffuse="40FFFFFF">spincontrol-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">spincontrol-down.png</texturedowndisabled>
+		
+		<textureupfocus>spincontrol-up-focus.png</textureupfocus>
+		<texturedownfocus>spincontrol-down-focus.png</texturedownfocus>
+		
+		<font>Regular20</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<textoffsetx>16</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<left>450</left>
+		<top>300</top>
+		<width>45</width>
+		<height>63</height>
+		<radiowidth>60</radiowidth>
+		<radioheight>36</radioheight>
+		
+		<textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="B7FFFFFF">radiobutton-focus.png</textureradioonnofocus>
+		
+		<textureradioofffocus>radiobutton.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="B7FFFFFF">radiobutton.png</textureradiooffnofocus>
+		
+		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton-focus.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton.png</textureradiooffdisabled>
+		
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<label>215</label>
+		<font>Regular20</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<textoffsetx>16</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	
+	<!-- Kodi 20+ fix -->
+	<default type="colorbutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>450</width>
+		<height>63</height>
+		<colorwidth>154</colorwidth>
+		<colorheight>76</colorheight>
+		<texturecolormask>color-button-box.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="40FFFFFF">color-button-box.png</texturecolordisabledmask>
+		<texturefocus></texturefocus>
+		<texturenofocus></texturenofocus>
+		<font>Regular20</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<textoffsetx>11</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	
+	<default type="slider">
+		<controloffsetx>75</controloffsetx>
+		<controloffsety>0</controloffsety>
+		<orientation>horizontal</orientation>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="sliderex">
+		<height>53</height>
+		<textoffsetx>16</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<sliderwidth>225</sliderwidth>
+		<sliderheight>36</sliderheight>
+		
+		<!-- Kodi 21+ -->
+		<texturesliderbardisabled colordiffuse="82FFFFFF">osd/slider/slider-bg.png</texturesliderbardisabled>
+		<textureslidernibdisabled colordiffuse="FF828282">osd/slider/slider-nib.png</textureslidernibdisabled>
+		
+		<texturesliderbar>osd/slider/slider-bg.png</texturesliderbar>
+		<textureslidernib>osd/slider/slider-nib.png</textureslidernib>
+		
+		<textureslidernibfocus colordiffuse="$VAR[uiColorVariantSliderNibFocus]">osd/slider/slider-nib-focus-neutral.png</textureslidernibfocus>
+		
+		<font>Regular17</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="mover">
+		<left>90</left>
+		<top>288</top>
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+	</default>
+	<default type="resize">
+		<left>90</left>
+		<top>288</top>
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+	</default>
+	<default type="edit">
+		<left>450</left>
+		<top>300</top>
+		<width>450</width>
+		<height>63</height>
+		<texturefocus border="14" colordiffuse="$VAR[accentColorDiffuseForNeutralTextures]">button-focus-neutral.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<font>Regular20</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3.5</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>16</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+</includes>
