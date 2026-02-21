@@ -715,7 +715,7 @@
         </definition>
     </include>
 	
-   <include name="Object_InfoCircle_VS10">
+    <include name="Object_InfoCircle_VS10">
         <param name="bordersize">1</param>
         <param name="aspectratio">scale</param>
         <param name="colorbacking">main_fg_100</param>
@@ -747,7 +747,6 @@
                         <param name="colordiffuse">$PARAM[colordiffuse]</param>
                         <param name="icon">$PARAM[icon]</param>
                         <param name="diffuse">$PARAM[diffuse]</param>
-                        <param name="fallback">$PARAM[fallback]</param>
                 	</include>
                 </control>
                 <nested />
@@ -758,7 +757,8 @@
                 	<top>35</top>
                 	<textcolor>$PARAM[textcolor]</textcolor>
                 	<selectedcolor>$PARAM[textcolor]</selectedcolor>
-                	<label fallback="$PARAM[fallback_role]">$PARAM[name]</label>
+                	<label>$PARAM[label]</label>
+                	<font>$PARAM[font]</font>
                 </include>
         	</control>
         </definition>
