@@ -871,7 +871,7 @@
 						<aspectratio align="left">keep</aspectratio>
 						<height>23</height>
 						<top>-22</top>
-					
+					</control>
 					<!-- Metadata -->
 					<control type="label">
 						<top>20</top>
