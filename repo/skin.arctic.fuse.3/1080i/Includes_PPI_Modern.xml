@@ -375,7 +375,7 @@
 				<!-- Group: HDR Static Metadata -->
 				<control type="group">
 					<visible>String.Contains(Player.Process(video.hdr.type),hdr) + String.IsEqual(Player.Process(video.dovi.has.config),0)</visible>
-					<left>1380</left>
+					<left>1355</left>
 					<top>205</top>
 					
 					<!-- HDR Static Metadata Icon -->
@@ -1023,7 +1023,7 @@
 						<left>331</left>
 						<top>231</top>
 						<label>$VAR[DVELVar1]</label>
-						<font>font_tiny_iconic_regular</font>
+						<font>font_tiny_iconic_regular1</font>
 						<textcolor>dialog_fg_90</textcolor>
 						<visible>!String.Contains(Player.Process(video.dovi.el.type),minimum)</visible>
 						<visible>!String.Contains(Player.Process(video.dovi.el.type),full)</visible>
@@ -1032,7 +1032,7 @@
 						<left>400</left>
 						<top>231</top>
 						<label>$VAR[ELSourcePresentVar]</label>
-						<font>font_tiny_iconic_regular</font>
+						<font>font_tiny_iconic_regular1</font>
 						<visible>!String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type))</visible>
 						<visible>!String.IsEqual(Player.Process(video.source.dovi.profile),0)</visible>
 					</control>
@@ -1044,7 +1044,7 @@
 					<visible>String.IsEqual(Player.Process(video.dovi.has.header),1)</visible>
 					<visible>String.IsEqual(Player.Process(video.dovi.has.l5),0)</visible>
 					<top>300</top>
-					<left>1380</left>
+					<left>1355</left>
 					
 					<!-- Metadata Metadata Icon -->
 					<control type="label">
@@ -1220,7 +1220,7 @@
 					<visible>String.IsEqual(Player.Process(video.dovi.has.header),1)</visible>
 					<visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
 					<top>300</top>
-					<left>1380</left>
+					<left>1355</left>
 					
 					<!-- Metadata Metadata Icon -->
 					<control type="label">
