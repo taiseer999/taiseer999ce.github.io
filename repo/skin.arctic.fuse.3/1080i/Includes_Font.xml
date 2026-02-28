@@ -32,7 +32,7 @@
             <font>
                 <name>font_Topbar_bold</name>
                 <filename>monadi BOLD.ttf</filename>
-                <size>44</size>
+                <size>38</size>
                 <style>uppercase</style>
             </font>
 
@@ -40,7 +40,7 @@
             <font>
                 <name>font_Topbarinfo</name>
                 <filename>monadi-reg.ttf</filename>
-                <size>32</size>
+                <size>29</size>
                 <style>uppercase</style>
             </font>
 
