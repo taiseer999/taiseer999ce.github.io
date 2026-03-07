@@ -620,7 +620,7 @@
 
     <include name="CodecLogosCenterPPI">
         <control type="group">
-            <left>705</left>
+            <left>710</left>
             
             <control type="group">
                 <visible></visible>
@@ -747,7 +747,7 @@
             </control>    
 
         <control type="group">
-            <left>925</left>
+            <left>935</left>
             
             <control type="group">
                 <visible></visible>
@@ -916,7 +916,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
-            <left>705</left>
+            <left>710</left>
             
             <control type="group">
                 <visible></visible>
@@ -1043,7 +1043,7 @@
         </control>    
 
          <control type="group">
-            <left>925</left>
+            <left>935</left>
             
             <control type="group">
                 <visible></visible>
