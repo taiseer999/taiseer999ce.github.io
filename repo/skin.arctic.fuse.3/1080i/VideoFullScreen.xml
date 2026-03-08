@@ -343,7 +343,7 @@
         <control type="group" id="3">
             <depth>DepthOSD+</depth>
             <visible>Skin.HasSetting(osd.usecenterCodecStartupLogos)</visible>
-            <left>705</left>
+            <left>710</left>
 			
             <animation type="WindowOpen" condition="!Skin.HasSetting(osd.useOneSecondCodecLogos) + !Skin.HasSetting(osd.useTwoSecondsCodecLogos) + !Skin.HasSetting(osd.useThreeSecondsCodecLogos) + !Skin.HasSetting(osd.useFourSecondsCodecLogos) + !Skin.HasSetting(osd.useFiveSecondsCodecLogos) + !Skin.HasSetting(osd.useSixSecondsCodecLogos) + !Skin.HasSetting(osd.useSevenSecondsCodecLogos) + !Skin.HasSetting(osd.useEightSecondsCodecLogos) + !Skin.HasSetting(osd.useNineSecondsCodecLogos) + !Skin.HasSetting(osd.useTenSecondsCodecLogos) + !Skin.HasSetting(osd.useElevenSecondsCodecLogos) + !Skin.HasSetting(osd.useTwelveSecondsCodecLogos) + !Skin.HasSetting(osd.useThirteenSecondsCodecLogos) + !Skin.HasSetting(osd.useFourteenSecondsCodecLogos) + !Skin.HasSetting(osd.useFifteenSecondsCodecLogos)">
                 <effect type="fade" start="0" end="100" time="300" />
@@ -512,7 +512,7 @@
             <control type="group" id="3">
             <depth>DepthOSD+</depth>
             <visible>Skin.HasSetting(osd.usecenterCodecStartupLogos)</visible>
-            <left>925</left>
+            <left>935</left>
 			
             <animation type="WindowOpen" condition="!Skin.HasSetting(osd.useOneSecondCodecLogos) + !Skin.HasSetting(osd.useTwoSecondsCodecLogos) + !Skin.HasSetting(osd.useThreeSecondsCodecLogos) + !Skin.HasSetting(osd.useFourSecondsCodecLogos) + !Skin.HasSetting(osd.useFiveSecondsCodecLogos) + !Skin.HasSetting(osd.useSixSecondsCodecLogos) + !Skin.HasSetting(osd.useSevenSecondsCodecLogos) + !Skin.HasSetting(osd.useEightSecondsCodecLogos) + !Skin.HasSetting(osd.useNineSecondsCodecLogos) + !Skin.HasSetting(osd.useTenSecondsCodecLogos) + !Skin.HasSetting(osd.useElevenSecondsCodecLogos) + !Skin.HasSetting(osd.useTwelveSecondsCodecLogos) + !Skin.HasSetting(osd.useThirteenSecondsCodecLogos) + !Skin.HasSetting(osd.useFourteenSecondsCodecLogos) + !Skin.HasSetting(osd.useFifteenSecondsCodecLogos)">
                 <effect type="fade" start="0" end="100" time="300" />

@@ -987,7 +987,7 @@
 						<wrapmultiline>true</wrapmultiline>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[Player.Process(video.hdr.colour.primaries)]</label>
+						<label>$VAR[ColorSpaceVar]</label>
 						<font>font_tiny_iconic_regular1</font>
 						
 						
