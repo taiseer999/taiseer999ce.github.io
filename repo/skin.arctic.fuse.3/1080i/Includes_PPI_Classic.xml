@@ -263,9 +263,6 @@
 					<control type="label">
 						<left>210</left>
 						<top>140</top>
-						<control type="label">
-						<left>210</left>
-						<top>140</top>
 						<label>$VAR[ColorSpaceVar]</label>
 						<font>font_tiny</font>
 						<textcolor>dialog_fg_90</textcolor>
