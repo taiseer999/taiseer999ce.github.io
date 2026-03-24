@@ -765,11 +765,16 @@
 		<value condition="String.IsEqual(ListItem.AudioCodec,avc)">AVC</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,cdda)">CDDA</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dca)">DTS</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,truehd)">TrueHD</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos)">Atmos HD</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby D</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dts)">DTS</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS-X</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS-X IMAX</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTSHD-HRA</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTSHD-MA</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtsma)">DTSHD-MA</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmnos DD+</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby D+</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,flac)">FLAC</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,mp1)">MP1</value>
@@ -929,5 +934,18 @@
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">[COLOR lightgreen]Atmos[/COLOR]</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">[COLOR lightgreen]DTS:X[/COLOR]</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">[COLOR lightgreen]IMAX[/COLOR]</value>
+	</variable>
+	<variable name="HDRcodectypeVar">
+		<value condition="String.Contains(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hdr10) + [String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.hdr10plus.) | String.Contains(Player.Filenameandpath,_hdr10plus_) | String.Contains(Player.Filenameandpath,_hdr10plus-) | String.Contains(Player.Filenameandpath,-HDR10plus-)]">HDR 10+</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hdr10)">HDR10</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hlg)">HLG</value>
+		<value condition="String.IsEmpty(VideoPlayer.HdrType)">SDR</value>
+	</variable>
+	<variable name="AudioCodecFlagVar">
+		<value condition="String.Contains(ListItem.Filenameandpath,ATMOS)">flags/audiocodec/atmos.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,DTS-X)">flags/audiocodec/dtsx.png</value>
+		<value condition="String.Contains(ListItem.Filenameandpath,DTSX)">flags/audiocodec/dtsx.png</value>
+		<value>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</value>
 	</variable>
 </includes>

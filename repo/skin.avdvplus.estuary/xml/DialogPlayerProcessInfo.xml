@@ -971,7 +971,7 @@
 					<!-- Video source type -->
 					<width>640</width>
 					<height>40</height>
-					<visible>Player.HasVideo</visible>
+					<visible>Player.HasVideo + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
 					<control type="label">
 						<width>220</width>
 						<height>40</height>
@@ -1018,6 +1018,32 @@
 						<shadowcolor>black</shadowcolor>
 						<visible>!String.IsEqual(Player.Process(video.source.hdr.type.raw),0)</visible>
 						<visible>!String.IsEqual(Player.Process(video.source.additional.hdr.type.raw),0)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<!-- Video source type -->
+					<width>640</width>
+					<height>40</height>
+					<visible>Player.HasVideo + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+					<control type="label">
+						<width>220</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]$LOCALIZE[31647]:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<!-- SDR -->
+						<left>220</left>
+						<width>420</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>right</align>
+						<label>$VAR[HDRcodectypeVar]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
 				<control type="group">
@@ -1601,7 +1627,7 @@
 					<width>520</width>
 					<height>40</height>
 					<visible>Player.HasVideo</visible>
-					<visible>String.Contains(Player.Process(video.hdr.type),dolby vision)</visible>
+					<visible>String.Contains(Player.Process(video.hdr.type),dolby vision) | String.Contains(VideoPlayer.HdrType,dolbyvision)</visible>
 					<visible>!String.Contains(Player.Process(video.hdr.type),hdr)</visible>
 					<control type="label">
 						<width>240</width>
@@ -1621,6 +1647,18 @@
 						<label>$VAR[DVProfileExtVar]$VAR[DVELVar, ] $INFO[Player.Process(video.dovi.codec.string),[COLOR dimgrey][,][/COLOR]]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
+						<visible>!String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+					</control>
+					<control type="label">
+						<left>280</left>
+						<width>240</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>right</align>
+						<label>10.0 [COLOR dimgrey][----][/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+						<visible>String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -1648,6 +1686,18 @@
 						<label>$INFO[Player.Process(video.dovi.meta.version)]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
+						<visible>!String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+					</control>
+					<control type="label">
+						<left>280</left>
+						<width>240</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>right</align>
+						<label>[COLOR dimgrey]None[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+						<visible>String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
 					</control>
 				</control>
 				<control type="group">
