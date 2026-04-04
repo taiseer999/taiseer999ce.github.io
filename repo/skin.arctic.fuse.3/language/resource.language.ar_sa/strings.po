@@ -293,7 +293,7 @@ msgstr "التفافية-العودة للبداية"
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31059"
 msgid "Side"
-msgstr "تخصيص الجانب الايسر"
+msgstr "الجانب الايسر"
 
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31060"

@@ -582,7 +582,7 @@
     </variable>
 
     <variable name="Label_Setting_Sidemenu">
-        <value condition="Skin.HasSetting(Submenu.EnableSideMode)">$LOCALIZE[31059]</value>
+        <value condition="Skin.HasSetting(HomeSwitcher.Vertical)">$LOCALIZE[31059]</value>
         <value>$LOCALIZE[31106]</value>
     </variable>
 
@@ -1893,6 +1893,17 @@
     <variable name="Label_Setting_WeatherStyle">
         <value condition="Skin.HasSetting(Furniture.EnableColourWeather)">$LOCALIZE[32079]</value>
         <value>$LOCALIZE[32083]</value>
+    </variable>
+
+    <variable name="CMModeVar">
+        <value condition="!String.StartsWith(Player.Process(video.dovi.meta.version),V)">[COLOR tomato][/COLOR]</value>
+        <value condition="String.StartsWith(Player.Process(video.dovi.meta.version),V)">[COLOR palegreen][/COLOR]</value>
+    </variable>
+	
+    <variable name="CMMode1Var">
+        <value condition="String.IsEqual(Player.Process(video.dovi.meta.version),VCMv4.0 2-0)">CMv4.0 2-0</value>
+        <value condition="String.IsEqual(Player.Process(video.dovi.meta.version),VCMv4.0 2-0 1-L8)">CMv4.0 2-0 1-L8</value>
+        <value>$INFO[Player.Process(video.dovi.meta.version)]</value>
     </variable>
 
 </includes>
