@@ -1,1 +1,0 @@
-["TMDb Helper - koreantvab", ["tmdb helper - tvdb"], [], {"google:suggestsubtypes": [[10, 160]], "google:suggesttype": ["TAIL"]}]
