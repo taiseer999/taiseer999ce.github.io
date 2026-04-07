@@ -1,0 +1,41 @@
+{
+  "name": "koreantvab",
+  "icon": "",
+  "list": [
+    {
+      "name": "Korean Drama AbuKarim",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Drama%20AbuKarim&list_slug=korean-drama-abukarim&plugin_category=Korean%20Drama%20AbuKarim&tmdb_type=both&user_slug=taiseer999"
+    },
+    {
+      "name": "Top Kdramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Top%20Kdramas&list_slug=top-kdramas&plugin_category=Top%20Kdramas&tmdb_type=both&user_slug=khandra"
+    },
+    {
+      "name": "Kdramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Kdramas&list_slug=kdramas&plugin_category=Kdramas&tmdb_type=both&user_slug=clrlune"
+    },
+    {
+      "name": "Korean Dramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Dramas&list_slug=korean-dramas-972cb8da-2c37-436c-acb4-4de43a79ae73&plugin_category=Korean%20Dramas&tmdb_type=both&user_slug=dandiandi"
+    },
+    {
+      "name": "2023 Best Korean Dramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=2023%20Best%20Korean%20Dramas&list_slug=2023-best-korean-dramas&plugin_category=2023%20Best%20Korean%20Dramas&tmdb_type=both&user_slug=just-david"
+    },
+    {
+      "name": "2024 Best Korean Dramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=2024%20Best%20Korean%20Dramas&list_slug=2024-best-korean-dramas&plugin_category=2024%20Best%20Korean%20Dramas&tmdb_type=both&user_slug=just-david"
+    },
+    {
+      "name": "Korean Dramas",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Dramas&list_slug=korean-dramas&plugin_category=Korean%20Dramas&tmdb_type=both&user_slug=xscaredycat"
+    }
+  ]
+}

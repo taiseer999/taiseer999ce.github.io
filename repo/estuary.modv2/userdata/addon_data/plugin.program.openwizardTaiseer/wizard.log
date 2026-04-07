@@ -1,0 +1,42 @@
+[2025-09-15 13:00:55] [Path Check] Started
+[2025-09-15 13:00:55] [Path Check] Good!
+[2025-09-15 13:00:55] [First Run] Showing Save Data Settings
+[2025-09-15 13:00:57] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:57] [Current Build Check] Build Not Installed
+[2025-09-15 13:00:58] [Current Build Check] [User Selected: Open Build Menu] [Next Check: 2019-01-01 00:00:00]
+[2025-09-15 13:00:58] [Build Update Check] Next Check: 2025-09-15 13:00:58
+[2025-09-15 13:00:58] [Auto Install Repo] Not Enabled
+[2025-09-15 13:00:58] [Binary Detection] Eligible Binary Addons to Reinstall
+[2025-09-15 13:00:58] [Auto Update Wizard] Started
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:59] plugin://plugin.program.openwizardTaiseer/: [ mode: builds ] 
+[2025-09-15 13:00:59] [Notifications] Not Enabled
+[2025-09-15 13:00:59] [Build Installed Check] Not Enabled
+[2025-09-15 13:00:59] [Trakt Data] Started
+[2025-09-15 13:00:59] [Trakt Data] Saving all Data
+[2025-09-15 13:00:59] [Debrid Data] Started
+[2025-09-15 13:00:59] [Debrid Data] Saving all Data
+[2025-09-15 13:00:59] [Login Info] Started
+[2025-09-15 13:00:59] [Login Info] Saving all Data
+[2025-09-15 13:00:59] Login Data Saved for OMDb - TheMovieDb Helper
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:59] Login Data Saved for TMDb - Fen
+[2025-09-15 13:00:59] [Auto Clean Up] Not Enabled
+[2025-09-15 13:00:59] plugin://plugin.program.openwizardTaiseer/: [ mode: builds ] 
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:00:59] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:07] plugin://plugin.program.openwizardTaiseer/: 
+[2025-09-15 13:01:07] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:07] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:07] URL is not of a valid schema: http://
+[2025-09-15 13:01:07] URL is not of a valid schema: http://
+[2025-09-15 13:01:10] plugin://plugin.program.openwizardTaiseer/: [ mode: builds ] 
+[2025-09-15 13:01:10] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:10] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:24] plugin://plugin.program.openwizardTaiseer/: 
+[2025-09-15 13:01:24] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:25] URL check passed for https://taiseer999.github.io/Builds.txt: Status code [200]
+[2025-09-15 13:01:25] URL is not of a valid schema: http://
+[2025-09-15 13:01:25] URL is not of a valid schema: http://

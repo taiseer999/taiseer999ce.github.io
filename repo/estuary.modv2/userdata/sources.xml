@@ -1,0 +1,42 @@
+<sources>
+    <video>
+        <default></default>
+        <source>
+            <name>Video Playlists</name>
+            <path>special://videoplaylists</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Movies</name>
+            <path>/Users/taiseerashouri/Movies</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </video>
+    <programs>
+        <default></default>
+    </programs>
+    <pictures>
+        <default></default>
+        <source>
+            <name>Pictures</name>
+            <path>/Users/taiseerashouri/Pictures</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </pictures>
+    <music>
+        <default></default>
+        <source>
+            <name>Music Playlists</name>
+            <path>special://musicplaylists</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Music</name>
+            <path>/Users/taiseerashouri/Music</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </music>
+    <files>
+        <default></default>
+    </files>
+</sources>

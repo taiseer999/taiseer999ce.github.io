@@ -1,0 +1,21 @@
+{
+  "name": "resume",
+  "icon": "",
+  "list": [
+    {
+      "name": "الحلقات",
+      "icon": "special://skin/extras/icons/inprogress2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_ondeck&tmdb_type=tv"
+    },   
+    {
+      "name": "الحلقة القادمة",
+      "icon": "special://skin/extras/icons/inprogress2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_nextepisodes&tmdb_type=tv"
+    },
+    {
+      "name": "المسلسلات",
+      "icon": "special://skin/extras/icons/tv2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_inprogress&list_name=%d8%aa%d9%83%d9%85%d9%84%d8%a9%20%d8%a7%d9%84%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9%20%d8%a7%d9%84%d9%85%d8%b3%d9%84%d8%b3%d9%84%d8%a7%d8%aa&tmdb_type=tv"
+    }
+  ]
+}

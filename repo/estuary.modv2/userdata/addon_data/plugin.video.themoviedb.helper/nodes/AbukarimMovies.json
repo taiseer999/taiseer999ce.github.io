@@ -1,0 +1,51 @@
+{
+  "name": "AbukarimMovies",
+  "icon": "",
+  "list": [
+    {
+      "name": "Korean Movies  AbuKarim",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Movies%20%20AbuKarim&list_slug=korean-movies-abukarim-26374953&plugin_category=Korean%20Movies%20%20AbuKarim&tmdb_type=both&user_slug=taiseer999"
+    },
+    {
+      "name": "Korean Crime Thrillers",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Crime%20Thrillers&list_slug=korean-crime-thrillers&plugin_category=Korean%20Crime%20Thrillers&tmdb_type=both&user_slug=vipulxgupta"
+    },
+    {
+      "name": "Korean Thriller",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Thriller&list_slug=korean-thriller&plugin_category=Korean%20Thriller&tmdb_type=both&user_slug=tekaarika"
+    },
+    {
+      "name": "Korean Action Adventure",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Movies&list_slug=korean-movies-c7e51670-9ec1-4424-ad59-abd0a62be8e9&plugin_category=Korean%20Movies&tmdb_type=both&user_slug=sschapma"
+    },
+    {
+      "name": "Korean Movies",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Movies&list_slug=korean-movies&plugin_category=Korean%20Movies&tmdb_type=both&user_slug=andy12no"
+    },
+    {
+      "name": "Korean Movies",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Trending%20Korean%20Movies%20%5bmdblist.com%5d&list_slug=trending-korean-movies-mdblist-com&plugin_category=Trending%20Korean%20Movies%20%5bmdblist.com%5d&tmdb_type=both&user_slug=nickisti"
+    },
+    {
+      "name": "Recommended (Korean Movies)",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Movies%202020%20-%202024&list_slug=korean-movies-2020-2024&plugin_category=Korean%20Movies%202020%20-%202024&tmdb_type=both&user_slug=docteur-dream"
+    },
+    {
+      "name": "Korean Movies",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20movies&list_slug=korean-movies&plugin_category=Korean%20movies&tmdb_type=both&user_slug=4ndr3wch4n"
+    },
+    {
+      "name": "Korean Movies",
+      "icon": "special://skin/extras/icons/kdramaw.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Korean%20Movies&list_slug=korean-movies&plugin_category=Korean%20Movies&tmdb_type=both&user_slug=hernicus"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "مسلسلاتي",
+  "icon": "",
+  "list": [
+    {
+      "name": "قائمة المشاهدة",
+      "icon": "special://skin/extras/icons/watchlist2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_watchlist_released&list_name=Watchlist%20(Released)&tmdb_type=tv"
+    },
+    {
+      "name": "مفضلة تراكت",
+      "icon": "special://skin/extras/icons/favourites.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_favorites&list_name=%d8%a7%d9%84%d9%85%d8%b3%d9%84%d8%b3%d9%84%d8%a7%d8%aa%20%d8%a7%d9%84%d9%85%d9%81%d8%b6%d9%84%d8%a9&tmdb_type=tv"
+    },
+    {
+      "name": "التجميعات",
+      "icon": "special://skin/extras/icons/collection.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_collection&list_name=%d8%a7%d9%84%d9%85%d8%b3%d9%84%d8%b3%d9%84%d8%a7%d8%aa%20%d8%a7%d9%84%d8%aa%d8%ac%d9%85%d9%8a%d8%b9%d8%a7%d8%aa&tmdb_type=tv"
+    },
+    {
+      "name": "مشابه للاكثر مشاهدة ",
+      "icon": "special://skin/extras/icons/recommended2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_becausemostwatched&tmdb_type=tv"
+    },
+    {
+      "name": "لانك شاهدت",
+      "icon": "special://skin/extras/icons/recommended2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_becauseyouwatched&tmdb_type=tv"
+    },
+    {
+      "name": "تم مشاهدتها",
+      "icon": "special://skin/extras/icons/recentlywatched2.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_history&tmdb_type=tv"
+    }
+  ]
+}

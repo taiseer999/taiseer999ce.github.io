@@ -1,0 +1,3 @@
+[B]Update - v6.7.49 - July 29th, 2025[/B]
+--[Info] You may need to re-authorize Trakt due to changes to the authorization code in the addon. Go to Settings: General then Indicators and make sure it is set to Trakt after re-authorizing.
+--[Fix] Quick fix for Trakt authorization issue.

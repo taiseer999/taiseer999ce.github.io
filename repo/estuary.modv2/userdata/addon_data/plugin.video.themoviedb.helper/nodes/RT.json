@@ -1,0 +1,66 @@
+{
+  "name": "RT",
+  "icon": "",
+  "list": [
+    {
+      "name": "2025",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202025&list_slug=rotten-tomatoes-best-of-2025&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202025&tmdb_type=both&user_slug=lish408"
+    },
+    {
+      "name": "2024",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202024&list_slug=rotten-tomatoes-best-of-2024&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202024&user_slug=lish408"
+    },
+    {
+      "name": "2023",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202023&list_slug=rotten-tomatoes-best-of-2023&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202023&user_slug=lish408"
+    },
+    {
+      "name": "2022",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202022&list_slug=rotten-tomatoes-best-of-2022&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202022&user_slug=lish408"
+    },
+    {
+      "name": "2021",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202021&list_slug=rotten-tomatoes-best-of-2021&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202021&user_slug=lish408"
+    },
+    {
+      "name": "2020",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202020&list_slug=rotten-tomatoes-best-of-2020&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202020&user_slug=lish408"
+    },
+    {
+      "name": "2019",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202019&list_slug=rotten-tomatoes-best-of-2019&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202019&user_slug=lish408"
+    },
+    {
+      "name": "2018",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202018&list_slug=rotten-tomatoes-best-of-2018&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202018&user_slug=lish408"
+    },
+    {
+      "name": "2017",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202017&list_slug=rotten-tomatoes-best-of-2017&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202017&user_slug=lish408"
+    },
+    {
+      "name": "2016",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202016&list_slug=rotten-tomatoes-best-of-2016&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202016&user_slug=lish408"
+    },
+    {
+      "name": "2015",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202015&list_slug=rotten-tomatoes-best-of-2015&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202015&user_slug=lish408"
+    },
+    {
+      "name": "2014",
+      "icon": "special://skin/extras/icons/rt.png",
+      "path": "plugin://plugin.video.themoviedb.helper/?info=trakt_userlist&list_name=Rotten%20Tomatoes%3a%20Best%20of%202014&list_slug=rotten-tomatoes-best-of-2014&plugin_category=Rotten%20Tomatoes%3a%20Best%20of%202014&user_slug=lish408"
+    }
+  ]
+}
