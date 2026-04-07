@@ -1629,7 +1629,7 @@
 	<variable name="VideoPlayerHdrTypeVar">
 		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">flags/videoresolution/dolbyvision100.png</value>
 		<value condition="String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.12bit.) | String.Contains(Player.Filenameandpath,.hdr10plus.) | String.Contains(Player.Filenameandpath,_hdr10plus_) | String.Contains(Player.Filenameandpath,_hdr10plus-)">flags/videoresolution/hdrplus100.png</value>
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),HDR10 | [String.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.Contains(Player.Process(amlogic.vs10.mode),Bypass) + ![String.IsEqual(Player.Process(video.source.additional.hdr.type.raw),2) + Integer.IsEqual(System.GetInt(coreelec.amlogic.dolbyvision.mode),2)]] | !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(amlogic.vs10.mode),HDR10) | [String.IsEqual(Player.Process(video.source.hdr.type.raw),1) + !String.Contains(Player.Process(amlogic.vs10.mode),SDR)] | String.IsEqual(Player.Process(video.source.hdr.type.raw),1) + !String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">flags/videoresolution/hdr100.png</value>
+		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),HDR10) | [String.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.Contains(Player.Process(amlogic.vs10.mode),Bypass) + ![String.IsEqual(Player.Process(video.source.additional.hdr.type.raw),2) + Integer.IsEqual(System.GetInt(coreelec.amlogic.dolbyvision.mode),2)]] | !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(amlogic.vs10.mode),HDR10) | [String.IsEqual(Player.Process(video.source.hdr.type.raw),1) + !String.Contains(Player.Process(amlogic.vs10.mode),SDR)] | String.IsEqual(Player.Process(video.source.hdr.type.raw),1) + !String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">flags/videoresolution/hdr100.png</value>
 		<value condition="[String.IsEqual(Player.Process(video.source.hdr.type.raw),4) + String.Contains(Player.Process(amlogic.vs10.mode),Bypass)] | String.Contains(Player.Process(amlogic.eoft_gamut),HLG)">flags/videoresolution/hlg100.png</value>
 	</variable>
 	<variable name="MediaSourceFlagVar">
@@ -2279,7 +2279,13 @@
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Dolby Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital+</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ac3)">Dolby Digital</value>
-		<value condition="String.Contains(VideoPlayer.AudioCodec,aac)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_latm)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_lc)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ltp)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ssr)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac)">AAC</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac-v2)">AAC</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,aif)">AIFF</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,alac)">ALAC</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,ape)">APE</value>
@@ -2373,4 +2379,33 @@
 		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.VideoResolution]</value>
 		<value>$INFO[ListItem.VideoResolution]</value>
 	</variable>
+	<variable name="HDRcodectypeVar">
+		<value condition="String.Contains(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hdr10) + [String.Contains(Player.Filenameandpath,.hdrplus.) | String.Contains(Player.Filenameandpath,.hdr10plus.) | String.Contains(Player.Filenameandpath,_hdr10plus_) | String.Contains(Player.Filenameandpath,_hdr10plus-) | String.Contains(Player.Filenameandpath,-HDR10plus-)]">HDR 10+</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hdr10)">HDR10</value>
+		<value condition="String.Contains(VideoPlayer.HdrType,hlg)">HLG</value>
+		<value condition="String.IsEmpty(VideoPlayer.HdrType)">SDR</value>
+	</variable>
+    <variable name="VideoConvVar">
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(video.dovi.codec.string),8)"></value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(video.dovi.codec.string),7)"></value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(video.dovi.codec.string),5)"></value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(video.dovi.codec.string),4)"></value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(video.dovi.codec.string),8)"></value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(video.dovi.codec.string),7)"></value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(video.dovi.codec.string),5)"></value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(video.dovi.codec.string),4)"></value>
+        <value condition="[String.IsEqual(VideoPlayer.VideoCodec,av1) + String.Contains(VideoPlayer.HdrType,dolbyvision)] + String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)"></value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">-&gt; Dolby Vision 8.1</value>
+        <value condition="[String.IsEqual(VideoPlayer.VideoCodec,av1) + String.Contains(VideoPlayer.HdrType,dolbyvision)] + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),1) + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),2) + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="[String.IsEqual(VideoPlayer.VideoCodec,av1) + String.Contains(VideoPlayer.HdrType,hdr10)] + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(amlogic.vs10.mode),HDR10)">-&gt; HDR10</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),SDR) + String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">-&gt; Dolby Vision 8.1</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),Dolby Vision) + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),HLG) + String.Contains(Player.Process(amlogic.vs10.mode),SDR)">-&gt; SDR</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),HLG) + String.Contains(Player.Process(amlogic.vs10.mode),HDR10)">-&gt; HDR10</value>
+        <value condition="String.Contains(Player.Process(video.source.hdr.type),HLG) + String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)">-&gt; Dolby Vision 8.1</value>
+    </variable>
 </includes>
