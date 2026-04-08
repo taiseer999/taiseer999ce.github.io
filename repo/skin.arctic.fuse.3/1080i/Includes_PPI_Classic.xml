@@ -818,7 +818,7 @@
 					
 					<!-- Dolby Vision Icon -->
 					<control type="image">
-						<texture colordiffuse="dialog_fg_100">codecs/dv.png</texture>
+						<texture colordiffuse="dialog_fg_100">special://skin/extras/icons/dv.png</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<height>23</height>
 						<top>-22</top>
