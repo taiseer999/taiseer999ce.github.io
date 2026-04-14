@@ -18,7 +18,7 @@
                 <width>210</width>
                 <height>170</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -27,7 +27,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -36,7 +36,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -156,7 +156,7 @@
                 <control type="image">
                     <width>180</width>
                     <height>1.5</height>
-                    <texture colordiffuse="90FFFFFF">common/selectedwhite.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/selectedwhite.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -324,7 +324,7 @@
                 <width>210</width>
                 <height>170</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -333,7 +333,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -342,7 +342,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -462,7 +462,7 @@
                 <control type="image">
                     <width>180</width>
                     <height>1.5</height>
-                    <texture colordiffuse="90FFFFFF">common/selectedwhite.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/selectedwhite.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -628,7 +628,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture>common/corner_small.png</texture>
+                    <texture>special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             
@@ -755,7 +755,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture>common/corner_small.png</texture>
+                    <texture>special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -924,7 +924,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture>common/corner_small.png</texture>
+                    <texture>special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             
@@ -1053,7 +1053,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture>common/corner_small.png</texture>
+                    <texture>special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1218,7 +1218,7 @@
                 <width>210</width>
                 <height>170</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1227,7 +1227,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1236,7 +1236,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1356,7 +1356,7 @@
                 <control type="image">
                     <width>180</width>
                     <height>1.5</height>
-                    <texture colordiffuse="90FFFFFF">common/selectedwhite.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/selectedwhite.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1524,7 +1524,7 @@
                 <width>210</width>
                 <height>170</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1533,7 +1533,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1542,7 +1542,7 @@
                 <width>210</width>
                 <height>90</height>
                 <control type="image">
-                    <texture colordiffuse="90FFFFFF">common/corner_small.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/corner_small.png</texture>
                 </control>
             </control>
             <control type="group">
@@ -1662,7 +1662,7 @@
                 <control type="image">
                     <width>180</width>
                     <height>1.5</height>
-                    <texture colordiffuse="90FFFFFF">common/selectedwhite.png</texture>
+                    <texture colordiffuse="90FFFFFF">special://skin/extras/backgrounds/overlay/selectedwhite.png</texture>
                 </control>
             </control>
             <control type="group">
