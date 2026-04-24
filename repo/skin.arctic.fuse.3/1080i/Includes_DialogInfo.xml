@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
@@ -99,44 +100,6 @@
                     <height>infodialog_poster_w</height>
                     <top>0</top>
                 </include>
-                
-             <!--control type="grouplist">
-                <top>940</top>
-                <left>0</left>
-                <align>left</align>
-                <usecontrolcoords>true</usecontrolcoords>
-              <control type="group">
-                    <height>100</height>
-                    <centerbottom>120</centerbottom>
-                    <align>center</align>
-                    <fadetime>100</fadetime>
-                    <control type="label">
-                        <left>0</left>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Path]</label>
-                        <textcolor>main_fg_70</textcolor>
-                        <font>font_tiny</font>
-                        <width>560</width>
-                    </control>
-
-                <control type="group">
-                    <height>80</height>
-                    <centerbottom>80</centerbottom>
-                    <align>center</align>
-                    <fadetime>100</fadetime>
-                    <control type="label">
-                        <left>0</left>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.FileName]</label>
-                        <textcolor>main_fg_70</textcolor>
-                        <font>font_tiny</font>
-                        <width>560</width>
-                    </control>
-                 </control>
-
-              </control>
-            </control-->
-                
             </control>
         </definition>
     </include>
@@ -158,7 +121,7 @@
             <right>$PARAM[indent]</right>
             <control type="group">
                 <include content="DialogInfo_Animation_Left" condition="!String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Spotlight)">
-                    <param name="condition">[String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Full) | String.IsEqual(ListItem.Property(tmdb_type),person) | Window.ISVisible(1190) | Window.ISVisible(1193)]</param>
+                    <param name="condition">[String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Full) | String.IsEqual(ListItem.Property(tmdb_type),person) | Window.ISVisible(1190) | Window.ISVisible(1193) | Window.IsActive(VideoFullScreen.xml) | Window.IsActive(MusicVisualisation.xml)]</param>
                 </include>
                 <include content="DialogInfo_Animation_Delay" condition="String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Spotlight)">
                     <param name="condition">true</param>
@@ -181,7 +144,7 @@
             </control>
             <control type="group">
                 <include content="DialogInfo_Animation_Left" condition="!String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Spotlight)">
-                    <param name="condition">[String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Wall) | String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),List) | String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Full) | String.IsEqual(ListItem.Property(tmdb_type),person) | Window.ISVisible(1190) | Window.ISVisible(1193)]</param>
+                    <param name="condition">[String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Wall) | String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),List) | String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Full) | String.IsEqual(ListItem.Property(tmdb_type),person) | Window.ISVisible(1190) | Window.ISVisible(1193) | Window.IsActive(VideoFullScreen.xml) | Window.IsActive(MusicVisualisation.xml)]</param>
                 </include>
                 <include content="DialogInfo_Animation_Delay" condition="String.IsEqual(Window(Home).Property(InfoPanel.FullSwitch),Spotlight)">
                     <param name="condition">true</param>
@@ -1176,7 +1139,7 @@
         <onload>SetProperty(Data05.Label,$LOCALIZE[568],1126)</onload>
         <onload>SetProperty(Data05.Label2,$INFO[ListItem.LastPlayed]$INFO[ListItem.Playcount,$COMMA , $LOCALIZE[31096]],1126)</onload>
         <onload>SetProperty(Data06.Label,$LOCALIZE[31207],1126)</onload>
-        <onload>SetProperty(Data06.Label2,$VAR[OSDItem_RipSource, • ,]$INFO[ListItem.VideoCodec]$VAR[Label_ListItem_VideoQuality, • ,]$INFO[ListItem.HdrType, • ,]$INFO[ListItem.VideoAspect, • ,]$VAR[AudioCodecVar12, • ,]$VAR[Label_ListItem_AudioChannels, • ,],1126)</onload>
+        <onload>SetProperty(Data06.Label2,$INFO[ListItem.VideoCodec]$VAR[Label_ListItem_VideoQuality, • ,]$INFO[ListItem.HdrType, • ,]$INFO[ListItem.VideoAspect, • ,]$INFO[ListItem.AudioCodec, • ,]$VAR[Label_ListItem_AudioChannels, • ,],1126)</onload>
 
         <onload>SetProperty(Data11.Label,DBID,1126)</onload>
         <onload>SetProperty(Data11.Label2,$INFO[ListItem.DBID],1126)</onload>
@@ -1705,7 +1668,7 @@
                         <param name="icon">special://skin/extras/icons/photo-film.png</param>
                         <param name="fallback_role">$LOCALIZE[31207]</param>
                         <param name="shot">$INFO[ListItem.Art(poster)]</param>
-                        <param name="name">[UPPERCASE]$INFO[ListItem.VideoResolution,, • ]$VAR[HDRcodectypeVar1]$INFO[ListItem.VideoAspect, • ,:1]$VAR[AudioCodecVar12, • ,]$VAR[Label_ListItem_AudioChannels, • ,][/UPPERCASE]</param>
+                        <param name="name">$INFO[ListItem.VideoCodec]$VAR[Label_ListItem_VideoQuality, • ,]$INFO[ListItem.VideoAspect, • ,]$INFO[ListItem.AudioCodec, • ,]$VAR[Label_ListItem_AudioChannels, • ,]</param>
                         <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
                     </include>
 
