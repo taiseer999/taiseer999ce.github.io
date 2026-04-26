@@ -28,27 +28,27 @@ msgstr "متابعة الحلقات"
 #: /1080i/Includes_Views_Combined.xml
 msgctxt "#31002"
 msgid "Combined Square"
-msgstr "Combined مربعة"
+msgstr "صور مربعة مجمعة"
 
 #: /1080i/Includes_Views_Combined.xml
 msgctxt "#31003"
 msgid "Combined Landscape"
-msgstr "Combined افقية"
+msgstr "صور افقية مجمعة"
 
 #: /1080i/Includes_Views_Combined.xml
 msgctxt "#31004"
 msgid "Combined Poster"
-msgstr "Combined صور افقية"
+msgstr "ملصقات مجمعة"
 
 #: /1080i/Includes_Views_Combined.xml
 msgctxt "#31005"
 msgid "Combined Circle"
-msgstr "صورة دائرية في جدارية combined"
+msgstr "جدارية دوائر مجمعة"
 
 #: /1080i/Includes_Views_Combined.xml
 msgctxt "#31006"
 msgid "Combined Board"
-msgstr "  جدارية صورة افقية كبيرة  combined"
+msgstr "جدارية الواح افقية مجمعة"
 
 #: /1080i/Dialog_DialogSelect.xml
 msgctxt "#31007"
@@ -63,7 +63,7 @@ msgstr "جدارية"
 #: /1080i/Includes_Shortcuts_Window.xml
 msgctxt "#31009"
 msgid "Widget Customisation"
-msgstr "تخصيص Widget"
+msgstr "تخصيص الودجتس"
 
 #: /1080i/Includes_Hubs.xml
 msgctxt "#31010"
@@ -147,11 +147,11 @@ msgstr "قائمة فرعية"
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31027"
 msgid "Focus widgets on startup"
-msgstr "التركيز على الودجتس في البداية"
+msgstr "عند بدأ التشغيل يكون المؤشر على الودجتس"
 
 msgctxt "#31028"
 msgid "Outline"
-msgstr "خطوط عريضة"
+msgstr "الحبكة"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31029"
@@ -267,11 +267,11 @@ msgstr "الصوت"
 
 msgctxt "#31053"
 msgid "Profile"
-msgstr "بروفيل"
+msgstr "البرفايل"
 
 msgctxt "#31054"
 msgid "Liked by"
-msgstr "تم الاعجاب من"
+msgstr "تم الاعجاب من قبل"
 
 msgctxt "#31055"
 msgid "out of"
@@ -293,12 +293,12 @@ msgstr "التفافية-العودة للبداية"
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31059"
 msgid "Side"
-msgstr "تخصيص الجانب الايسر"
+msgstr "الجانب الايسر"
 
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31060"
 msgid "Slide"
-msgstr "انزلاق"
+msgstr "الانزلاق "
 
 #: /shortcuts/template.xml
 msgctxt "#31061"
@@ -379,10 +379,40 @@ msgctxt "#31077"
 msgid "More Information"
 msgstr "معلومات اضافية"
 
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31078"
+msgid "Use fake label textboxes"
+msgstr "استخدم مربعات نص لتسمية مزيفة"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31079"
+msgid "improves performance on Omega"
+msgstr "تحسين الأداء في Omega"
+
+#: /1080i/Dialog_DialogCustom.xml
+msgctxt "#31080"
+msgid "Button"
+msgstr "الزر الايمن"
+
+#: /1080i/Dialog_DialogCustom.xml
+msgctxt "#31081"
+msgid "Others"
+msgstr "اخرى"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31082"
+msgid "Ratings style"
+msgstr "نمط التقيمات"
+
 #: /1080i/Includes_Labels.xml
 msgctxt "#31083"
 msgid "Combined"
 msgstr "مجمع"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31084"
+msgid "Preload hubs during startup initialisation"
+msgstr "تجهيز القوائم الفرعية خلال بدأ التشغيل"
 
 msgctxt "#31085"
 msgid "Live TV"
@@ -391,6 +421,11 @@ msgstr "بث مباشر"
 msgctxt "#31086"
 msgid "Customise options"
 msgstr "قائمة الخيارات"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31087"
+msgid "Game Saves"
+msgstr "محفوظات الالعاب"
 
 #: /1080i/VideoOSDBookmarks.xml
 msgctxt "#31088"
@@ -406,20 +441,40 @@ msgctxt "#31090"
 msgid "In-Progress"
 msgstr "إكمال المشاهدة"
 
+#: /1080i/Includes_Labels.xml
+msgctxt "#31091"
+msgid "In-Game Saves"
+msgstr "محفوظات الالعاب من داخل الاضافة"
+
 #: /1080i/SkinSettings.xml /1080i/Includes_Shortcuts_Window.xml
 msgctxt "#31092"
 msgid "Detailed information"
 msgstr "معلومات مفصلة"
 
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31093"
+msgid "Cycle extra fanart"
+msgstr "تدوير صور الاعمال الفنية"
+
 #: /1080i/SkinSettings.xml
 msgctxt "#31094"
 msgid "Mouse pointer size"
-msgstr "حجم مؤشر الفأرة"
+msgstr "حجم مؤشر الماوس"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31095"
 msgid "Translations"
 msgstr "الترجمات"
+
+#: /1080i/Dialog_DialogPictureInfo.xml
+msgctxt "#31096"
+msgid "plays"
+msgstr "يشغل"
+
+#: /1080i/Includes_DialogInfo.xml
+msgctxt "#31097"
+msgid "File details"
+msgstr "معلومات الملف"
 
 #: /1080i/SkinSettings.xml /1080i/Includes_Items.xml
 msgctxt "#31098"
@@ -434,36 +489,61 @@ msgstr "آخر بث"
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31100"
 msgid "Row Board"
-msgstr ""
+msgstr "صف الواح"
 
 #: /1080i/Includes_Views_Wall.xml
 msgctxt "#31101"
 msgid "Wall Board"
-msgstr ""
+msgstr "جدارية من صور الواح"
+
+#: /1080i/Includes_DialogInfo.xml
+msgctxt "#31102"
+msgid "Extension"
+msgstr "امتداد"
 
 msgctxt "#31103"
 msgid "Widgets"
-msgstr ""
+msgstr "ودجتس"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31104"
+msgid "Position"
+msgstr "الموقع"
 
 msgctxt "#31105"
 msgid "Spotlight"
-msgstr "Spotlight"
+msgstr "سبوت لايت"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31106"
+msgid "Top"
+msgstr "بالاعلى"
+
+#: /1080i/Dialog_DialogGameControllers.xml
+msgctxt "#31107"
+msgid "Edit buttons"
+msgstr "تحرير الازرار"
 
 msgctxt "#31108"
 msgid "Collections"
 msgstr "المجموعات"
 
+#: /1080i/Dialog_DialogPVRGroupManager.xml
+msgctxt "#31109"
+msgid "Edit group"
+msgstr "تحرير المجموعة"
+
 msgctxt "#31111"
 msgid "Row Poster"
-msgstr "صف بوسترات"
+msgstr "صف ملصقات"
 
 msgctxt "#31112"
 msgid "Row Landscape"
-msgstr "صف افقى"
+msgstr "صف صورة افقية"
 
 msgctxt "#31113"
 msgid "Row Square"
-msgstr "صف مربع"
+msgstr "صف صور مربعة"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31114"
@@ -505,6 +585,16 @@ msgctxt "#31122"
 msgid "Watchlist"
 msgstr "قائمة المشاهدة"
 
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31123"
+msgid "Plot line"
+msgstr "وصف الحبكة"
+
+#: /1080i/Dialog_FileBrowser.xml
+msgctxt "#31121"
+msgid "Mirror"
+msgstr "إستنساخ"
+
 msgctxt "#31124"
 msgid "Indicator"
 msgstr "المؤشر"
@@ -512,6 +602,16 @@ msgstr "المؤشر"
 msgctxt "#31125"
 msgid "Invert Text Colour"
 msgstr "عكس لون النص"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31126"
+msgid "Plotline"
+msgstr "خط الحبكة"
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31127"
+msgid "Genre colours"
+msgstr "الاصناف ملونة في البث المباشر"
 
 #: /1080i/Includes_MediaFilter.xml
 msgctxt "#31128"
@@ -546,15 +646,15 @@ msgid "Detailed"
 msgstr "مفصل"
 
 msgid "Aqua Classic"
-msgstr "أكوا كلاسيك"
+msgstr "لون ازرق بحري"
 
 msgctxt "#31139"
 msgid "Tropical Sunset"
-msgstr "غروب الشمس الاستوائي"
+msgstr "غروب الشمس"
 
 msgctxt "#31140"
 msgid "Miami Vaporwave"
-msgstr "ألوان وردية متداخلة"
+msgstr "ألوان وردية"
 
 msgctxt "#31141"
 msgid "Plain Monochrome"
@@ -614,12 +714,12 @@ msgstr "إخفاء"
 #: /1080i/SkinSettings.xml
 msgctxt "#31165"
 msgid "Seekbar behaviour on delayed pause"
-msgstr " pause تخصيص ما يظهر على شاشة عرض الفيديو عند التوقف المؤقت"
+msgstr "تخصيص ما يظهر على شاشة عرض الفيديو عند التوقف المؤقت"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31166"
 msgid "Back"
-msgstr "زر Back الانتقال الى"
+msgstr "زر العودة"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31167"
@@ -629,7 +729,7 @@ msgstr "شعار"
 #: /1080i/Includes_Views_List.xml
 msgctxt "#31168"
 msgid "List Square"
-msgstr "القائمة مربعة"
+msgstr "صوره مربعة في القائمة الرأسية"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31169"
@@ -681,7 +781,6 @@ msgid "Ends"
 msgstr "النهاية"
 
 msgctxt "#31185"
-msgctxt "#31185"
 msgid "Autoscroll"
 msgstr "تنقل تلقائي"
 
@@ -699,7 +798,7 @@ msgstr "محدد"
 
 msgctxt "#31189"
 msgid "Autoclose OSD after X seconds"
-msgstr "إغلاق تلقائي ل OSD بعد وقت محدد"
+msgstr "اغلاق تلقائي لشريط عرض الفيديو"
 
 msgctxt "#31194"
 msgid "Album duration"
@@ -708,7 +807,7 @@ msgstr "وقت تشغيل الألبوم"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31195"
 msgid "Light"
-msgstr "فاتح light"
+msgstr "فاتح"
 
 msgctxt "#31196"
 msgid "Up Next"
@@ -822,12 +921,12 @@ msgstr "أرجواني"
 #: /1080i/Includes_Items.xml
 msgctxt "#31221"
 msgid "Slate"
-msgstr "قرميد"
+msgstr "قرميدي"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31222"
 msgid "Coal"
-msgstr "فحم"
+msgstr "لون الفحم"
 
 msgctxt "#31223"
 msgid "Gridlines"
@@ -841,7 +940,7 @@ msgstr "وردي"
 #: /1080i/Includes_Items.xml
 msgctxt "#31225"
 msgid "Chalk"
-msgstr "لون الطباشير"
+msgstr "ابيض"
 
 #: /1080i/Includes_Items.xml
 msgctxt "#31226"
@@ -856,7 +955,7 @@ msgstr "العرض الآول"
 #: /1080i/Custom_1115_Dialog_ColourPresets.xml
 msgctxt "#31228"
 msgid "Aqua"
-msgstr "أكوا"
+msgstr لون البحر الازرق"
 
 #: /1080i/Custom_1115_Dialog_ColourPresets.xml
 msgctxt "#31229"
@@ -884,7 +983,7 @@ msgstr "تقديم زمن العرض"
 
 msgctxt "#31234"
 msgid "Customise indicators"
-msgstr "المؤشرات"
+msgstr " تخصيص المؤشرات"
 
 msgctxt "#31235"
 msgid "Indicators"
@@ -910,11 +1009,6 @@ msgstr "التذييل"
 #: /1080i/Custom_1115_Dialog_ColourPresets.xml
 msgctxt "#31240"
 msgid "Tropical"
-msgstr ""
-
-#: /1080i/Custom_1115_Dialog_ColourPresets.xml
-msgctxt "#31240"
-msgid "Tropical"
 msgstr "لون استوائي"
 
 #: /1080i/SkinSettings.xml
@@ -930,7 +1024,7 @@ msgstr "أزرق - رمادي"
 #: /1080i/Includes_Items.xml
 msgctxt "#31243"
 msgid "Midnight Purple"
-msgstr " أرجواني غامق"
+msgstr "أرجواني غامق"
 
 msgctxt "#31244"
 msgid "Now playing"
@@ -1043,7 +1137,7 @@ msgstr "مرحبا"
 #: /1080i/Includes_Shortcuts_Pallette.xml
 msgctxt "#31282"
 msgid "Widget"
-msgstr "Widget"
+msgstr "ودجت"
 
 #: /1080i/Includes_Info.xml
 msgctxt "#31283"
@@ -1238,12 +1332,12 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31340"
 msgid "Reset skin to defaults"
-msgstr "إعادة المظهر للإعداد الاصلي"
+msgstr "فورمات المظهر"
 
 msgctxt "#31346"
 sgctxt "#31346"
 msgid "More by this artist"
-msgstr "اضغط للأسفل لرؤية مزيدا من أعمال الممثل"
+msgstr "مزيدا من أعمال الممثل"
 
 #: /1080i/Includes_DialogInfo.xml
 msgctxt "#31347"
@@ -1432,7 +1526,7 @@ msgstr "سنة الصدور"
 #: /1080i/Includes_Items.xml Shorter label for use in info dialog buttons
 msgctxt "#31393"
 msgid "Trailer"
-msgstr "اعلان الفلم"
+msgstr "المقطع الترويجي"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31394"
@@ -1519,7 +1613,6 @@ msgctxt "#31415"
 msgid "Movies and TV Shows"
 msgstr "أفلام ومسلسلات"
 
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31416"
 msgid "Secondary button"
@@ -1527,12 +1620,12 @@ msgstr "زر ثانوي"
 
 msgctxt "#31417"
 msgid "Random Artists"
-msgstr "ممثلين بشكل عشوائي"
+msgstr "ترتيب عشوائي للممثلين"
 
 #: /1080i/Includes_Views_Row.xml
 msgctxt "#31418"
 msgid "Circle Row"
-msgstr "صف دائري"
+msgstr "صف صورة دائرية"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31419"
@@ -1552,7 +1645,7 @@ msgstr "بطاقة"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31424"
 msgid "Board"
-msgstr "صورة افقية كبيرة"
+msgstr "لوح"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31425"
@@ -1592,7 +1685,7 @@ msgstr "متأقلم تلقائياً"
 #: /1080i/SkinSettings.xml
 msgctxt "#31434"
 msgid "Video OSD"
-msgstr "واجهة عرض الفيديو الOSD"
+msgstr "شريط عرض الفيديو"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31435"
@@ -1767,7 +1860,7 @@ msgstr "إعادة العرض"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31484"
 msgid "Pause"
-msgstr "Pause توقف مؤقت"
+msgstr "توقف مؤقت"
 
 #: /1080i/Custom_1123_Dialog_Trailer.xml
 msgctxt "#31485"
@@ -1912,7 +2005,7 @@ msgstr "الترتيب معكوس"
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31519"
 msgid "Empty widget placeholder"
-msgstr "اخلاء مكان وضعwidget "
+msgstr "اخلاء مكان الودجت الغير متاح"
 
 #: /1080i/Includes_Weather_Radar.xml
 msgctxt "#31520"
@@ -2192,7 +2285,7 @@ msgstr "غير مجمع"
 #: /1080i/Includes_Info.xml
 msgctxt "#31600"
 msgid "Ends at"
-msgstr "ينتهي عند الساعة"
+msgstr "الانتهاء"
 
 #: /1080i/Custom_1115_Window_Shortcuts.xml
 msgctxt "#31601"
@@ -2207,12 +2300,383 @@ msgstr "اضافة قائمة"
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31604"
 msgid "Additional"
-msgstr "اضافس"
+msgstr "المزيد"
 
 #: /1080i/Includes_SkinSettings.xml
 msgctxt "#31605"
 msgid "Next aired"
 msgstr "العرض القادم"
+
+
+
+
+
+msgctxt "#32000"
+msgid "Display mode"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Video mode"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Color space"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Mb/s"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Bit depth"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Decoder"
+msgstr ""
+
+msgctxt "#32006"
+msgid "VS10 engine"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Processing"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Video queue"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Video queue data"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Audio queue"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Audio queue data"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Kb/s"
+msgstr ""
+
+msgctxt "#32013"
+msgid "Playback time"
+msgstr ""
+
+msgctxt "#32014"
+msgid "Processor"
+msgstr ""
+
+msgctxt "#32015"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#32016"
+msgid "Profile"
+msgstr ""
+
+msgctxt "#32017"
+msgid "Level"
+msgstr ""
+
+msgctxt "#32018"
+msgid "RPU"
+msgstr ""
+
+msgctxt "#32019"
+msgid "Base Layer"
+msgstr ""
+
+msgctxt "#32020"
+msgid "Enhancement Layer"
+msgstr ""
+
+msgctxt "#32021"
+msgid "Enhancement Layer Type"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#32023"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Aspect ratio"
+msgstr ""
+
+msgctxt "#32025"
+msgid "HDR10 MDL"
+msgstr ""
+
+msgctxt "#32026"
+msgid "HDR10 MaxCLL/FALL"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Media source"
+msgstr ""
+
+msgctxt "#32028"
+msgid "Unknown"
+msgstr ""
+
+msgctxt "#32029"
+msgid "On"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Off"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Deinterlacing"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Player cache"
+msgstr ""
+
+msgctxt "#32033"
+msgid "N/A"
+msgstr ""
+
+msgctxt "#32034"
+msgid "Memory usage"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Passthrough"
+msgstr ""
+
+msgctxt "#32036"
+msgid "AML FPS"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Dolby Vision"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#32039"
+msgid "HDR Static Metadata"
+msgstr ""
+
+msgctxt "#32040"
+msgid "cd/m²"
+msgstr ""
+
+msgctxt "#32041"
+msgid "RPU MDL"
+msgstr ""
+
+msgctxt "#32042"
+msgid "RPU MaxCLL/FALL"
+msgstr ""
+
+msgctxt "#32043"
+msgid "FLL MIN / MAX / Ø"
+msgstr ""
+
+msgctxt "#32044"
+msgid "PQ  MIN / MAX / Ø"
+msgstr ""
+
+msgctxt "#32045"
+msgid "12-bit"
+msgstr ""
+
+msgctxt "#32046"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#32047"
+msgid "Bitrate"
+msgstr ""
+
+msgctxt "#32048"
+msgid "VS10 status"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Input"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Audio language"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Subtitle language"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Video"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Output"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32057"
+msgid "Top left"
+msgstr "اليسار"
+
+msgctxt "#32058"
+msgid "Top center"
+msgstr "بالوسط"
+
+msgctxt "#32059"
+msgid "Top right"
+msgstr "اليمين"
+
+msgctxt "#32060"
+msgid "Codec logos (OSD)"
+msgstr "شاشة الفيديو"
+
+msgctxt "#32061"
+msgid "Codec logos (PlayerProcessInfo)"
+msgstr "PPI عند فتح شاشة معلومات التشغيل"
+
+msgctxt "#32062"
+msgid "Codec logos (Start)"
+msgstr "عند بدء تشغيل الفيديو"
+
+msgctxt "#32063"
+msgid "Position of codec logos"
+msgstr "موضع شعارات الترميز بأعلى الشاشة"
+
+msgctxt "#32064"
+msgid "Original"
+msgstr "الاصلية"
+
+msgctxt "#32065"
+msgid "VS10"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Audio codec"
+msgstr ""
+
+msgctxt "#32067"
+msgid "L5 Active Offsets"
+msgstr ""
+
+msgctxt "#32068"
+msgid "Version"
+msgstr ""
+
+msgctxt "#32069"
+msgid "Bit depth"
+msgstr ""
+
+msgctxt "#32070"
+msgid "EOTF & Gamut"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Duration"
+msgstr "المدة"
+
+msgctxt "#32073"
+msgid "PlayerProcessInfo"
+msgstr "معلومات المشغل PPI"
+
+msgctxt "#32074"
+msgid "PlayerProcessInfo type"
+msgstr "PPI تصميم معلومات المشغل"
+
+msgctxt "#32075"
+msgid "second"
+msgstr ""
+
+msgctxt "#32076"
+msgid "Show file name "
+msgstr "إظهار اسم الملف"
+
+msgctxt "#32077"
+msgid "Modern"
+msgstr "حديث"
+
+msgctxt "#32078"
+msgid "Classic"
+msgstr "كلاسيكي"
+
+msgctxt "#32079"
+msgid "Original"
+msgstr "اصلي"
+
+msgctxt "#32080"
+msgid "Optional"
+msgstr "اختيار الإصدار"
+
+msgctxt "#32081"
+msgid "Show file name and path in the version selection"
+msgstr "عرض اسم الملف والمسار"
+
+msgctxt "#32082"
+msgid "Customise video osd"
+msgstr "شاشة عرض الفيديو"
+
+msgctxt "#32083"
+msgid "Customise video info"
+msgstr "معلومات الفيديو"
+
+msgctxt "#32084"
+msgid "Show two-row information bar"
+msgstr ""
+
+msgctxt "#32085"
+msgid "DiscArt"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Rotating disc"
+msgstr ""
+
+msgctxt "#32087"
+msgid "Decoding"
+msgstr ""
+
+msgctxt "#32088"
+msgid "System"
+msgstr ""
+
+msgctxt "#32306"
+msgid "Codecs / PPI"
+msgstr "الترميز و PPI"
+
+msgctxt "#32089"
+msgid "Info line"
+msgstr "شريط المعلومات"
+
+
+msgctxt "#52074"
+msgid "Video OSD extras"
+msgstr "ايقونات فيديو OSD"
+
+msgctxt "#52075"
+msgid "CONNECTED"
+msgstr "متصل"
+
+msgctxt "#52076"
+msgid "DISCONNECTED"
+msgstr "غير متصل"
+
+
 
 
 msgctxt "#32000"
@@ -2453,7 +2917,7 @@ msgstr "شاشة الفيديو"
 
 msgctxt "#32061"
 msgid "Codec logos (PlayerProcessInfo)"
-msgstr "  PPI عند فتح شاشة معلومات التشغيل"
+msgstr "PPI عند فتح شاشة معلومات التشغيل"
 
 msgctxt "#32062"
 msgid "Codec logos (Start)"
@@ -2492,19 +2956,15 @@ msgid "EOTF & Gamut"
 msgstr ""
 
 msgctxt "#32071"
-msgid "Codec logos (Duration)"
-msgstr "مدة بقاء شعارات الترميز عند بدء تشغيل الفيديو"
-
-msgctxt "#32072"
-msgid "Time for codec logos"
-msgstr "وقت شعارات الترميز"
+msgid "Duration"
+msgstr "المدة"
 
 msgctxt "#32073"
 msgid "PlayerProcessInfo"
 msgstr "معلومات المشغل PPI"
 
 msgctxt "#32074"
-msgid "PlayerProcessInfo mode"
+msgid "PlayerProcessInfo type"
 msgstr "PPI تصميم معلومات المشغل"
 
 msgctxt "#32075"
@@ -2512,8 +2972,8 @@ msgid "second"
 msgstr ""
 
 msgctxt "#32076"
-msgid "Show file name in PlayerProcessInfo"
-msgstr " إظهار اسم الملف في معلومات المشغل"
+msgid "Show file name "
+msgstr "إظهار اسم الملف"
 
 msgctxt "#32077"
 msgid "Modern"
@@ -2533,7 +2993,7 @@ msgstr "اختيار الإصدار"
 
 msgctxt "#32081"
 msgid "Show file name and path in the version selection"
-msgstr "عرض اسم الملف والمسار في اختيار الإصدار"
+msgstr "عرض اسم الملف والمسار"
 
 msgctxt "#32082"
 msgid "Customise video osd"
@@ -2567,14 +3027,381 @@ msgctxt "#32306"
 msgid "Codecs / PPI"
 msgstr "الترميز ومعلومات المشغل"
 
+msgctxt "#32089"
+msgid "Info line"
+msgstr "شريط المعلومات"
+
+
 msgctxt "#52074"
 msgid "Video OSD extras"
-msgstr "إضافات فيديو OSD"
+msgstr "ايقونات فيديو OSD"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#52077"
+msgid "Network and CPU + RAM above the clock"
+msgstr "حالة الشبكة وحرارة المعالج والذاكرة فوق الساعة"
 
 msgctxt "#52075"
-msgid "Connected"
-msgstr "متصل"
+msgid "Network Connected"
+msgstr "متصل بالشبكة"
 
 msgctxt "#52076"
-msgid "Not Connected"
-msgstr "غير متصل"
+msgid "No connection"
+msgstr "غير متصل بالشبكة"
+
+msgctxt "#31900"
+msgid "Display mode"
+msgstr ""
+
+msgctxt "#31901"
+msgid "Video mode"
+msgstr ""
+
+msgctxt "#31902"
+msgid "Color space"
+msgstr ""
+
+msgctxt "#31903"
+msgid "Mb/s"
+msgstr ""
+
+msgctxt "#31904"
+msgid "Bit depth"
+msgstr ""
+
+msgctxt "#31905"
+msgid "Decoder"
+msgstr ""
+
+msgctxt "#31906"
+msgid "VS10 | VP mode"
+msgstr ""
+
+msgctxt "#31907"
+msgid "Processing"
+msgstr ""
+
+msgctxt "#31908"
+msgid "Video queue"
+msgstr ""
+
+msgctxt "#31909"
+msgid "Video queue data"
+msgstr ""
+
+msgctxt "#31910"
+msgid "Audio queue"
+msgstr ""
+
+msgctxt "#31911"
+msgid "Audio queue data"
+msgstr ""
+
+msgctxt "#31912"
+msgid "Kb/s"
+msgstr ""
+
+msgctxt "#31913"
+msgid "Playback time"
+msgstr ""
+
+msgctxt "#31914"
+msgid "Processor"
+msgstr ""
+
+msgctxt "#31915"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#31916"
+msgid "Profile"
+msgstr ""
+
+msgctxt "#31917"
+msgid "Level"
+msgstr ""
+
+msgctxt "#31918"
+msgid "RPU"
+msgstr ""
+
+msgctxt "#31919"
+msgid "Base Layer"
+msgstr ""
+
+msgctxt "#31920"
+msgid "Enhancement Layer"
+msgstr ""
+
+msgctxt "#31921"
+msgid "CMv2.9 -> CMv4.0"
+msgstr ""
+
+msgctxt "#31922"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#31923"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#31924"
+msgid "Aspect ratio"
+msgstr ""
+
+msgctxt "#31925"
+msgid "HDR10 MDL"
+msgstr ""
+
+msgctxt "#31926"
+msgid "HDR10 MaxCLL/FALL"
+msgstr ""
+
+msgctxt "#31927"
+msgid "Media source"
+msgstr ""
+
+msgctxt "#31928"
+msgid "Unknown"
+msgstr ""
+
+msgctxt "#31929"
+msgid "On"
+msgstr ""
+
+msgctxt "#31930"
+msgid "Off"
+msgstr ""
+
+msgctxt "#31931"
+msgid "Deinterlacing"
+msgstr ""
+
+msgctxt "#31932"
+msgid "Player cache"
+msgstr ""
+
+msgctxt "#31933"
+msgid "N/A"
+msgstr ""
+
+msgctxt "#31934"
+msgid "Memory usage"
+msgstr ""
+
+msgctxt "#31935"
+msgid "Passthrough"
+msgstr ""
+
+msgctxt "#31936"
+msgid "AML FPS"
+msgstr ""
+
+msgctxt "#31937"
+msgid "Dolby Vision"
+msgstr ""
+
+msgctxt "#31938"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#31939"
+msgid "HDR Static Metadata"
+msgstr ""
+
+msgctxt "#31940"
+msgid "cd/m²"
+msgstr ""
+
+msgctxt "#31941"
+msgid "RPU MDL"
+msgstr ""
+
+msgctxt "#31942"
+msgid "RPU MaxCLL/FALL"
+msgstr ""
+
+msgctxt "#31943"
+msgid "FLL MIN / MAX / Ø"
+msgstr ""
+
+msgctxt "#31944"
+msgid "PQ  MIN / MAX / Ø"
+msgstr ""
+
+msgctxt "#31945"
+msgid "12-bit"
+msgstr ""
+
+msgctxt "#31946"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#31947"
+msgid "Bitrate"
+msgstr ""
+
+msgctxt "#31948"
+msgid "VS10 status"
+msgstr ""
+
+msgctxt "#31951"
+msgid "Input"
+msgstr ""
+
+msgctxt "#31952"
+msgid "Audio language"
+msgstr ""
+
+msgctxt "#31953"
+msgid "Subtitle language"
+msgstr ""
+
+msgctxt "#31954"
+msgid "Video"
+msgstr ""
+
+msgctxt "#31955"
+msgid "Output"
+msgstr ""
+
+msgctxt "#31956"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#31957"
+msgid "Top left"
+msgstr "يسار"
+
+msgctxt "#31958"
+msgid "Top center"
+msgstr "بالوسط"
+
+msgctxt "#31959"
+msgid "Top right"
+msgstr "يمين"
+
+msgctxt "#31960"
+msgid "Codec logos (OSD)"
+msgstr "شاشة الفيديو"
+
+msgctxt "#31961"
+msgid "Codec logos (PlayerProcessInfo)"
+msgstr "PPI عند فتح شاشة"
+
+msgctxt "#31962"
+msgid "Codec logos (Start)"
+msgstr "عند بدء تشغيل الفيديو"
+
+msgctxt "#31963"
+msgid "Position of codec logos"
+msgstr "موضع شعارات الترميز "
+
+msgctxt "#31964"
+msgid "Original"
+msgstr ""
+
+msgctxt "#31965"
+msgid "VS10"
+msgstr ""
+
+msgctxt "#31966"
+msgid "Audio codec"
+msgstr ""
+
+msgctxt "#31967"
+msgid "L5 Active Offsets"
+msgstr ""
+
+msgctxt "#31968"
+msgid "Version"
+msgstr ""
+
+msgctxt "#31969"
+msgid "Bit depth"
+msgstr ""
+
+msgctxt "#31970"
+msgid "EOTF & Gamut"
+msgstr ""
+
+msgctxt "#31971"
+msgid "- Duration"
+msgstr "المدة -"
+
+msgctxt "#31972"
+msgid "- Show path"
+msgstr "اظهر المسار"
+
+msgctxt "#31973"
+msgid "Artwork Style"
+msgstr ""
+
+msgctxt "#31974"
+msgid "PlayerProcessInfo type"
+msgstr "نوع شاشة PPI"
+
+msgctxt "#31975"
+msgid "second"
+msgstr ""
+
+msgctxt "#31976"
+msgid "- Show file name"
+msgstr "اظهار اسم الملف"
+
+msgctxt "#31977"
+msgid "Modern"
+msgstr "حديث"
+
+msgctxt "#31978"
+msgid "Classic"
+msgstr "كلاسيكي"
+
+msgctxt "#31979"
+msgid "Original"
+msgstr "اصلي"
+
+msgctxt "#31980"
+msgid "VHS Art"
+msgstr ""
+
+msgctxt "#31981"
+msgid "Show file name in the version selection"
+msgstr "عرض اسم الملف والمسار"
+
+msgctxt "#31982"
+msgid "Customise video osd"
+msgstr "شاشة عرض الفيديو"
+
+msgctxt "#31983"
+msgid "Customise video info"
+msgstr ""
+
+msgctxt "#31984"
+msgid "Show two-row information bar"
+msgstr "عرض شريط المعلومات في صفين"
+
+msgctxt "#31985"
+msgid "Disc Art"
+msgstr ""
+
+msgctxt "#31986"
+msgid "Rotating disc"
+msgstr "قرص دوار"
+
+msgctxt "#31987"
+msgid "Decoding"
+msgstr ""
+
+msgctxt "#31988"
+msgid "System"
+msgstr ""
+
+msgctxt "#31989"
+msgid "Info line"
+msgstr "شريط المعلومات"
+
+msgctxt "#31990"
+msgid "L5 Offsets (detected)"
+msgstr ""
+
