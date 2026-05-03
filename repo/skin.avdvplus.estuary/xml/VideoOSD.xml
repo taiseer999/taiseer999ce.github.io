@@ -146,89 +146,6 @@
 					<ondown condition="Control.HasFocus(255)">13103</ondown>
 					<onleft>608</onleft>
 					<onright>600</onright>
-
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70013"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-star-small.png"/>
-						<param name="onclick" value="vs10.original"/>
-						<param name="selected" value=
-							"Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),5) |
-							 [[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) |
-							   Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] +
-							  String.Contains(Player.Process(video.hdr.type),Dolby)]"/>
-						<param name="visible" value="true"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70014"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-s-small.png"/>
-						<param name="onclick" value="vs10.sdr"/>
-						<param name="selected" value="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),3)"/>
-						<param name="visible" value="true"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70015"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-h-small.png"/>
-						<param name="onclick" value="vs10.hdr10"/>
-						<param name="selected" value="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),2)"/>
-						<param name="visible" value=
-							"[String.Contains(Player.Process(video.hdr.type),SDR) |
-							  String.Contains(Player.Process(video.hdr.type),HLG)]"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70016"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-dv-small.png"/>
-						<param name="onclick" value="vs10.dv"/>
-						<param name="selected" value=
-							"[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) |
-							  Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] +
-							 !String.Contains(Player.Process(video.hdr.type),Dolby)"/>
-						<param name="visible" value=
-							"String.Contains(Player.Process(video.hdr.type),SDR) |
-							 String.Contains(Player.Process(video.hdr.type),HDR)"/>
-					</include>
-
-					<!--include content="OSDSmallButton">
-						<param name="control_id" value="70013"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-star-small.png"/>
-						<param name="onclick" value="vs10.original"/>
-						<param name="selected" value=
-							"Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),5) |
-							 [[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) |
-							   Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] +
-							  String.Contains(Player.Process(video.hdr.type),Dolby)]"/>
-						<param name="visible" value="!String.IsEqual(Player.Process(video.source.hdr.type.raw),2)"/>
-						<param name="visible" value="true"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70014"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-s-small.png"/>
-						<param name="onclick" value="vs10.sdr"/>
-						<param name="selected" value="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),3)"/>
-						<param name="visible" value="!String.IsEqual(Player.Process(video.source.hdr.type.raw),2)"/>
-						<param name="visible" value="true"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70015"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-h-small.png"/>
-						<param name="onclick" value="vs10.hdr10"/>
-						<param name="selected" value="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),2)"/>
-						<param name="visible" value=
-							"[String.Contains(Player.Process(video.hdr.type),SDR) |
-							  String.Contains(Player.Process(video.hdr.type),HLG)]"/>
-					</include>
-					<include content="OSDSmallButton">
-						<param name="control_id" value="70016"/>
-						<param name="texture" value="osd/fullscreen/buttons/button-ring-dv-small.png"/>
-						<param name="onclick" value="vs10.dv"/>
-						<param name="selected" value=
-							"[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) |
-							  Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] +
-							 !String.Contains(Player.Process(video.hdr.type),Dolby)"/>
-						<param name="visible" value=
-							"String.Contains(Player.Process(video.hdr.type),SDR) |
-							 String.IsEqual(Player.Process(video.source.hdr.type.raw),1)"/>
-					</include-->
-
 					<control type="radiobutton" id="804">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/home.png"/>
@@ -236,12 +153,12 @@
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<visible>VideoPlayer.HasMenu</visible>
 					</control>
-					<control type="radiobutton" id="70012">
+					<control type="radiobutton" id="70013">
 						<include content="OSDButton">
-							<param name="texture" value="osd/fullscreen/buttons/teletext.png"/>
+							<param name="texture" value="osd/fullscreen/buttons/vs10.png"/>
 						</include>
-						<onclick>playerdebug</onclick>
-						<visible>!VideoPlayer.HasMenu</visible> <!-- not enough space if have menu as well -->
+						<onclick>Action(Close)</onclick>
+						<onclick>ActivateWindow(1111)</onclick>
 					</control>
 					<control type="radiobutton" id="70011">
 						<include content="OSDButton">
@@ -249,6 +166,12 @@
 						</include>
 						<onclick>Action(Close)</onclick>
 						<onclick>ActivateWindow(playerprocessinfo)</onclick>
+					</control>
+					<control type="radiobutton" id="70012">
+						<include content="OSDButton">
+							<param name="texture" value="osd/fullscreen/buttons/playerdebug.png"/>
+						</include>
+						<onclick>playerdebug</onclick>
 					</control>
 					<control type="radiobutton" id="70040">
 						<include content="OSDButton">

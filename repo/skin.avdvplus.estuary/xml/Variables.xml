@@ -336,9 +336,9 @@
 		<value condition="Control.HasFocus(608)+ PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
 		<value condition="Control.HasFocus(608)">$LOCALIZE[264]</value>
 		<value condition="Control.HasFocus(804)">$LOCALIZE[33061]</value>
-		<value condition="Control.HasFocus(70011)">$LOCALIZE[31124]</value>
+		<value condition="Control.HasFocus(70011)">Player Process Info</value>
 		<value condition="Control.HasFocus(70012)">Player Debug</value>
-		<value condition="Control.HasFocus(70013)">Original</value>
+		<value condition="Control.HasFocus(70013)">VS10 Mode</value>
 		<value condition="Control.HasFocus(70014)">VS10 SDR</value>
 		<value condition="Control.HasFocus(70015)">VS10 HDR10</value>
 		<value condition="Control.HasFocus(70016)">VS10 Dolby Vision</value>
@@ -749,13 +749,13 @@
 		<value>$INFO[ListItem.HdrType]</value>
 	</variable>
 	<variable name="AudioCodecVar">
-        <value condition="String.IsEqual(ListItem.AudioCodec,aac)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,aac_lc)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,aac_ltp)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,aac_ssr)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,he_aac)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,he_aac-v2)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_lc)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_ltp)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,aac_ssr)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,he_aac)">AAC</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,he_aac-v2)">AAC</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby D</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,aif)">AIFF</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,aifc)">AIFF</value>
@@ -777,10 +777,10 @@
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmnos DD+</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby D+</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,flac)">FLAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,mp1)">MP1</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,mp2)">MP2</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,mp3)">MP3</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,mp3float)">MP3</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,mp1)">MP1</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,mp2)">MP2</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,mp3)">MP3</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,mp3float)">MP3</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,ogg)">OGG</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,opus)">OPUS</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,pcm)">PCM</value>
@@ -819,28 +819,24 @@
 	<variable name="DVELVar">
 		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),minimum)">[COLOR lightgreen]MEL[/COLOR]</value>
 		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),full)">[COLOR lightgreen]FEL[/COLOR]</value>
-		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),none)"></value>
 	</variable>
 	<variable name="DVSourceELVar">
 		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.type),minimum)">[COLOR 8016a34a]MEL[/COLOR]</value>
 		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.type),full)">[COLOR 8016a34a]FEL[/COLOR]</value>
-		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.type),none)"></value>
 	</variable>
 	<variable name="RPUPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR]</value>
-		<value>[COLOR dimgrey]■[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR]</value>
+		<value>[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="BLPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR]</value>
-		<value>[COLOR dimgrey]■[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR lightgreen]■[/COLOR]</value>
+		<value>[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="ELPresentVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR lightgreen]■[/COLOR]</value>
-		<value>[COLOR dimgrey]■[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.el.present),0)">[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="ELSourcePresentVar">
-		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.present),1)">[COLOR 8016a34a]■[/COLOR]</value>
-		<value>[COLOR dimgrey]■[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.source.dovi.el.present),0)">[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="DVProfileExtVar">
 		<value>$INFO[Player.Process(video.dovi.profile)].$INFO[Player.Process(video.dovi.bl.signal.compatibility)]</value>
@@ -849,35 +845,25 @@
 		<value>$INFO[Player.Process(video.source.dovi.profile)].$INFO[Player.Process(video.source.dovi.bl.signal.compatibility)]</value>
 	</variable>
 	<variable name="DVTunnelVar">
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode.raw),1)">DV Tunnel</value>
-	</variable>
-	<variable name="DVVS10Var">
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),dolby vision)">Dolby Vision</value>
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),hdr10)">HDR10</value>
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),sdr)">SDR</value>
-		<value condition="String.Contains(Player.Process(amlogic.vs10.mode),bypass)">bypass</value>
-	</variable>
-	<variable name="ColourRangeVar">
-		<value condition="String.Contains(Player.Process(video.color.range),unknown)"></value>
-		<value>$INFO[Player.Process(video.color.range)]</value>
-	</variable>
-	<variable name="ColourSpaceVar">
-		<value condition="String.Contains(Player.Process(video.color.space),unknown)"></value>
-		<value>$INFO[Player.Process(video.color.space)]</value>
-	</variable>
-	<variable name="ColourPrimariesVar">
-		<value condition="String.Contains(Player.Process(video.color.primaries),unknown)"></value>
-		<value>$INFO[Player.Process(video.color.primaries)]</value>
-	</variable>
-	<variable name="ColourTransferCharacteristicVar">
-		<value condition="String.Contains(Player.Process(video.color.transfer.characteristic),unknown)"></value>
-		<value>$INFO[Player.Process(video.color.transfer.characteristic)]</value>
+		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)">DV Tunnel</value>
 	</variable>
 	<variable name="|">
-		<value>[COLOR FF404040]|[/COLOR]</value>
+		<value>[COLOR ff404040]|[/COLOR]</value>
 	</variable>
-	<variable name="ColourVar">
-		<value>$VAR[ColourRangeVar] $VAR[|] $VAR[ColourSpaceVar] $VAR[|] $VAR[ColourPrimariesVar] $VAR[|] $VAR[ColourTransferCharacteristicVar]</value>
+	<variable name="ColorRangeVar">
+		<value condition="String.IsEqual(Player.Process(video.color.range),tv)">Limited</value>
+		<value condition="String.IsEqual(Player.Process(video.color.range),pc)">Full</value>
+		<value condition="String.IsEqual(Player.Process(video.color.range),unknown)">[COLOR dimgrey]---[/COLOR]</value>
+	</variable>
+	<variable name="ColorPrimariesVar">
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),bt2020)">BT.2020</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),bt709)">BT.709</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),bt601)">BT.601</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),bt470bg)">BT.470BG</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),smpte170m)">SMPTE 170M</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),unknown) + Integer.IsEqual(Player.Process(video.dovi.profile),5)">IPTPQc2</value>
+		<value condition="String.IsEqual(Player.Process(video.color.primaries),unknown)">[COLOR dimgrey]---[/COLOR]</value>
+		<value>[UPPERCASE]$INFO[Player.Process(video.color.primaries)][/UPPERCASE]</value>
 	</variable>
 	<variable name="AudioChannels1Var">
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
@@ -903,26 +889,26 @@
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital+</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Dolby Digital+</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ac3)">Dolby Digital</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp1)">MP1</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp2)">MP2</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3)">MP3</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">MP3</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp1)">MP1</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp2)">MP2</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3)">MP3</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">MP3</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,flac)">FLAC</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,vorbis)">Vorbis</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aif)">AIFF</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aifc)">AIFF</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aiff)">AIFF</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,alac)">ALAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,ape)">APE</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,avc)">AVC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,cdda)">CDDA</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_latm)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_lc)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ltp)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ssr)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac)">AAC</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac_v2)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aif)">AIFF</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aifc)">AIFF</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aiff)">AIFF</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,alac)">ALAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ape)">APE</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,avc)">AVC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,cdda)">CDDA</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_latm)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_lc)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ltp)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_ssr)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac)">AAC</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,he_aac_v2)">AAC</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,wma)">WMA</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,wmav2)">WMA</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,wmapro)">WMA Pro</value>
@@ -947,5 +933,59 @@
 		<value condition="String.Contains(ListItem.Filenameandpath,DTS-X)">flags/audiocodec/dtsx.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,DTSX)">flags/audiocodec/dtsx.png</value>
 		<value>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</value>
+	</variable>
+	<variable name="SubtitleVar">
+		<value condition="String.IsEmpty(VideoPlayer.SubtitlesName)">$INFO[VideoPlayer.SubtitlesLangEx]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitlesName)">$INFO[VideoPlayer.SubtitlesName]</value>
+	</variable>
+	<variable name="LevelIDVar">
+		<value condition="Integer.IsLess(Player.Process(video.dovi.level),10)">0</value>
+	</variable>
+	<variable name="VPModeVar">
+		<value condition="Integer.IsEqual(Player.Process(video.vpmode),1)">[COLOR lightgreen]■[/COLOR]</value>
+		<value>[COLOR ff424242]■[/COLOR]</value>
+	</variable>
+	<variable name="DualTrackVar">
+		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),ST-DL) + String.IsEqual(Player.Process(video.source.hdr.type),Dolby Vision)">ST-DL</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),DT-DL) + String.IsEqual(Player.Process(video.source.hdr.type),Dolby Vision)">DT-DL</value>
+	</variable>
+	<variable name="DualTrackAddVar">
+		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),ST-DL) + String.IsEqual(Player.Process(video.source.additional.hdr.type),Dolby Vision)">ST-DL</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),DT-DL) + String.IsEqual(Player.Process(video.source.additional.hdr.type),Dolby Vision)">DT-DL</value>
+	</variable>
+	<variable name="CMAppendVar">
+		<value condition="String.StartsWith(Player.Process(video.dovi.meta.version),V)">[COLOR dimgrey]Append[/COLOR]</value>
+	</variable>
+	<variable name="L5StateVar">
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),0)">Failed</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),1)">Skipped [COLOR dimgrey](non-16:9)[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),2)">Skipped [COLOR dimgrey](IMAX)[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),3)">Detected</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),4)">Skipped</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),5)">Disabled</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),6)">Running</value>
+	</variable>
+	<variable name="VideoResVar">
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,1080)">HD</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,720)">HD</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,576)">SD</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,480)">SD</value>
+		<value>$INFO[VideoPlayer.VideoResolution]</value>
+	</variable>
+	<variable name="VS10ModeOriginalVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass) | [String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)]">[COLOR lightgreen]$INFO[Player.Process(video.hdr.type)][/COLOR]</value>
+		<value>$INFO[Player.Process(video.hdr.type)]</value>
+	</variable>
+	<variable name="VS10ModeSDRVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),SDR)">[COLOR lightgreen]VS10 SDR[/COLOR]</value>
+		<value>VS10 SDR</value>
+	</variable>
+	<variable name="VS10ModeHDRVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),HDR10)">[COLOR lightgreen]VS10 HDR10[/COLOR]</value>
+		<value>VS10 HDR10</value>
+	</variable>
+	<variable name="VS10ModeDVVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)">[COLOR lightgreen]VS10 Dolby Vision[/COLOR]</value>
+		<value>VS10 Dolby Vision</value>
 	</variable>
 </includes>
