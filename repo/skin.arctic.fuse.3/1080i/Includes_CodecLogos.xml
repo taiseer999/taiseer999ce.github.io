@@ -840,8 +840,8 @@
             </control>
             <control type="group">
                 <visible>String.IsEqual(VideoPlayer.AudioCodec,dca)</visible>
-                <top>65</top>
-                <left>55</left>
+                <top>55</top>
+                <left>30</left>
                 <control type="image">
                     <width>140</width>
                     <height>60</height>
