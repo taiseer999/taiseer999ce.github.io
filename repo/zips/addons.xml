@@ -6738,7 +6738,7 @@ I had this disabled because i want to be able to jump to the most right object b
 [B]2.7.41[/B]
 - Initial Release based on Confluence 2.7.4</news>
 	</extension>
-</addon><addon id="skin.arctic.fuse.2" name="Arctic Fuse 2" provider-name="jurialmunkey . AK" version="2.12.14.2">
+</addon><addon id="skin.arctic.fuse.2" name="Arctic Fuse 2" provider-name="jurialmunkey . AK" version="4.6.26.17.2">
  <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.1.28" />
