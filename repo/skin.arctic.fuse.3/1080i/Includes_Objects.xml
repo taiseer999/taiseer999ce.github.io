@@ -780,7 +780,7 @@
             <control type="label">
                 <height>25</height>
                 <textcolor>main_fg_100</textcolor>
-                <label>CoreELEC</label>
+                <label>CoreELEC "NG"</label>
                 <font>font_title_midi</font>
                 <align>center</align>
             </control>
