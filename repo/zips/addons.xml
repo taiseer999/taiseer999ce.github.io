@@ -481,34 +481,6 @@ updated YouTube addon URL
     <description lang="tr_TR">The Movie Database (TMDb), topluluk tarafından oluşturulmuş bir film ve TV veritabanıdır. Her bir veri parçası, 2008 yılına dayanan muhteşem topluluğumuz tarafından eklenmiştir. TMDb'nin güçlü uluslararası odağı ve veri genişliği büyük ölçüde benzersizdir ve inanılmaz derecede gurur duyduğumuz bir şeydir. Basitçe söylemek gerekirse, topluluk içinde yaşıyor ve nefes alıyoruz ve bizi farklı kılan da tam olarak bu.</description>
     <description lang="zh_CN">TMDb 是一个由网络社区创建的影视数据库。每一条数据都是由我们令人惊叹的社区添加的，可以追溯到2008年。TMDb 强大的国际关注度和数据广度在很大程度上是无与伦比的，我们对此感到无比自豪。简单地说，我们生活在社区中，呼吸着社区的气息，这正是我们与众不同的原因。</description>
   </extension>
-</addon><addon id="plugin.program.ABUKARIMwizard" name="ABUKARIMwizard Wizard" version="3.0.8.2" provider-name="Slam, Sarge, Funsterbe, BYB">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0.1" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Simple Wizard is a lightweight template for installing builds on Kodi. Has some code from Aftermath Wizard by Surfacingx. Skin Switch by OpenELEQ. Base code by BYB. Credits to them and all others who contributed. Please report any bugs to @slamious on Telegram/Twitter.</summary>
-		<description lang="en_GB">Kodi Wizard</description>
-		<disclaimer lang="en_GB">This Addon contains no content</disclaimer>
-		<language>en</language>
-		<platform>all</platform>
-		<license>GPL-2.0-or-later</license>
-		<forum />
-		<website /> 
-		<email />
-		<source />
-		<news />
-		<assets>
-				<icon>resources/icon.png</icon>
-				<fanart>resources/fanart.jpg</fanart>
-				<banner />
-				<clearlogo />
-				<screenshot />
-		</assets>
-	</extension>
 </addon><addon id="plugin.program.kodi.auth.backup" name="Kodi Auth Backup" version="5.7.4" provider-name="i-Meshal">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -1092,54 +1064,6 @@ v.3.3.7
             <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="script.ezmaintenanceplus" name="EZ Maintenance+" version="2023.01.09.0" provider-name="aenema, peno">
-  <requires>
-    <import addon="script.module.requests" version="1.0.0" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-     <provides>executable</provides>
-  </extension>
-  
-  <extension point="xbmc.addon.metadata">
-	<summary>A Streamlined Utility Tool for Kodi</summary>
-	<description>No Bloatware, no Nonsense! Just Keep your Kodi sharp and clean with this utility tool... Now with a Custom Wizard.</description>
-    <language />
-    <platform>all</platform>
-    <license>The MIT License</license>
-    <forum>-</forum>
-    <source>https://github.com</source>
-    <assets>
-	    <icon>icon.png</icon>
-	    <fanart>fanart.png</fanart>
-    </assets>
-    <news>
-2023.01.09.0
- - Added AutoClean Cache functionality every x days at a given hour.
- - Backup always replaced the home folder reference in xml files with special://home
-   Not all addons can handle this replace so it is now possible via a setting to disable this.
- - Backup Cancel didn't work. This is now fixed.
-
-2023.01.01.0
- - Fix a fix on 2022.12.28.0
-
-2022.12.28.0
- - Fix crash with full backup when there are foreign, like Hebrew, characters in xml files
-
-2021.12.19.0
- - Made kodi 19 (Matrix) compatible.
-
-2021.11.03.0
-- Fix Speedtest crash.
-
-2020.12.19.1
-- The plugin was also installed under Video add-ons. Now it only is in Program add-ons where it belongs
-- Clean removed some files created by Common plugin cache or StorageServer or script.common.plugin.cache at kodi startup.
-  This resulted in breaking cache functionality of kodi
-- Upload kodi log file to pastebin didn't always work and the first bytes were binary characters
-- Made all decode calls UTF-8
-- Improved ADVANCED SETTINGS(BUFFER SIZE) functionality
-    </news>
-  </extension>
 </addon><addon id="script.favourites" name="Favourites script" version="8.1.2" provider-name="ronie, `Black">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
@@ -1431,56 +1355,6 @@ v.3.3.7
 		<description lang="sk_SK">Keymap Editor je grafický nástroj na nastavovanie mapovania tlačidiel diaľkových ovládačov, klávesníc a iných vstupných zariadení podporovaných Kodi. Poznámka: k existujúcim používateľom definovaným mapovaniam bude pridaná prípona .bak.</description>
 		<description lang="zh_CN">键映射编辑器是一个用于配置 Kodi 支持的遥控器、键盘和其他输入设备的功能映射的图形界面。注意：现有的用户定义键映射将重命名为.bak。</description>
 	</extension>
-</addon><addon id="script.kodinerds.android.update" name="KN APK Downloader" version="1.1.6+matrix.1" provider-name="Maven">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.six" version="1.0.0" />
-        <import addon="script.module.simplecache" version="1.0.0" />
-    </requires>
-    <extension point="xbmc.python.script" library="default.py" />
-    <extension point="xbmc.service" library="service.py" start="login" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="de">Downloader für Maven's Kodi-Builds</summary>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
-        <platform>android</platform>
-        <assets>
-            <icon>resources/images/icon.png</icon>
-        </assets>
-    </extension>
-</addon><addon id="script.module.accountmgr" version="2.6.6.1" name="Account Manager" provider-name="Zaxxon709">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-		<import addon="script.module.requests" version="2.19.1" />
-            	<import addon="script.module.acctview" version="2.4.8" />
-	</requires>
-	
-	<extension point="xbmc.python.script" library="lib/default.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker>
-		<summary lang="en">مدير الحسابات</summary>
-		<description>Manage your Trakt, Debrid, Torbox, Easy Debrid, OffCloud, Easynews, FilePursuit and Metadata logins</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<disclaimer lang="en">The author is not responsible for the use of this addon. [CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.png</fanart>
-		</assets>
-	</extension>
-</addon><addon id="script.module.acctview" name="acctviewer" version="2.4.9" provider-name="Zaxxon709">
-    <extension point="xbmc.python.pluginsource" library="default.py">
-    </extension>
-    <extension point="xbmc.python.module" library="resources" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">View Authorized Accounts</summary>
-        <description lang="en">Account Manager Dependency</description>
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <source>https://</source>
-    </extension>
 </addon><addon id="script.module.addon.signals" name="Addon Signals" version="0.0.6+matrix.1" provider-name="Rick Phillips (ruuk)">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
