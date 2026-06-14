@@ -1,0 +1,66 @@
+[B]8.8.13[/B]
+• Codec logos: optional dark variant for the startup logos
+• Add ProRes to the video codec variables
+• PlayerProcessInfo: show the CMv4.0 → CMv2.9 down-convert state in the DV Metadata section
+• Fix overlapping media flags on music videos
+
+[B]8.8.12[/B]
+• Codec logos: add 'keep inside active area' setting (default on)
+
+[B]8.8.11[/B]
+• Remove blank space and vertical bar when subtitle language is not available
+• Keep consistent info between Enabled and Disabled subtitle
+
+[B]8.8.10[/B]
+• CoreELEC power button and calibration logo icons (vlix)
+
+[B]8.8.9[/B]
+• Codec logos: layout (vertical/horizontal) and position (left/center/right) settings, vertical+left by default, with an off-device preview toggle
+
+[B]8.8.8[/B]
+• Initial commit for p3i.Estuary
+
+[B]0.8.5[/B]
+• Updated language files from Transifex
+
+[B]0.8.3[/B]
+• Updated language files from Transifex
+
+[B]0.8.2[/B]
+• Updated language files from Transifex
+
+[B]0.8.1[/B]
+• Updated language files from Transifex
+
+[B]0.7.13[/B]
+• Updated language files from Transifex
+
+[B]0.7.12[/B]
+• Updated language files from Transifex
+
+[B]0.7.11[/B]
+• Updated language files from Transifex
+
+[B]0.7.10[/B]
+• Updated language files from Transifex
+
+[B]0.7.8[/B]
+• Updated language files from Transifex
+
+[B]0.7.7[/B]
+• Updated language files from Transifex
+
+[B]0.7.3[/B]
+• Updated language files from Transifex
+
+[B]0.7.1[/B]
+• Updated language files from Transifex
+
+[B]0.6.2[/B]
+• Updated language files from Transifex
+
+[B]0.6.1[/B]
+• Updated language files from Transifex
+
+﻿[B]0.0.1[/B]
+• Initial commit
