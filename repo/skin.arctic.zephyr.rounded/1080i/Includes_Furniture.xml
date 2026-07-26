@@ -1410,9 +1410,9 @@
                                 <texture>special://skin/extras/icons/stat_temp.png</texture>
                             </control>
                             <control type="label">
-                                <font>TinyRobotoNotoCJKsc-Regular</font>
+                                <font>tiny</font>
                                 <width>auto</width>
-                                <height>38</height>
+                                <height>42</height>
                                 <textcolor>Dark2</textcolor>
                                 <label>$INFO[System.CPUTemperature]</label>
                             </control>
@@ -1425,9 +1425,9 @@
                                 <texture>special://skin/extras/icons/stat_ram.png</texture>
                             </control>
                             <control type="label">
-                                <font>TinyRobotoNotoCJKsc-Regular</font>
+                                <font>tiny</font>
                                 <width>auto</width>
-                                <height>38</height>
+                                <height>42</height>
                                 <textcolor>Dark2</textcolor>
                                 <label>$INFO[system.memory(used.percent)]</label>
                             </control>
@@ -1450,9 +1450,9 @@
                                 <visible>!String.Contains(Network.IPAddress,1)</visible>
                             </control>
                                <control type="image">
-                              <width>80</width>
-                              <height>80</height>
-                              <top>-20</top>
+                              <width>63</width>
+                              <height>63</height>
+                              <top>-11</top>
                                 <left>17</left>
                               <aspectratio>keep</aspectratio>
                               <texture>special://skin/extras/icons/CE.png</texture>
