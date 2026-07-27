@@ -318,7 +318,7 @@
         <param name="hasprogress">false</param>
         <param name="texture">dialog/loading-back.png</param>
         <param name="size">100</param>
-        <param name="icon">special://skin/extras/icons/kodi.png</param>
+        <param name="icon">special://skin/extras/icons/ce.png</param>
         <param name="progress">Control.GetLabel(32)</param>
         <param name="progress_id">32</param>
         <param name="spinprogress">false</param>
@@ -714,79 +714,30 @@
             </control>
         </definition>
     </include>
-	
-    <include name="Object_InfoCircle_VS10">
-        <param name="bordersize">1</param>
-        <param name="aspectratio">scale</param>
-        <param name="colorbacking">main_fg_100</param>
-        <param name="colordiffuse">main_bg_90</param>
-        <param name="textcolor">main_fg_90</param>
-        <param name="font_top">font_mini_bold</param>
-        <param name="include_labels">true</param>
-        <param name="backing_visible">true</param>
-        <param name="shadow_colordiffuse">shadow_soft</param>
-        <definition>
-        	<control type="group">
-                <height>80</height>
-                <control type="group">
-                	<centertop>50%</centertop>
-                	<height>50</height>
-                	<width>50</width>
-                	<control type="image">
-                        <include content="Dimension_Padding">
-                        	<param name="pad">-40</param>
-                        </include>
-                        <bordersize>40</bordersize>
-                        <bordertexture colordiffuse="$PARAM[shadow_colordiffuse]">shadows/circle_50-shadow-40.png</bordertexture>
-                        <texture colordiffuse="$PARAM[colorbacking]">diffuse/circle/circle_50.png</texture>
-                        <visible>$PARAM[backing_visible]</visible>
-                	</control>
-                	<include content="Object_InfoCircle_Image">
-                        <param name="bordersize">$PARAM[bordersize]</param>
-                        <param name="aspectratio">$PARAM[aspectratio]</param>
-                        <param name="colordiffuse">$PARAM[colordiffuse]</param>
-                        <param name="icon">$PARAM[icon]</param>
-                        <param name="diffuse">$PARAM[diffuse]</param>
-                	</include>
-                </control>
-                <nested />
-                <left>40</left>
-                <include content="Object_InfoCircle_Text_Top" condition="$PARAM[include_labels]">
-                	<left>80</left>
-                	<height>50</height>
-                	<top>35</top>
-                	<textcolor>$PARAM[textcolor]</textcolor>
-                	<selectedcolor>$PARAM[textcolor]</selectedcolor>
-                	<label>$PARAM[label]</label>
-                	<font>$PARAM[font]</font>
-                </include>
-        	</control>
-        </definition>
-    </include>
 
     <include name="Object_StartUp_Logo">
         <control type="grouplist">
-            <height>200</height>
+            <height>128</height>
             <centertop>400</centertop>
             <orientation>vertical</orientation>
             <align>center</align>
             <control type="image">
-                <width>100</width>
-                <height>100</height>
+                <width>96</width>
+                <height>96</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture>special://skin/extras/icons/CE.png</texture>
+                <texture>special://skin/extras/icons/ce.png</texture>
             </control>
             <control type="label">
-                <height>25</height>
+                <height>32</height>
                 <textcolor>main_fg_100</textcolor>
-                <label>CoreELEC "NG"</label>
-                <font>font_title_midi</font>
+                <label>CoreELEC "NO"</label>
+                <font>font_logo_large</font>
                 <align>center</align>
             </control>
         </control>
         <control type="grouplist">
-            <height>95</height>
+            <height>80</height>
             <centertop>50%</centertop>
             <orientation>horizontal</orientation>
             <itemgap>10</itemgap>
@@ -796,7 +747,7 @@
                 <align>center</align>
                 <width>auto</width>
                 <font>font_title_huge</font>
-                <textcolor>main_fg_100</textcolor>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <label>[COLOR=main_logo]Arctic[/COLOR] Fuse</label>
             </control>
             <control type="label">
@@ -804,8 +755,8 @@
                 <height>50</height>
                 <align>center</align>
                 <width>auto</width>
-                <font>font_title_midi</font>
-                <textcolor>main_fg_100</textcolor>
+                <font>font_head_bold</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <label>$NUMBER[3]</label>
             </control>
         </control>
@@ -833,7 +784,7 @@
                     <left>-10</left>
                     <label>$INFO[Window(Weather).Property(Current.Temperature), [B],[/B]°]</label>
                     <width>auto</width>
-                    <height>95</height>
+                    <height>90</height>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font_title_huge</font>

@@ -359,9 +359,20 @@
             <param name="id">007</param>
             <param name="dialog">false</param>
             <param name="control">radiobutton</param>
-            <label>$LOCALIZE[52077]</label>
+            <label>CPU + RAM</label>
             <onclick>Skin.ToggleSetting(Furniture.Network_RAM)</onclick>
             <selected>Skin.HasSetting(Furniture.Network_RAM)</selected>
+        </include>
+        <include content="Settings_Button" description="CoreELEC Logo">
+            <param name="dialog">false</param>
+            <param name="window">skinsettings</param>
+            <param name="baseid">$PARAM[baseid]</param>
+            <param name="id">011</param>
+            <param name="dialog">false</param>
+            <param name="control">radiobutton</param>
+            <label>Show CoreELEC logo above date</label>
+            <onclick>Skin.ToggleSetting(Header.DisableLogo)</onclick>
+            <selected>!Skin.HasSetting(Header.DisableLogo)</selected>
         </include>
        
 
