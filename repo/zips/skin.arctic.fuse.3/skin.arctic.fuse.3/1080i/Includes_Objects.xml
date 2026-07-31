@@ -747,6 +747,7 @@
                         <param name="colordiffuse">$PARAM[colordiffuse]</param>
                         <param name="icon">$PARAM[icon]</param>
                         <param name="diffuse">$PARAM[diffuse]</param>
+                        <param name="fallback">$PARAM[fallback]</param>
                 	</include>
                 </control>
                 <nested />
@@ -757,8 +758,7 @@
                 	<top>35</top>
                 	<textcolor>$PARAM[textcolor]</textcolor>
                 	<selectedcolor>$PARAM[textcolor]</selectedcolor>
-                	<label>$PARAM[label]</label>
-                	<font>$PARAM[font]</font>
+                	<label fallback="$PARAM[fallback_role]">$PARAM[name]</label>
                 </include>
         	</control>
         </definition>
@@ -766,27 +766,27 @@
 
     <include name="Object_StartUp_Logo">
         <control type="grouplist">
-            <height>200</height>
+            <height>128</height>
             <centertop>400</centertop>
             <orientation>vertical</orientation>
             <align>center</align>
             <control type="image">
-                <width>100</width>
-                <height>100</height>
+                <width>96</width>
+                <height>96</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture>special://skin/extras/icons/CE.png</texture>
+                <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/CE.png</texture>
             </control>
             <control type="label">
-                <height>25</height>
+                <height>32</height>
                 <textcolor>main_fg_100</textcolor>
                 <label>CoreELEC "NG"</label>
-                <font>font_title_midi</font>
+                <font>font_logo_large</font>
                 <align>center</align>
             </control>
         </control>
         <control type="grouplist">
-            <height>95</height>
+            <height>80</height>
             <centertop>50%</centertop>
             <orientation>horizontal</orientation>
             <itemgap>10</itemgap>
@@ -796,7 +796,7 @@
                 <align>center</align>
                 <width>auto</width>
                 <font>font_title_huge</font>
-                <textcolor>main_fg_100</textcolor>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <label>[COLOR=main_logo]Arctic[/COLOR] Fuse</label>
             </control>
             <control type="label">
@@ -804,8 +804,8 @@
                 <height>50</height>
                 <align>center</align>
                 <width>auto</width>
-                <font>font_title_midi</font>
-                <textcolor>main_fg_100</textcolor>
+                <font>font_head_bold</font>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <label>$NUMBER[3]</label>
             </control>
         </control>
@@ -833,7 +833,7 @@
                     <left>-10</left>
                     <label>$INFO[Window(Weather).Property(Current.Temperature), [B],[/B]°]</label>
                     <width>auto</width>
-                    <height>95</height>
+                    <height>90</height>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font_title_huge</font>

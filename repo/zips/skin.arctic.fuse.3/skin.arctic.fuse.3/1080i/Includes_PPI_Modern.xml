@@ -135,7 +135,7 @@
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 					
-					<!-- Pixel format -->
+					<!-- Output format -->
 					<control type="label">
 						<top>80</top>
 						<label>$LOCALIZE[31923]:</label>
@@ -150,7 +150,7 @@
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 					
-					<!-- Bit depth -->
+					<!-- Video bit depth -->
 					<control type="label">
 						<top>110</top>
 						<label>$LOCALIZE[31904]:</label>
@@ -259,7 +259,7 @@
 						<left>211</left>
 						<top>21</top>
 						<label>$VAR[VS10ModeVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 					</control>
 					<control type="label">
 						<top>20</top>
@@ -272,7 +272,7 @@
 						<left>275</left>
 						<top>21</top>
 						<label>$VAR[VideoVPModeVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 					</control>
 					
 					<!-- VS10 status -->
@@ -872,7 +872,7 @@
 					
 					<!-- Dolby Vision Icon -->
 					<control type="image">
-						<texture colordiffuse="dialog_fg_100">special://skin/extras/icons/dv.png</texture>
+						<texture colordiffuse="dialog_fg_100">codecs/dv.png</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<height>23</height>
 						<top>-22</top>
@@ -968,7 +968,7 @@
 						<left>326</left>
 						<top>141</top>
 						<label>$VAR[RPUPresentVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 					
@@ -983,7 +983,7 @@
 						<left>326</left>
 						<top>171</top>
 						<label>$VAR[BLPresentVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 					
@@ -998,14 +998,14 @@
 						<left>326</left>
 						<top>201</top>
 						<label>$VAR[ELPresentVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 					<control type="label">
 						<left>395</left>
 						<top>201</top>
 						<label>$VAR[ELSourcePresentVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 						<textcolor>dialog_fg_90</textcolor>
 						<visible>!String.IsEqual(Player.Process(video.source.dovi.el.present),Player.Process(video.dovi.el.present))</visible>
 						<visible>!String.IsEqual(Player.Process(video.source.dovi.profile),0)</visible>
@@ -1022,7 +1022,7 @@
 						<left>326</left>
 						<top>231</top>
 						<label>$VAR[CMModeVar]</label>
-						<font>font_tiny_iconic_regular1</font>
+						<font>font_tiny_iconic_regular</font>
 						<textcolor>dialog_fg_90</textcolor>
 					</control>
 				</control>
