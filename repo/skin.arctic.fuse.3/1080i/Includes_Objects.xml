@@ -775,12 +775,12 @@
                 <height>96</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/kodi.png</texture>
+                <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/CE.png</texture>
             </control>
             <control type="label">
                 <height>32</height>
                 <textcolor>main_fg_100</textcolor>
-                <label>CoreELEC</label>
+                <label>CoreELEC "NG"</label>
                 <font>font_logo_large</font>
                 <align>center</align>
             </control>
