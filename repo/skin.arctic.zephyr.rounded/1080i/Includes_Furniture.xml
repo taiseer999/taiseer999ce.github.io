@@ -1351,7 +1351,7 @@
                         </control>
 
                         <control type="group">
-                            <visible>![String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
+                            <visible>![String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
                             <visible>!String.IsEmpty(Weather.plugin)</visible>
                             <visible>Weather.IsFetched</visible>
                             <include>Animation_Fade_In_WeatherDelay</include>
@@ -1361,7 +1361,7 @@
                         </control>
 
                         <control type="label">
-                            <visible>![String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
+                            <visible>![String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
                             <visible>!String.IsEmpty(Weather.plugin)</visible>
                             <visible>Weather.IsFetched</visible>
                             <include>Animation_Fade_In_WeatherDelay</include>
@@ -1371,7 +1371,7 @@
                             <aligny>center</aligny>
                             <font>font_tiny_top</font>
                             <textcolor>Dark2</textcolor>
-                            <label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
+                            <label>$INFO[Weather.Data(Current.Temperature)]</label>
                         </control>
                     </control>
 
@@ -1795,7 +1795,7 @@
                     <!-- 1ER LIGN -->
 
                     <control type="label">
-                        <visible>![String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated)) | String.IsEmpty(Weather.plugin) | !Weather.IsFetched]</visible>
+                        <visible>![String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated)) | String.IsEmpty(Weather.plugin) | !Weather.IsFetched]</visible>
 
                         <centertop>26</centertop>
                         <right>144</right>
@@ -1803,7 +1803,7 @@
                         <font>Flag</font>
                         <align>right</align>
                         <textcolor>Dark1</textcolor>
-                        <label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
+                        <label>$INFO[Weather.Data(Current.Temperature)]</label>
                     </control>
 
                     <control type="label">
@@ -1829,7 +1829,7 @@
                 <!-- WEATHER ICON -->
 
                 <control type="group">
-                    <visible>!String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503])</visible>
+                    <visible>!String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503])</visible>
                     <visible>!String.IsEmpty(Weather.plugin)</visible>
                     <visible>Weather.IsFetched</visible>
                     <include>Animation_Fade_In_WeatherDelay</include>
@@ -1845,7 +1845,7 @@
                 <!-- BUSY ANIMATION -->
 
                 <control type="group">
-                    <visible>String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))</visible>
+                    <visible>String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))</visible>
                     <visible>!String.IsEmpty(Weather.plugin)</visible>
                     <visible>Weather.IsFetched</visible>
 
@@ -1995,7 +1995,7 @@
                     <orientation>horizontal</orientation>
 
                     <control type="label">
-                        <visible>![String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
+                        <visible>![String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
                         <visible>!String.IsEmpty(Weather.plugin)</visible>
                         <visible>Weather.IsFetched</visible>
                         <include>Animation_Fade_In_WeatherDelay</include>
@@ -2005,13 +2005,13 @@
                         <aligny>center</aligny>
                         <font>font_tiny_top</font>
                         <textcolor>Dark2</textcolor>
-                        <label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
+                        <label>$INFO[Weather.Data(Current.Temperature)]</label>
                     </control>
 
                     <!-- WEATHER ICON -->
 
                     <control type="group">
-                        <visible>![String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
+                        <visible>![String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))]</visible>
                         <visible>!String.IsEmpty(Weather.plugin)</visible>
                         <visible>Weather.IsFetched</visible>
                         <include>Animation_Fade_In_WeatherDelay</include>
@@ -2046,7 +2046,7 @@
                 <!-- BUSY ANIMATION -->
 
                 <control type="group">
-                    <visible>String.Contains(Window(Weather).Property(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))</visible>
+                    <visible>String.Contains(Weather.Data(Current.Temperature),$LOCALIZE[503]) | String.IsEmpty(Window(Weather).Property(Updated))</visible>
                     <visible>!String.IsEmpty(Weather.plugin)</visible>
                     <visible>Weather.IsFetched</visible>
 
