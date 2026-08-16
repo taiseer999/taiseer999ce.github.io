@@ -767,7 +767,7 @@
     <include name="Object_StartUp_Logo">
         <control type="grouplist">
             <height>128</height>
-            <centertop>400</centertop>
+            <centertop>350</centertop>
             <orientation>vertical</orientation>
             <align>center</align>
             <control type="image">
@@ -780,14 +780,14 @@
             <control type="label">
                 <height>30</height>
                 <textcolor>main_fg_100</textcolor>
-                <label>CoreELEC "NG"</label>
+                <label>CoreELEC "NO"</label>
                 <font>font_logo_large</font>
                 <align>center</align>
             </control>
         </control>
         <control type="grouplist">
-            <height>100</height>
-            <centertop>50%</centertop>
+            <height>140</height>
+            <centertop>47%</centertop>
             <orientation>horizontal</orientation>
             <itemgap>10</itemgap>
             <align>center</align>
@@ -804,7 +804,7 @@
                 <height>50</height>
                 <align>center</align>
                 <width>auto</width>
-                <font>font_head_bold</font>
+                <font>font_huge_bold</font>
                 <textcolor>$VAR[ColorHighlight]</textcolor>
                 <label>$NUMBER[3]</label>
             </control>
