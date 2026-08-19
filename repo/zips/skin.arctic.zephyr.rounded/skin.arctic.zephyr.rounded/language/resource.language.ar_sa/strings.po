@@ -1331,7 +1331,7 @@ msgstr "علامات الفصول"
 
 msgctxt "#31328"
 msgid "Rotten Tomatoes"
-msgstr "الطماطم الفاسدة"
+msgstr "راتون توميتوز"
 
 msgctxt "#31329"
 msgid "Select media flags"
@@ -2556,6 +2556,7 @@ msgstr "التقدم السريع"
 msgctxt "#31634"
 msgid "Bookmark"
 msgstr "إشارة مرجعية"
+
 
 msgctxt "#31991"
 msgid "Show genre icons on home"
