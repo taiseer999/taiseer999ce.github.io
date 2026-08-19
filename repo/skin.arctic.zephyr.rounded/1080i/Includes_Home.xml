@@ -304,6 +304,7 @@
             <!-- CONTAINER 301 -->
 
             <onback condition="Skin.HasSetting(home.onback.go.to.first.widget) + !String.IsEmpty(Window(Home).Property(BackToId))">SetFocus($INFO[Window(Home).Property(BackToId)])</onback>
+            <onback>ActivateWindow(DialogButtonMenu)</onback>
 
             <onup condition="[![Skin.HasSetting(home.style.flix)]] + [!$EXP[Extended_Now_Playing_Is_Visible] | [$EXP[Extended_Now_Playing_Is_Visible] | Skin.HasSetting(hide.home.nowplaying.extended.osd.control.button)]]">301</onup>
 
@@ -1022,7 +1023,13 @@
                     <width>NetflixPlotWidth</width>
 
                     <control type="group">
-                        <left>980</left>
+                        <!-- CLEARLOGO POSITION - OVER ART (default) / IN PANEL (toggle) -->
+                        <include content="Def_Left" condition="!Skin.HasSetting(home.flix.clearlogo.in.panel)">
+                            <param name="left" value="980" />
+                        </include>
+                        <include content="Def_Left" condition="Skin.HasSetting(home.flix.clearlogo.in.panel)">
+                            <param name="left" value="0" />
+                        </include>
                         <include content="Widgets_Item_Main_Title" condition="$PARAM[labelisvisible]">
                             <param name="id" value="$PARAM[id]" />
                         </include>
@@ -1033,9 +1040,14 @@
                         <param name="top" value="80" />
                     </include>
 
-                    <include content="Widgets_Item_Sub_Title" condition="Skin.HasSetting(show.home.flix.title.clearlogo)">
+                    <include content="Widgets_Item_Sub_Title" condition="Skin.HasSetting(show.home.flix.title.clearlogo) + !Skin.HasSetting(home.flix.clearlogo.in.panel)">
                         <param name="id" value="$PARAM[id]" />
                         <param name="top" value="20" />
+                    </include>
+
+                    <include content="Widgets_Item_Sub_Title" condition="Skin.HasSetting(show.home.flix.title.clearlogo) + Skin.HasSetting(home.flix.clearlogo.in.panel)">
+                        <param name="id" value="$PARAM[id]" />
+                        <param name="top" value="140" />
                     </include>
 
                     <include content="Widgets_Item_Plot" condition="!Skin.HasSetting(show.home.flix.title.clearlogo) + !Skin.HasSetting(home.style.horizontal.clean)">
@@ -1044,10 +1056,16 @@
                         <param name="top" value="145" />
                     </include>
 
-                    <include content="Widgets_Item_Plot" condition="Skin.HasSetting(show.home.flix.title.clearlogo) + !Skin.HasSetting(home.style.horizontal.clean)">
+                    <include content="Widgets_Item_Plot" condition="Skin.HasSetting(show.home.flix.title.clearlogo) + !Skin.HasSetting(home.style.horizontal.clean) + !Skin.HasSetting(home.flix.clearlogo.in.panel)">
                         <param name="id" value="$PARAM[id]" />
                         <param name="height" value="140" />
                         <param name="top" value="85" />
+                    </include>
+
+                    <include content="Widgets_Item_Plot" condition="Skin.HasSetting(show.home.flix.title.clearlogo) + !Skin.HasSetting(home.style.horizontal.clean) + Skin.HasSetting(home.flix.clearlogo.in.panel)">
+                        <param name="id" value="$PARAM[id]" />
+                        <param name="height" value="96" />
+                        <param name="top" value="205" />
                     </include>
 
                     <include content="Widgets_Item_Plot" condition="!Skin.HasSetting(show.home.flix.title.clearlogo) + Skin.HasSetting(home.style.horizontal.clean)">
