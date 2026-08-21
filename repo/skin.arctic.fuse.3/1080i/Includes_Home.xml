@@ -330,6 +330,7 @@
             <include>Home_Animation</include>
             <include content="Furniture_Header" condition="!Skin.HasSetting(HomeSwitcher.DisableHeader)">
                 <param name="label">$VAR[Home_Header_Label]</param>
+                <param name="showlogo">true</param>
             </include>
             <control type="group">
                 <include>Home_Group_Definition</include>
@@ -484,9 +485,8 @@
     <include name="Home_Switcher_Right_Buttons">
         <control type="grouplist">
             <include content="Object_Right" condition="Skin.HasSetting(HomeSwitcher.DisableSearch)">
-                <param name="right">-40</param>
+                <param name="right">-130</param>
             </include>
-            <right>-30</right>
             <align>right</align>
             <height>80</height>
             <width>400</width>
