@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <includes>
 
     <!-- OSD - OBJECT -->
@@ -245,7 +245,7 @@
                     <height>45</height>
                     <align>right</align>
                     <colordiffuse>$VAR[Color_OSD_Panel_White30]</colordiffuse>
-                    <texture>kaitoast/finishtime2.png</texture>
+                    <texture>dialog/kaitoast/finishtime2.png</texture>
                 </control>
                 <control type="label" description="Total Time">
                     <width>auto</width>
@@ -313,7 +313,7 @@
                     <height>62</height>
                     <aspectratio aligny="center">keep</aspectratio>
                     <colordiffuse>$VAR[Color_OSD_Panel_White100]</colordiffuse>
-                    <texture flipx="true">kaitoast/finishtime.png</texture>
+                    <texture flipx="true">dialog/kaitoast/finishtime.png</texture>
                 </control>
 
                 <!-- TIME REMAINING -->
@@ -347,7 +347,7 @@
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
                     <colordiffuse>$VAR[Color_OSD_Panel_White100]</colordiffuse>
-                    <texture>kaitoast/arrow.png</texture>
+                    <texture>dialog/kaitoast/arrow.png</texture>
                 </control>
 
                 <!-- TIME FINISH -->
@@ -416,7 +416,7 @@
 
                 <include content="Object_Scrollbar_Dialog_Vertical">
                     <param name="colordiffuse_texturesliderbackground" value="E62D2E2E" />
-                    <param name="texturesliderbarfocus" value="scrollbar/scrollv.png" />
+                    <param name="texturesliderbarfocus" value="dialog/scrollbar/scrollv.png" />
                     <param name="texturesliderbarfocus_colordiffuse" value="4ddddddd" />
                     <param name="scrollid" value="$PARAM[scrollid]" />
                     <param name="onleft" value="$PARAM[onleft]" />
@@ -1263,8 +1263,8 @@
         <height>70</height>
         <font>Tiny</font>
         <textcolor>$VAR[Color_OSD_Panel_White70]</textcolor>
-        <textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
-        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
+        <textureradiofocus colordiffuse="Black70">dialog/buttons/radio-on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="Black30">dialog/buttons/radio-off.png</textureradionofocus>
         <focusedcolor>Selected</focusedcolor>
         <include>Texture_Highlight_Focus</include>
         <include condition="true">Animation_View_List_Focus_Scroll</include>
@@ -2514,18 +2514,35 @@
                     <param name="visible" value="[Skin.HasSetting(show.osd.video.rating) + !Skin.HasSetting(show.osd.video.numeric.rating) + !VideoPlayer.Content(livetv)]" />
                     <param name="color" value="$VAR[Def_VideoPlayer_Flag_Colordiffuse_Star]" />
                 </include>
-                <include content="Def_Flag">
-                    <param name="Star" value="FlagstarVideo1" />
-                    <param name="visible" value="[Skin.HasSetting(show.osd.video.rating) + Skin.HasSetting(show.osd.video.numeric.rating) + !VideoPlayer.Content(livetv)]" />
-                    <param name="color" value="$VAR[Def_VideoPlayer_Flag_Colordiffuse_Star]" />
-                </include>
+                <control type="image">
+                    <width>80</width>
+                    <height>40</height>
+                    <centertop>50%</centertop>
+                    <aspectratio aligny="center" align="center">keep</aspectratio>
+                    <fadetime>ExtendedFlagIconsFadetime</fadetime>
+                    <texture colordiffuse="$VAR[Def_VideoPlayer_Flag_Colordiffuse_Dark1]" background="true">flags/rating/$VAR[Def_VideoPlayer_Flag_Color]/imdb/imdb.png</texture>
+                    <visible>[Skin.HasSetting(show.osd.video.rating) + Skin.HasSetting(show.osd.video.numeric.rating) + !VideoPlayer.Content(livetv)] + [!String.IsEmpty(VideoPlayer.Rating(imdb)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.IMDb_Rating))]</visible>
+                </control>
 
-                <control type="label" description="Rating">
-                    <visible>Skin.HasSetting(show.osd.video.rating) + Skin.HasSetting(show.osd.video.numeric.rating) + [Integer.IsGreater(VideoPlayer.Rating,0) | [Integer.IsGreater(VideoPlayer.UserRating,0) + Skin.HasSetting(userrating.override.kodi.rating.num)]]</visible>
-                    <width>auto</width>
+                <control type="label" description="IMDb Rating">
+                    <visible>Skin.HasSetting(show.osd.video.rating) + Skin.HasSetting(show.osd.video.numeric.rating) + !VideoPlayer.Content(livetv) + !String.IsEmpty(VideoPlayer.Rating(imdb))</visible>
+                    <width min="50">auto</width>
+                    <height>40</height>
+                    <centertop>50%</centertop>
+                    <left>10</left>
+                    <font>Medium</font>
                     <textcolor>$VAR[Color_OSD_Panel_White70]</textcolor>
-                    <include>Def_Flag_Label</include>
-                    <label>$VAR[Label_OSD_Player_Rating_Video]</label>
+                    <label>$INFO[VideoPlayer.Rating(imdb),, ]</label>
+                </control>
+                <control type="label" description="IMDb Rating TMDbHelper Fallback">
+                    <visible>Skin.HasSetting(show.osd.video.rating) + Skin.HasSetting(show.osd.video.numeric.rating) + !VideoPlayer.Content(livetv) + String.IsEmpty(VideoPlayer.Rating(imdb)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.IMDb_Rating))</visible>
+                    <width min="50">auto</width>
+                    <height>40</height>
+                    <centertop>50%</centertop>
+                    <left>10</left>
+                    <font>Medium</font>
+                    <textcolor>$VAR[Color_OSD_Panel_White70]</textcolor>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.Player.IMDb_Rating),, ]</label>
                 </control>
             </control>
 
@@ -2577,13 +2594,13 @@
                     <top>830r</top>
                     <width>100%</width>
                     <height>870</height>
-                    <texture>common/fsinfoscreen.png</texture>
+                    <include>Texture_OSD_Background</include>
                 </control>
                 <control type="image">
                     <top>830r</top>
                     <width>100%</width>
                     <height>870</height>
-                    <texture>common/fsinfoscreen.png</texture>
+                    <include>Texture_OSD_Background</include>
                     <animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
                 </control>
             </control>
@@ -2913,7 +2930,7 @@
                     <top>830r</top>
                     <width>100%</width>
                     <height>870</height>
-                    <texture>common/fsinfoscreen.png</texture>
+                    <include>Texture_OSD_Background</include>
                     <animation effect="fade" start="0" end="100" time="250">Visible</animation>
                     <animation effect="fade" end="0" start="100" time="250">Hidden</animation>
                     <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml) | [Window.IsVisible(script-cu-lrclyrics-main.xml) + !Skin.HasSetting(hideseekbaronlyrics)]</visible>
@@ -2922,7 +2939,7 @@
                     <top>830r</top>
                     <width>100%</width>
                     <height>870</height>
-                    <texture>common/fsinfoscreen.png</texture>
+                    <include>Texture_OSD_Background</include>
                     <animation effect="fade" start="80" end="80" condition="true">Conditional</animation>
                     <animation effect="fade" start="0" end="100" time="250">Visible</animation>
                     <animation effect="fade" end="0" start="100" time="250">Hidden</animation>

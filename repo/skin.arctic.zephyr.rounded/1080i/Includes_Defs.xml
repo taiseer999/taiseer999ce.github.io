@@ -132,9 +132,8 @@
             <onup condition="$EXP[Home_Is_Horizontal]">SetProperty(first_menu,1,Home)</onup>
 
             <onclick>ClearProperty(GlobalSearchWindowOpen,Home)</onclick>
-            <!-- <onclick>ActivateWindow(1146)</onclick> -->
-            <onclick>ActivateWindow(1147)</onclick>
-            <onclick>ActivateWindow(1146)</onclick>
+            <onclick condition="!Skin.HasSetting(Show.Home.Search.Type.Dynamic)">ActivateWindow(1147)</onclick>
+            <onclick condition="Skin.HasSetting(Show.Home.Search.Type.Dynamic)">ActivateWindow(1148)</onclick>
             <onclick>ClearProperty(AnimationDirection,Home)</onclick>
         </control>
         <!-- BUTTON EDIT WIKI -->
@@ -1342,13 +1341,13 @@
     <include name="Def_Home_Label_Widget_Sub_Title_ReleaseDate">
         <control type="label" description="Release date from TMDbHelper prop">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Premiered)]</label>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Premiered))</visible>
         </control>
         <control type="label" description="Release date from ListItem">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <label>$INFO[Container($PARAM[id]).ListItem.Premiered]</label>
             <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Premiered)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Premiered)</visible>
         </control>
@@ -1357,19 +1356,19 @@
     <include name="Def_Home_Label_Widget_Sub_Title_Duration">
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + !String.IsEqual(Container($PARAM[id]).ListItem.Duration(mins),0) + !Skin.HasSetting(show.time.format.hh.mm)</visible>
-            <label>$INFO[Container($PARAM[id]).ListItem.Duration(mins),, $LOCALIZE[31074]]</label>
+            <label>$INFO[Container($PARAM[id]).ListItem.Duration(mins),,$LOCALIZE[31074]]</label>
         </control>
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + Skin.HasSetting(show.time.format.hh.mm) + Integer.IsGreater(Container($PARAM[id]).ListItem.Duration(h),0)</visible>
             <label>$INFO[Container($PARAM[id]).ListItem.Duration(h),,$LOCALIZE[31061]] $INFO[Container($PARAM[id]).ListItem.Duration(mm),,$LOCALIZE[31062]]</label>
         </control>
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + !String.IsEqual(Container($PARAM[id]).ListItem.Duration(m),0) + Skin.HasSetting(show.time.format.hh.mm) + !Integer.IsGreater(Container($PARAM[id]).ListItem.Duration(h),0)</visible>
             <label>$INFO[Container($PARAM[id]).ListItem.Duration(m),,$LOCALIZE[31062]]</label>
         </control>
@@ -1378,19 +1377,19 @@
     <include name="Def_Home_Label_Widget_Sub_Title_Duration_JLOM">
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration),0) + !Skin.HasSetting(show.time.format.hh.mm)</visible>
             <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Duration),,$LOCALIZE[31062]]</label>
         </control>
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.H)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration.H),0) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.M)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration.M),0) + Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.Duration.M),9) + Skin.HasSetting(show.time.format.hh.mm)</visible>
             <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Duration.H),,$LOCALIZE[31061]] $INFO[Window(Home).Property(TMDbHelper.ListItem.Duration.M),,$LOCALIZE[31062]]</label>
         </control>
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.H)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration.H),0) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.M)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration.M),0) + !Integer.IsGreater(Window(Home).Property(TMDbHelper.ListItem.Duration.M),9) + Skin.HasSetting(show.time.format.hh.mm)</visible>
             <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Duration.H),,$LOCALIZE[31061]] $INFO[Window(Home).Property(TMDbHelper.ListItem.Duration.M),0,$LOCALIZE[31062]]</label>
         </control>
@@ -1404,7 +1403,7 @@
 
         <control type="label" description="Duration">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.H)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration.M)) + !Integer.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration.M),0) + Skin.HasSetting(show.time.format.hh.mm)</visible>
             <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Duration.M),,$LOCALIZE[31062]]</label>
         </control>
@@ -1723,47 +1722,57 @@
     <include name="Def_Home_Label_Widget_Sub_Title_Genre">
         <control type="label">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <label>$VAR[Home_SubTitle_Genre1_AR,(,]$VAR[Home_SubTitle_Genre2_AR, / ,])</label>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name))</visible>
         </control>
         <control type="label">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <label>$VAR[Home_SubTitle_GenreCombined_AR,(,)]</label>
             <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre))</visible>
         </control>
         <control type="label">
             <include>Widgets_Item_Sub_Title_Definition</include>
-            <left>6</left>
+            <left>0</left>
             <label>$INFO[Container($PARAM[id]).ListItem.Genre,(,)]</label>
             <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre.1.Name)) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Genre)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Genre)</visible>
         </control>
     </include>
 
     <include name="Def_Home_Label_Widget_Sub_Title_Year">
-        <control type="label">
+        <control type="label" description="Full premiered date from TMDbHelper prop">
+            <include>Widgets_Item_Sub_Title_Definition</include>
+            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Premiered)]</label>
+            <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Premiered))</visible>
+        </control>
+        <control type="label" description="Full premiered date from ListItem">
+            <include>Widgets_Item_Sub_Title_Definition</include>
+            <label>$INFO[Container($PARAM[id]).ListItem.Premiered]</label>
+            <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Premiered)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Premiered)</visible>
+        </control>
+        <control type="label" description="Year fallback when no premiered date">
             <include>Widgets_Item_Sub_Title_Definition</include>
             <label>$INFO[Container($PARAM[id]).ListItem.Year,,]</label>
-            <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
+            <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Premiered)) + String.IsEmpty(Container($PARAM[id]).ListItem.Premiered) + !String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
         </control>
     </include>
 
     <include name="Def_Home_Label_Widget_Sub_Title_Mpaa">
         <control type="image" description="MPAA badge from TMDbHelper prop">
-            <left>16</left>
-            <top>0</top>
+            <left>10</left>
+            <top>9</top>
             <width min="0" max="76">auto</width>
-            <height>46</height>
+            <height>30</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
             <texture>flags/mpaa/color/$VAR[flag_mpaa_homeprop]</texture>
             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Mpaa))</visible>
         </control>
         <control type="image" description="MPAA badge from ListItem">
-            <left>16</left>
-            <top>0</top>
+            <left>10</left>
+            <top>9</top>
             <width min="0" max="76">auto</width>
-            <height>46</height>
+            <height>30</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
             <texture>flags/mpaa/color/$VAR[flag_mpaa]</texture>
             <visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Mpaa)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Mpaa)</visible>
@@ -2186,7 +2195,7 @@
                         <top>8</top>
                         <width>100</width>
                         <height>100</height>
-                        <texture colordiffuse="$VAR[Color_Indicator_Background_Watched]" background="true">misc/banner_status_overlay.png</texture>
+                        <texture colordiffuse="$VAR[Color_Indicator_Background_Watched]" background="true">dialog/misc/banner_status_overlay.png</texture>
                     </control>
                     <control type="label">
                         <right>-9</right>
@@ -2204,7 +2213,7 @@
                         <left>12</left>
                         <width>24</width>
                         <height>24</height>
-                        <texture colordiffuse="Dark2">buttons/radio-on.png</texture>
+                        <texture colordiffuse="Dark2">dialog/buttons/radio-on.png</texture>
                         <visible>String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundWatched) | String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundLabel)</visible>
                     </control>
                 </control>
@@ -2220,7 +2229,7 @@
                         <top>8</top>
                         <width>100</width>
                         <height>100</height>
-                        <texture colordiffuse="$VAR[Color_Indicator_Background_New]" background="true">misc/banner_status_overlay.png</texture>
+                        <texture colordiffuse="$VAR[Color_Indicator_Background_New]" background="true">dialog/misc/banner_status_overlay.png</texture>
                     </control>
                     <control type="label">
                         <right>-9</right>
@@ -2238,7 +2247,7 @@
                         <left>12</left>
                         <width>24</width>
                         <height>24</height>
-                        <texture colordiffuse="Dark2">buttons/radio-on.png</texture>
+                        <texture colordiffuse="Dark2">dialog/buttons/radio-on.png</texture>
                         <visible>String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundNew) | String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundLabel)</visible>
                     </control>
                 </control>
@@ -2254,7 +2263,7 @@
                         <top>8</top>
                         <width>100</width>
                         <height>100</height>
-                        <texture colordiffuse="$VAR[Color_Indicator_Background_In_Progress]" background="true">misc/banner_status_overlay.png</texture>
+                        <texture colordiffuse="$VAR[Color_Indicator_Background_In_Progress]" background="true">dialog/misc/banner_status_overlay.png</texture>
                     </control>
                     <control type="label">
                         <right>-9</right>
@@ -2272,7 +2281,7 @@
                         <left>12</left>
                         <width>24</width>
                         <height>24</height>
-                        <texture colordiffuse="Dark2">buttons/radio-on.png</texture>
+                        <texture colordiffuse="Dark2">dialog/buttons/radio-on.png</texture>
                         <visible>String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundInProgress) | String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundLabel)</visible>
                     </control>
                 </control>
@@ -2288,7 +2297,7 @@
                         <top>8</top>
                         <width>100</width>
                         <height>100</height>
-                        <texture colordiffuse="$VAR[Color_Indicator_Background_Is_Playing]" background="true">misc/banner_status_overlay.png</texture>
+                        <texture colordiffuse="$VAR[Color_Indicator_Background_Is_Playing]" background="true">dialog/misc/banner_status_overlay.png</texture>
                     </control>
                     <control type="label">
                         <right>-8</right>
@@ -2305,7 +2314,7 @@
                         <left>12</left>
                         <width>24</width>
                         <height>24</height>
-                        <texture colordiffuse="Dark2">buttons/radio-on.png</texture>
+                        <texture colordiffuse="Dark2">dialog/buttons/radio-on.png</texture>
                         <visible>String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundIsPlaying) | String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundIsPlayingicon)</visible>
                     </control>
                 </control>
@@ -2321,7 +2330,7 @@
                         <top>8</top>
                         <width>100</width>
                         <height>100</height>
-                        <texture colordiffuse="$VAR[Color_Indicator_Background_UnWatched]" background="true">misc/banner_status_overlay.png</texture>
+                        <texture colordiffuse="$VAR[Color_Indicator_Background_UnWatched]" background="true">dialog/misc/banner_status_overlay.png</texture>
                     </control>
                     <control type="label">
                         <right>-9</right>
@@ -2339,7 +2348,7 @@
                         <left>12</left>
                         <width>24</width>
                         <height>24</height>
-                        <texture colordiffuse="Dark2">buttons/radio-on.png</texture>
+                        <texture colordiffuse="Dark2">dialog/buttons/radio-on.png</texture>
                         <visible>String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundUnWatched) | String.IsEqual(Window(Home).Property(ColorSettingSelected),IndicatorColorBackgroundLabel)</visible>
                     </control>
                 </control>
@@ -3101,6 +3110,7 @@
         <onclick>Skin.SetString(fanart.fallback.image,special://skin/extras/backgrounds/pictures/pictures_5.jpg)</onclick>
         <onclick>Skin.SetString(fanart.fallback.game,special://skin/extras/backgrounds/games/games_3.jpg)</onclick>
         <onclick>Skin.SetString(fanart.fallback.search,special://skin/extras/backgrounds/search/search_2.jpg)</onclick>
+        <onclick>Skin.SetBool(Show.Home.Search.Type.Dynamic)</onclick>
         <onclick>Skin.SetString(fanart.fallback.youtube,special://skin/extras/backgrounds/addons/addons_6.jpg)</onclick>
         <onclick>Skin.SetString(fanart.fallback.podcasts,special://skin/extras/backgrounds/addons/addons_4.jpg)</onclick>
         <onclick>Skin.SetString(fanart.fallback.more,special://skin/extras/backgrounds/more/more_1.jpg)</onclick>
@@ -3495,6 +3505,7 @@
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.image,special://skin/extras/backgrounds/pictures/pictures_5.jpg)</onload>
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.game,special://skin/extras/backgrounds/games/games_3.jpg)</onload>
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.search,special://skin/extras/backgrounds/search/search_2.jpg)</onload>
+        <onload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(Show.Home.Search.Type.Dynamic)</onload>
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.youtube,special://skin/extras/backgrounds/addons/addons_6.jpg)</onload>
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.podcasts,special://skin/extras/backgrounds/addons/addons_4.jpg)</onload>
         <onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(fanart.fallback.more,special://skin/extras/backgrounds/more/more_1.jpg)</onload>
@@ -4021,4 +4032,33 @@
         <midtexture colordiffuse="Selected" border="4">progress/progress-end.png</midtexture>
         <righttexture colordiffuse="Selected" border="4">progress/progress-right.png</righttexture>
     </include>
+
+    <!-- ===== PORTED FROM AZR OMEGA : SEARCH LIST / DYNAMIC SEARCH ===== -->
+
+    <variable name="border40">
+        <value>common/border40.png</value>
+    </variable>
+
+
+    <!-- ===== PORTED FROM AZR OMEGA : MEDIA STATUS ICON (circle) ===== -->
+
+    <include name="Def_Background_Media_Status_Icon_Top_Right">
+        <top>14</top>
+        <right>14</right>
+        <align>right</align>
+        <aligny>center</aligny>
+        <width>38</width>
+        <height>38</height>
+    </include>
+
+    <include name="Def_Media_Status_Icon_Symbol_Circle">
+        <top>13</top>
+        <right>23</right>
+        <align>right</align>
+        <aligny>center</aligny>
+        <width>38</width>
+        <height>38</height>
+        <font>SymbolPoster</font>
+    </include>
+
 </includes>

@@ -11,6 +11,7 @@
 
     <onload>RunScript(script.skinshortcuts,type=buildxml)</onload>
     <onload>RunScript(script.skinvariables,action=buildviews)</onload>
+    <onload>ClearProperty(Show_Menu_Search,Home)</onload>
 
     <!-- Clear stale TMDbHelper studio/network props so previous item's logo doesn't linger -->
     <onload>ClearProperty(TMDbHelper.ListItem.base_studio,Home)</onload>
@@ -30,12 +31,6 @@
     <!-- SET SKIN COLOR THEME -->
 
     <onload condition="String.IsEqual(Skin.String(settingthemecolor),2) + !String.IsEqual(Window(Home).Property(SkinInfo.Setting.lookandfeel.skincolors),Light)">RunScript(script.skin.info.service,action=set_setting,setting=lookandfeel.skincolors,value=Light,noconfirm=true)</onload>
-
-    <!-- SET SKIN FONT -->
-
-    <onload condition="String.IsEqual(Skin.String(settingskinfont),1) + !String.IsEqual(Window(Home).Property(SkinInfo.Setting.lookandfeel.font),Default)">RunScript(script.skin.info.service,action=set_setting,setting=lookandfeel.font,value=Default,noconfirm=true)</onload>
-    <onload condition="String.IsEqual(Skin.String(settingskinfont),2) + !String.IsEqual(Window(Home).Property(SkinInfo.Setting.lookandfeel.font),ايفون)">RunScript(script.skin.info.service,action=set_setting,setting=lookandfeel.font,value=ايفون,noconfirm=true)</onload>
-    <onload condition="String.IsEqual(Skin.String(settingskinfont),3) + !String.IsEqual(Window(Home).Property(SkinInfo.Setting.lookandfeel.font),تونس)">RunScript(script.skin.info.service,action=set_setting,setting=lookandfeel.font,value=تونس,noconfirm=true)</onload>
 
     <!-- INITIALISATION -->
 

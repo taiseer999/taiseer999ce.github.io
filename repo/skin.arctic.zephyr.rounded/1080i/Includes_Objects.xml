@@ -351,7 +351,7 @@
                     <width>100</width>
                     <height>100</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="FFFFFFFF">nowplaying/pause.png</texture>
+                    <texture colordiffuse="FFFFFFFF">dialog/nowplaying/pause.png</texture>
                     <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
                     <visible>Player.Paused</visible>
                 </control>
@@ -364,7 +364,7 @@
                     <width>100</width>
                     <height>100</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="FFFFFFFF">nowplaying/play.png</texture>
+                    <texture colordiffuse="FFFFFFFF">dialog/nowplaying/play.png</texture>
                     <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
                     <include>Animation_Rotate_Icon_Play</include>
                     <visible>Player.Playing</visible>
@@ -410,7 +410,7 @@
             <width>100</width>
             <height>100</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
-            <texture colordiffuse="Dark1">nowplaying/play.png</texture>
+            <texture colordiffuse="Dark1">dialog/nowplaying/play.png</texture>
             <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
             <visible>!Player.Paused + !Player.Forwarding + !Player.Forwarding</visible>
             <include>$PARAM[animation]</include>
@@ -421,7 +421,7 @@
             <width>100</width>
             <height>100</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
-            <texture colordiffuse="Dark1">nowplaying/pause.png</texture>
+            <texture colordiffuse="Dark1">dialog/nowplaying/pause.png</texture>
             <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
             <visible>Player.Paused</visible>
         </control>
@@ -431,7 +431,7 @@
             <width>100</width>
             <height>100</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
-            <texture colordiffuse="Dark1">nowplaying/ff.png</texture>
+            <texture colordiffuse="Dark1">dialog/nowplaying/ff.png</texture>
             <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
             <visible>Player.Forwarding</visible>
         </control>
@@ -441,7 +441,7 @@
             <width>100</width>
             <height>100</height>
             <aspectratio align="center" aligny="center">keep</aspectratio>
-            <texture colordiffuse="Dark1">nowplaying/rw.png</texture>
+            <texture colordiffuse="Dark1">dialog/nowplaying/rw.png</texture>
             <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
             <visible>Player.Rewinding</visible>
         </control>
@@ -493,9 +493,9 @@
                 <orientation>vertical</orientation>
                 <showonepage>false</showonepage>
 
-                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">scrollbar/scrollv.png</texturesliderbackground>
-                <texturesliderbar border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbar]">scrollbar/scrollv.png</texturesliderbar>
-                <texturesliderbarfocus border="4" colordiffuse="$PARAM[texturesliderbarfocus_colordiffuse]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">dialog/scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbar]">dialog/scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="4" colordiffuse="$PARAM[texturesliderbarfocus_colordiffuse]">dialog/scrollbar/scrollv.png</texturesliderbarfocus>
 
                 <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus($PARAM[scrollid]) + !Container.Scrolling + $PARAM[animation_fade_hide]">Conditional</animation>
             </control>
@@ -526,9 +526,9 @@
 
                 <orientation>horizontal</orientation>
 
-                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">scrollbar/scrollh.png</texturesliderbackground>
-                <texturesliderbar border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbar]">scrollbar/scrollh.png</texturesliderbar>
-                <texturesliderbarfocus border="4" colordiffuse="$VAR[Color_Focus]">scrollbar/scrollh.png</texturesliderbarfocus>
+                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">dialog/scrollbar/scrollh.png</texturesliderbackground>
+                <texturesliderbar border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbar]">dialog/scrollbar/scrollh.png</texturesliderbar>
+                <texturesliderbarfocus border="4" colordiffuse="$VAR[Color_Focus]">dialog/scrollbar/scrollh.png</texturesliderbarfocus>
                 <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus($PARAM[scrollid]) + $PARAM[animation_fade_hide]">Conditional</animation>
             </control>
         </definition>
@@ -549,9 +549,9 @@
                 <height>$PARAM[height]</height>
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
-                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">scrollbar/scrollv.png</texturesliderbackground>
-                <texturesliderbar border="4" colordiffuse="Dark3">scrollbar/scrollv.png</texturesliderbar>
-                <texturesliderbarfocus border="4" colordiffuse="$PARAM[texturesliderbarfocus_colordiffuse]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <texturesliderbackground border="4" colordiffuse="$PARAM[colordiffuse_texturesliderbackground]">dialog/scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="4" colordiffuse="Dark3">dialog/scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="4" colordiffuse="$PARAM[texturesliderbarfocus_colordiffuse]">dialog/scrollbar/scrollv.png</texturesliderbarfocus>
                 <orientation>vertical</orientation>
                 <showonepage>false</showonepage>
                 <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus($PARAM[scrollid]) + !Container.Scrolling + $PARAM[animation_fade_hide]">Conditional</animation>
@@ -980,4 +980,180 @@
             </control>
         </definition>
     </include>
+
+    <!-- ===== PORTED FROM AZR OMEGA : SEARCH LIST / DYNAMIC SEARCH ===== -->
+
+    <include name="Object_Search_Bar">
+        <param name="visible" value="$PARAM[visible]" default="Control.HasFocus(90009)" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+
+                <top>40</top>
+                <left>80</left>
+                <width>80</width>
+                <height>80</height>
+
+                <control type="image">
+                    <width>590</width>
+                    <height>80</height>
+                    <include>Texture_Bar_Search_Focus</include>
+                </control>
+                <control type="image">
+                    <top>-4</top>
+                    <left>-4</left>
+                    <width>88</width>
+                    <height>88</height>
+                    <include>Texture_Icon_Search_Focus</include>
+                </control>
+            </control>
+            <control type="group">
+                <visible>!$PARAM[visible]</visible>
+                <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+
+                <top>40</top>
+                <left>80</left>
+                <width>80</width>
+                <height>80</height>
+
+                <control type="image">
+                    <width>590</width>
+                    <height>80</height>
+                    <include>Texture_Bar_Search_NoFocus</include>
+                </control>
+                <control type="image">
+                    <width>590</width>
+                    <height>80</height>
+                    <texture border="40" colordiffuse="$VAR[Color_Search_Bar_Border]" infill="false">$VAR[border40]</texture>
+                </control>
+                <control type="image">
+                    <top>-4</top>
+                    <left>-4</left>
+                    <width>88</width>
+                    <height>88</height>
+                    <include>Texture_Icon_Search_NoFocus</include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Footer_Duo_Tips">
+        <param name="top" value="$PARAM[top]" default="814" />
+        <param name="left" value="$PARAM[left]" default="40" />
+        <param name="width" value="$PARAM[width]" default="1400" />
+        <param name="height" value="$PARAM[height]" default="50" />
+        <param name="align" value="$PARAM[align]" default="left" />
+        <param name="label" value="$PARAM[label]" default="" />
+        <param name="label2" value="$PARAM[label2]" default="" />
+        <param name="id_label" value="$PARAM[id_label]" default="88" />
+        <param name="font" value="$PARAM[font]" default="Tiny" />
+        <param name="textcolor" value="$PARAM[textcolor]" default="Dark3" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="Dark3" />
+        <param name="visible" value="$PARAM[visible]" default="true" />
+
+        <definition>
+            <control type="grouplist">
+                <visible>$PARAM[visible]</visible>
+
+                <include>Animation_OSD_Fade_Tips</include>
+
+                <top>$PARAM[top]</top>
+                <left>$PARAM[left]</left>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <align>$PARAM[align]</align>
+
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <control type="image">
+                    <visible>!String.IsEmpty(Control.GetLabel($PARAM[id_label]1).index(0)) | !String.IsEmpty(Control.GetLabel($PARAM[id_label]2).index(0))</visible>
+                    <top>3</top>
+                    <width>50</width>
+                    <height>50</height>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture flipy="false" colordiffuse="$PARAM[colordiffuse]">special://skin/extras/icons/lightbulb.png</texture>
+                </control>
+                <control type="label" id="$PARAM[id_label]1">
+                    <height>56</height>
+                    <font>$PARAM[font]</font>
+                    <scroll>true</scroll>
+                    <scrollspeed>40</scrollspeed>
+                    <scrollsuffix>  ••  </scrollsuffix>
+                    <textcolor>$PARAM[textcolor]</textcolor>
+                    <label>$PARAM[label]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <include content="Animation_Label_Fade_In"><param name="visible" value="$PARAM[visible]" /></include>
+                </control>
+                <control type="label" id="$PARAM[id_label]2">
+                    <height>56</height>
+                    <font>$PARAM[font]</font>
+                    <scroll>true</scroll>
+                    <scrollspeed>40</scrollspeed>
+                    <scrollsuffix>  ••  </scrollsuffix>
+                    <textcolor>$PARAM[textcolor]</textcolor>
+                    <label>$PARAM[label2]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <include content="Animation_Label_Fade_Out"><param name="visible" value="$PARAM[visible]" /></include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Footer_Right_Tips">
+        <param name="top" value="$PARAM[top]" default="814" />
+        <param name="right" value="$PARAM[right]" default="40" />
+        <param name="width" value="$PARAM[width]" default="700" />
+        <param name="height" value="$PARAM[height]" default="50" />
+        <param name="align" value="$PARAM[align]" default="right" />
+        <param name="label" value="$PARAM[label]" default="" />
+        <param name="font" value="$PARAM[font]" default="Tiny" />
+        <param name="textcolor" value="$PARAM[textcolor]" default="Dark3" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="Dark3" />
+        <param name="visible" value="$PARAM[visible]" default="true" />
+
+        <definition>
+            <control type="grouplist">
+                <visible>$PARAM[visible]</visible>
+
+                <include>Animation_OSD_Fade_Tips</include>
+
+                <top>$PARAM[top]</top>
+                <right>$PARAM[right]</right>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <align>$PARAM[align]</align>
+
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <control type="image">
+                    <visible>!String.IsEmpty(Control.GetLabel(88).index(0))</visible>
+                    <top>3</top>
+                    <width>50</width>
+                    <height>50</height>
+                    <aspectratio align="right" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture flipy="false" colordiffuse="$PARAM[colordiffuse]">special://skin/extras/icons/lightbulb.png</texture>
+                </control>
+                <control type="label" id="88">
+                    <width min="50">auto</width>
+                    <height>56</height>
+                    <font>$PARAM[font]</font>
+                    <scroll>true</scroll>
+                    <scrollspeed>40</scrollspeed>
+                    <scrollsuffix>  ••  </scrollsuffix>
+                    <textcolor>$PARAM[textcolor]</textcolor>
+                    <label>$PARAM[label]</label>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                </control>
+            </control>
+        </definition>
+    </include>
+
 </includes>

@@ -557,8 +557,6 @@
         <control type="group">
             <animation effect="slide" start="0" end="0,385" time="0" condition="[String.IsEqual(Window(Home).Property(BackToId),Window(Home).Property(LastId)) + !String.IsEqual(Container(300).ListItem.Property(widgetFullscreen),yes)] + !Skin.HasSetting(home.style.flix)">Conditional</animation>
 
-            <include>Animation_Vertical_Widgets_Label_Focus_Search</include>
-
             <control type="group">
                 <include content="Def_Widgets_Item_Main_Sys_Info_Weather">
                     <param name="label" value="$LOCALIZE[130]" />
@@ -658,8 +656,6 @@
         <control type="group">
             <animation effect="slide" start="0" end="0,385" time="0" condition="[String.IsEqual(Window(Home).Property(BackToId),Window(Home).Property(LastId)) + !String.IsEqual(Container(300).ListItem.Property(widgetFullscreen),yes)] + !Skin.HasSetting(home.style.flix)">Conditional</animation>
 
-            <include>Animation_Vertical_Widgets_Label_Focus_Search</include>
-
             <control type="group">
                 <include content="Def_Widgets_Item_Main_Sys_Info_Weather">
                     <param name="label" value="$INFO[Container($PARAM[id]).ListItem.Label]" />
@@ -693,8 +689,6 @@
     <include name="Def_Home_Flix_Widgets_Weather_Info">
         <control type="group">
             <animation effect="slide" start="0" end="0,385" time="0" condition="[String.IsEqual(Window(Home).Property(BackToId),Window(Home).Property(LastId)) + !String.IsEqual(Container(300).ListItem.Property(widgetFullscreen),yes)] + !Skin.HasSetting(home.style.flix)">Conditional</animation>
-
-            <include>Animation_Vertical_Widgets_Label_Focus_Search</include>
 
             <width>1920</width>
             <height>400</height>
@@ -1062,7 +1056,7 @@
                 <label>$LOCALIZE[31320]</label>
                 <property name="LabelMore">more</property>
                 <!-- <property name="labelisvisible" value="true" /> -->
-                <icon>buttonsdialogs/morewidget.png</icon>
+                <icon>dialog/misc/morewidget.png</icon>
                 <onclick>ActivateWindow($PARAM[target],$PARAM[content],return)</onclick>
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,9)</visible>
             </item>
@@ -1084,36 +1078,40 @@
         <definition>
             <visible>$PARAM[visible]</visible>
 
-            <include>Animation_Scrolltime_Widgets_List</include>
-
-            <include>Animation_Vertical_Widgets_Container_Focus_Search</include>
+            <include>Animation_Horizontal_Scrolltime_Widgets_List</include>
 
             <animation effect="fade" start="0" end="0" time="0" condition="Skin.HasSetting(home.style.horizontal.clean)">Conditional</animation>
 
             <include content="Animation_Fade_Out_Home_Fullscreen_Widget" condition="$EXP[Home_Is_Horizontal_Flix] | $EXP[Home_Is_Vertical_Flix]">
-               <param name="condition" value="$PARAM[animation_condition]" />
+                <param name="condition" value="$PARAM[animation_condition]" />
+            </include>
+
+            <!-- HIDDEN WITH SEARCH MENU -->
+
+            <include content="Animation_Fade_Out_Home_Fullscreen_Widget_150" condition="!Skin.HasSetting(home.style.horizontal.clean) + !Skin.HasSetting(home.style.flix)">
+                <param name="condition" value="$EXP[Home_Search_Is_Focus]" />
             </include>
 
             <include content="Def_Top" condition="Skin.HasSetting(home.style.horizontal.clean)">
-               <param name="top" value="200" />
+                <param name="top" value="200" />
             </include>
             <include content="Def_Top" condition="Skin.HasSetting(home.style.flix)">
-               <param name="top" value="440" />
+                <param name="top" value="440" />
             </include>
             <include content="Def_Top" condition="!Skin.HasSetting(home.style.flix)">
-               <param name="top" value="60" />
+                <param name="top" value="60" />
             </include>
             <include content="Def_Width" condition="Skin.HasSetting(home.style.horizontal.clean)">
-               <param name="width" value="225" />
+                <param name="width" value="225" />
             </include>
             <include content="Def_Height" condition="Skin.HasSetting(home.style.horizontal.clean)">
-               <param name="height" value="565" />
+                <param name="height" value="565" />
             </include>
             <include content="Def_Height" condition="Skin.HasSetting(home.style.flix)">
-               <param name="height" value="325" />
+                <param name="height" value="325" />
             </include>
             <include content="Def_Height" condition="!Skin.HasSetting(home.style.flix)">
-               <param name="height" value="$PARAM[height]" />
+                <param name="height" value="$PARAM[height]" />
             </include>
 
             <height>$PARAM[height]</height>
@@ -1244,7 +1242,7 @@
     </include>
 
     <include name="Widgets_Item_Sub_Title_Definition">
-        <font>SubTitleBoldXL</font>
+        <font>InfoNetflix</font>
         <width>auto</width>
         <height>46</height>
         <align>left</align>
@@ -1266,7 +1264,7 @@
     <include name="Def_Widget_Poster">
         <param name="texture" value="$PARAM[texture]"  default="$VAR[Image_Poster]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="visible_title_overlay" value="$PARAM[visible_title_overlay]" default="false" />
         <param name="pad_image" value="$PARAM[pad_image]" default="10" />
         <param name="fallback" value="$PARAM[fallback]" default="DefaultMovies" />
@@ -1311,24 +1309,26 @@
                 <param name="bottom" value="-10" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="5" />
-                <param name="bottom" value="-10" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="5" />
                 <param name="bottom" value="-10" />
             </include>
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
+
+            <!-- PLAYED - PROGRESS BAR (ported) -->
+            <include content="Layout_Poster_Progress_Bar_PercentPlayed">
+                <param name="bottom" value="20" />
+            </include>
+            <include content="Layout_Poster_Progress_Bar_PVR">
+                <param name="bottom" value="20" />
+            </include>
 
             <!-- WIDGET "MORE" -->
 
@@ -1350,7 +1350,7 @@
         <param name="middle" value="$PARAM[middle]" default="false" />
         <param name="small" value="$PARAM[small]" default="false" />
         <param name="aspectratio" value="$PARAM[aspectratio]" default="scale" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="fallback" value="$PARAM[fallback]" default="DefaultMovies" />
 
         <definition>
@@ -1373,7 +1373,7 @@
                     <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
                     <param name="fallback" value="$PARAM[fallback]" />
                     <param name="visible_background_b12" value="$PARAM[visible_background_b12]" />
-                    <param name="visible" value="!String.StartsWith(ListItem.Path,pvr://channels) + ![String.IsEqual(ListItem.Path,favourites://) | Container.Content(favourites)] + !Container.Content(images)" />
+                    <param name="visible" value="!String.StartsWith(ListItem.Path,pvr://channels) + ![String.IsEqual(ListItem.Path,favourites://) | Container.Content(favourites)] + !Container.Content(images) + !Container.Content(studios)" />
                 </include>
 
                 <!-- FAVOURITES -->
@@ -1387,6 +1387,19 @@
                     <param name="condition_fadetime" value="false" />
                     <param name="visible_background_b12" value="$PARAM[visible_background_b12]" />
                     <param name="visible" value="[String.IsEqual(ListItem.Path,favourites://) | Container.Content(favourites)]" />
+                </include>
+
+                <!-- STUDIOS -->
+
+                <include content="Def_Art_Icon_Image">
+                    <param name="pad_image" value="$PARAM[pad_image]" />
+                    <param name="aspectratio" value="keep" />
+                    <param name="texture" value="$VAR[Image_Poster]" />
+                    <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
+                    <param name="fallback" value="DefaultStudios" />
+                    <param name="condition_fadetime" value="false" />
+                    <param name="visible_background_b12" value="$PARAM[visible_background_b12]" />
+                    <param name="visible" value="Container.Content(studios)" />
                 </include>
 
                 <!-- ADDONS -->
@@ -1437,16 +1450,9 @@
                 <param name="bottom" value="-10" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="5" />
-                <param name="bottom" value="-10" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="5" />
                 <param name="bottom" value="-10" />
             </include>
@@ -1564,8 +1570,16 @@
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
+
+            <!-- PLAYED - PROGRESS BAR (ported) -->
+            <include content="Layout_Poster_Progress_Bar_PercentPlayed">
+                <param name="bottom" value="20" />
+                <param name="middle" value="$PARAM[middle]" />
+                <param name="bottom_middle" value="85" />
+            </include>
 
             <!-- WIDGET "MORE" -->
 
@@ -1590,7 +1604,7 @@
                 <param name="pad_shadow" value="1" />
                 <param name="pad_border" value="1" />
                 <param name="pad_image" value="10" />
-                <param name="colordiffuse" value="ArtPlate" />
+                <param name="colordiffuse" value="White100" />
             </include>
 
             <control type="group">
@@ -1739,18 +1753,9 @@
                 <param name="bottom_small" value="82" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="7" />
-                <param name="bottom" value="-10" />
-                <param name="small" value="$PARAM[small]" />
-                <param name="bottom_small" value="82" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="7" />
                 <param name="bottom" value="-10" />
                 <param name="small" value="$PARAM[small]" />
@@ -1759,8 +1764,16 @@
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
+
+            <!-- PLAYED - PROGRESS BAR (ported) -->
+            <include content="Layout_Poster_Progress_Bar_PercentPlayed">
+                <param name="bottom" value="20" />
+                <param name="small" value="$PARAM[small]" />
+                <param name="bottom_small" value="110" />
+            </include>
 
             <!-- WIDGET "MORE" -->
 
@@ -1775,7 +1788,7 @@
         <param name="visible_background_b12" value="$PARAM[visible_background_b12]" default="false" />
         <param name="colordiffuse_border" value="$PARAM[colordiffuse_border]" default="$VAR[Color_Border_Widget]" />
         <param name="colordiffuse_shadow" value="$PARAM[colordiffuse_shadow]" default="$VAR[Color_Shadow]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="texture" value="$PARAM[texture]"  default="$VAR[Image_Widget_Fanart]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
         <param name="pad_image" value="$PARAM[pad_image]" default="10" />
@@ -1951,18 +1964,9 @@
                 <param name="bottom_small" value="82" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="5" />
-                <param name="bottom" value="-10" />
-                <param name="small" value="$PARAM[small]" />
-                <param name="bottom_small" value="82" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="5" />
                 <param name="bottom" value="-10" />
                 <param name="small" value="$PARAM[small]" />
@@ -1971,8 +1975,16 @@
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
+
+            <!-- PLAYED - PROGRESS BAR (ported) -->
+            <include content="Layout_Poster_Progress_Bar_PercentPlayed">
+                <param name="bottom" value="20" />
+                <param name="small" value="$PARAM[small]" />
+                <param name="bottom_small" value="110" />
+            </include>
 
             <!-- WIDGET "MORE" -->
 
@@ -1993,7 +2005,7 @@
         <param name="clearlogo" value="$PARAM[clearlogo]" default="false" />
         <param name="small" value="$PARAM[small]" default="false" />
         <param name="aspectratio" value="$PARAM[aspectratio]" default="scale" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
 
         <definition>
             <include content="Def_Art_Full_Background_b12">
@@ -2090,31 +2102,30 @@
                 <param name="bottom" value="-10" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="5" />
-                <param name="bottom" value="-10" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="5" />
                 <param name="bottom" value="-10" />
             </include>
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
+
+            <!-- PLAYED - PROGRESS BAR (ported) -->
+            <include content="Layout_Poster_Progress_Bar_PercentPlayed">
+                <param name="bottom" value="20" />
+            </include>
         </definition>
     </include>
 
     <include name="Def_Widget_Banner">
         <param name="texture" value="$PARAM[texture]"  default="$VAR[Image_Banner]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="pad_image" value="$PARAM[pad_image]" default="10" />
 
         <definition>
@@ -2153,23 +2164,17 @@
                 <param name="bottom" value="-10" />
             </include>
 
-            <!-- RATING -->
+            <!-- POSTER - FLAG - RATING - TYPE -->
 
-            <include content="Layout_Poster_Rating_Set_Version_Info" condition="Skin.HasSetting(show.furniture.video.rating.num.set.version)">
-                <param name="left" value="5" />
-                <param name="bottom" value="-10" />
-            </include>
-
-            <!-- TMDB - DBID -->
-
-            <include content="Layout_Poster_TMDb_Status" condition="!Skin.HasSetting(show.furniture.video.rating.num.set.version)">
+            <include content="Layout_Poster_Flag_Rating_Type" >
                 <param name="left" value="5" />
                 <param name="bottom" value="-10" />
             </include>
 
             <!-- WATCHED STATUS -->
 
-            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + !Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Indicator_Status_Icon</include>
+            <include condition="!Skin.HasSetting(hide.markers) + !Skin.HasSetting(furniture.markers.alternative) + Skin.HasSetting(furniture.markers.af3)">Layout_Poster_Circle_Progress</include>
             <include condition="!Skin.HasSetting(hide.markers) + Skin.HasSetting(furniture.markers.alternative)">Layout_Poster_Indicator_Status_Banner</include>
 
             <!-- WIDGET "MORE" -->
@@ -2190,7 +2195,7 @@
                 <param name="pad_shadow" value="1" />
                 <param name="pad_border" value="1" />
                 <param name="pad_image" value="10" />
-                <param name="colordiffuse" value="ArtPlate" />
+                <param name="colordiffuse" value="White100" />
             </include>
 
             <include content="Def_Art_Only_Background_Widget_System">
@@ -2391,7 +2396,7 @@
                 <param name="pad_shadow" value="1" />
                 <param name="pad_border" value="1" />
                 <param name="pad_image" value="10" />
-                <param name="colordiffuse" value="ArtPlate" />
+                <param name="colordiffuse" value="White100" />
             </include>
 
             <include content="Def_Art_Only_Background_Widget_Weather">
@@ -2463,7 +2468,7 @@
                 <param name="pad_shadow" value="1" />
                 <param name="pad_border" value="1" />
                 <param name="pad_image" value="10" />
-                <param name="colordiffuse" value="ArtPlate" />
+                <param name="colordiffuse" value="White100" />
             </include>
 
             <include content="Def_Art_Only_Background_Widget_Weather">
@@ -2550,7 +2555,7 @@
                 <param name="pad_shadow" value="1" />
                 <param name="pad_border" value="1" />
                 <param name="pad_image" value="10" />
-                <param name="colordiffuse" value="ArtPlate" />
+                <param name="colordiffuse" value="White100" />
             </include>
 
             <include content="Def_Art_Only_Background_Widget_Weather">
@@ -2633,7 +2638,7 @@
     <include name="Layout_Widget_Poster">
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Poster]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="aspectratio_default_icon" value="$PARAM[aspectratio_default_icon]" default="keep" />
         <param name="fallback" value="$PARAM[fallback]" default="DefaultVideo" />
         <param name="height" value="$PARAM[height]" default="325" />
@@ -2657,7 +2662,7 @@
     <include name="Layout_Widget_Poster_Focus">
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Poster]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="aspectratio_default_icon" value="$PARAM[aspectratio_default_icon]" default="keep" />
         <param name="fallback" value="$PARAM[fallback]" default="DefaultVideo" />
         <param name="height" value="$PARAM[height]" default="325" />
@@ -2695,7 +2700,7 @@
         <param name="visible_background_b12" value="$PARAM[visible_background_b12]" default="false" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Poster]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
         <param name="aspectratio" value="$PARAM[aspectratio]" default="scale" />
@@ -2724,10 +2729,10 @@
         <param name="visible_background_b12" value="$PARAM[visible_background_b12]" default="false" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Poster]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
-        <param name="aspectratio" value="$PARAM[aspectratio]" />
+        <param name="aspectratio" value="$PARAM[aspectratio]" default="scale" />
         <param name="fallback" value="$PARAM[fallback]" default="DefaultVideo" />
         <param name="middle" value="$PARAM[middle]" default="false" />
         <param name="small" value="$PARAM[small]" default="false" />
@@ -2765,7 +2770,7 @@
         <param name="colordiffuse_shadow" value="$PARAM[colordiffuse_shadow]" default="$VAR[Color_Shadow]" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Fanart]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="image_height" value="$PARAM[image_height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
@@ -2795,7 +2800,7 @@
         <param name="colordiffuse_shadow" value="$PARAM[colordiffuse_shadow]" default="$VAR[Color_Shadow]" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Fanart]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="image_height" value="$PARAM[image_height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
@@ -2833,7 +2838,7 @@
         <param name="visible_background_b12" value="$PARAM[visible_background_b12]" default="false" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Fanart]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="image_height" value="$PARAM[image_height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
@@ -2861,7 +2866,7 @@
         <param name="visible_background_b12" value="$PARAM[visible_background_b12]" default="false" />
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Fanart]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <param name="image_height" value="$PARAM[image_height]" default="325" />
         <param name="top" value="$PARAM[top]" default="305" />
@@ -2978,7 +2983,7 @@
     <include name="Layout_Widget_Banner">
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Banner]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <definition>
             <control type="group">
@@ -2994,7 +2999,7 @@
     <include name="Layout_Widget_Banner_Focus">
         <param name="texture" value="$PARAM[texture]" default="$VAR[Image_Banner]" />
         <param name="texture_diffuse" value="$PARAM[texture_diffuse]" />
-        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="ArtPlate" />
+        <param name="colordiffuse" value="$PARAM[colordiffuse]" default="White100" />
         <param name="height" value="$PARAM[height]" default="325" />
         <definition>
             <control type="group">
@@ -3387,4 +3392,48 @@
         <onfocus condition="Integer.IsGreater(Container(24605).NumItems,0) + Control.IsVisible(24605)">SetFocus(24605,0,absolute)</onfocus>
         <onfocus condition="Integer.IsGreater(Container(24606).NumItems,0) + Control.IsVisible(24606)">SetFocus(24606,0,absolute)</onfocus>
     </include>
+
+    <!-- ===== PORTED FROM AZR OMEGA : SEARCH LIST / DYNAMIC SEARCH ===== -->
+
+    <include name="Def_Search_Widget_Container">
+        <param name="height" value="$PARAM[height]" default="325" />
+        <param name="orientation" value="$PARAM[orientation]" default="horizontal" />
+        <param name="movement" value="$PARAM[movement]" default="0" />
+        <param name="visible" value="$PARAM[visible]"  default="true" />
+        <param name="altvisible" value="$PARAM[altvisible]"  default="false" />
+        <param name="busy_visible" value="$PARAM[busy_visible]"  default="false" />
+
+        <definition>
+            <visible>[Container($PARAM[id]).IsUpdating | !Integer.IsEqual(Container($PARAM[id]).NumItems,0) | $PARAM[altvisible]]</visible>
+            <visible>$PARAM[visible]</visible>
+
+            <animation effect="fade" start="100" end="0" time="0" condition="Container($PARAM[id]).IsUpdating + $PARAM[busy_visible]">Conditional</animation>
+            <include>Animation_Horizontal_Scrolltime_Widgets_List</include>
+
+            <top>60</top>
+            <left>70</left>
+            <right>0</right>
+            <height>325</height>
+
+            <onfocus condition="$EXP[Has_Home_Menu_Auto_Slide_Out_Animation]">CancelAlarm(slide_out_setfocus_2011,true)</onfocus>
+
+            <!-- SET TMDB WIDGET CONTAINER -->
+
+            <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],Home)</onfocus>
+
+            <onunfocus>ClearProperty(nowplaying.auto.show.timer,Home)</onunfocus>
+            <onunfocus>ClearProperty(HomeLastWidgetFocus,Home)</onunfocus>
+
+            <!-- MAIN MENU : FOCUS IF INACTIVITY -->
+
+            <onfocus condition="Window.IsVisible(Home) + Skin.HasSetting(homemenu.auto.back.to.main) + !Skin.HasSetting(homemenu.auto.back.to.main.only.from.submenu)">SetProperty(focus_main_menu_timer,1,Home)</onfocus>
+
+            <onback>90009</onback>
+
+            <focusposition>0</focusposition>
+            <movement>$PARAM[movement]</movement>
+            <orientation>$PARAM[orientation]</orientation>
+        </definition>
+    </include>
+
 </includes>
